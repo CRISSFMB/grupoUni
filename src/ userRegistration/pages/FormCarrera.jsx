@@ -47,9 +47,11 @@ function FormCarrera() {
 
   return (
     <div className="container">
+      {/* Muestra el logo en el formulario */}
       <img src={logo} alt="Logo ISTEC" className="logo" />
       <h1>Carrera:</h1>
 
+      {/* Formulario para la selección de carrera */}
       <form onSubmit={handleSubmit} className="formulario">
         <div className="form-row">
           <label htmlFor="carrera">Carrera a Seguir:</label>
@@ -77,7 +79,7 @@ function FormCarrera() {
         </div>
 
         <div className="button-group">
-          <button type="submit">Guardar Matricula</button>
+          <button type="submit">Guardar</button>
         </div>
       </form>
     </div>

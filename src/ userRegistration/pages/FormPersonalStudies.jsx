@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import logo from "../assets/log.png";
-import "../css/styleformulario.css"; // Asegúrate de crear este archivo
+import logo from "../../assets/log.png";
+import "../css/formPersonalStudies.css"; // Asegúrate de crear este archivo
 
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -84,9 +84,8 @@ function FormPersonalStudies() {
     //     );
     //   }
     // }
+    navigate("formInstitutionalServices");
   };
-
-  navigate("formInstitutionalServices");
 
   return (
     <div className="container">

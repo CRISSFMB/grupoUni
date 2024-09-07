@@ -7,97 +7,64 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 .formulario {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3px;
-}
-
-label {
-  margin-bottom: 5px;
-  font-weight: bold;
-  padding: 5px;
-}
-
-input,
-select {
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 18px;
-}
-
-.button-group {
-  grid-column: span 2;
-  display: flex;
-  justify-content: space-between;
-}
-
-.error-message {
-  color: red; /* Cambia el color del texto a rojo */
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.button-group button {
-  padding: 20px 20px;
-  background-color: #11cc75;
-  color: rgb(17, 17, 17);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.button-group {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.button-group button:hover {
-  background-color: #a5d6a7;
+  width: 100%;
 }
 
 .form-row {
-  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.form-group:last-child {
+  margin-right: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
   font-weight: bold;
-  padding: 2px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.phone-input {
+  background-image: url("phone-icon.png");
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #64ffb7aa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #079163aa);
+  background-color: rgb(216, 171, 171);
 }
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: justify;
-}
-
-.date {
-  text-align: right;
-}
-
-.rector {
-  font-weight: bold;
-}
-
-.firma {
-  text-align: center;
+.logo img {
+  display: flex;
+  justify-content: center;
 }

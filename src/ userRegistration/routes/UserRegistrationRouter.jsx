@@ -6,7 +6,8 @@ import FormPersonalData from "../pages/FormPersonalData";
 import FormPersonalAdresse from "../pages/FormPersonalAdresse";
 import FormGeneralInfo from "../pages/FormGeneralInfo";
 import FormHealtInformation from "../pages/FormHealthInformation";
-import FormInstitutionalServices from "../pages/ FormInstitutionalServices";
+import FormInstitutionalServices from "../pages/FormInstitutionalServices";
+import FormPersonalStudies from "../pages/FormPersonalStudies";
 
 const UserRegistrationRouter = () => {
   return (
@@ -25,8 +26,12 @@ const UserRegistrationRouter = () => {
         element={<FormHealtInformation />}
       />
       <Route
-        path="formInstitutionalServices"
+        path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices"
         element={<FormInstitutionalServices />}
+      />
+      <Route
+        path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies"
+        element={<FormPersonalStudies />}
       />
     </Routes>
   );

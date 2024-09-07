@@ -16,10 +16,8 @@ function HomePageRegister() {
   const handleRightImageClick = () => {
     navigate("/isteccarrera");
   };
-
   return (
     <div className="container1">
-      <img src={logo} alt="Logo ISTEC" className="logo" />
       <div className="image-group1">
         <img
           src={puce}
