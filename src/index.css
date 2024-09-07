@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 65.2%;
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+*,
+*:after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1301px;
+  margin: 0 auto;
+}
