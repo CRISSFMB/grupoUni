@@ -5,6 +5,7 @@
   background-color: #f4f4f4;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
 }
 
 .formulario {
@@ -60,11 +61,3 @@ button:hover {
   background-color: #45a049;
 }
 
-.logo {
-  background-color: rgb(216, 171, 171);
-}
-
-.logo img {
-  display: flex;
-  justify-content: center;
-}
