@@ -99,7 +99,7 @@ function FormHealtInformation() {
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}
 
-      <form onSubmit={handleSubmit} className="formulario">
+      {/* <form onSubmit={handleSubmit} className="formulario">
         <div className="form-row">
           <label htmlFor="catastrofica">
             ¿Tiene alguna enfermedad catastrófica?
@@ -189,7 +189,105 @@ function FormHealtInformation() {
         <div className="button-group">
           <button type="submit">Guardar</button>
         </div>
+      </form> */}
+       <form onSubmit={handleSubmit} className="formulario">
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="catastrofica">¿Tiene alguna enfermedad catastrófica?</label>
+            <select
+              id="catastrofica"
+              name="catastrofica"
+              value={formData.catastrofica}
+              onChange={handleChange}
+            >
+              <option value="">Seleccione</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          {formData.catastrofica === "si" && (
+            <div className="form-group right-group">
+              <label htmlFor="enfermedad">Nombre de la enfermedad:</label>
+              <input
+                type="text"
+                id="enfermedad"
+                name="enfermedad"
+                value={formData.enfermedad}
+                onChange={(e) => {
+                  const letras = /^[A-Za-z\s]+$/;
+                  if (e.target.value === "" || letras.test(e.target.value)) {
+                    handleChange(e);
+                  }
+                }}
+              />
+            </div>
+          )}
+        </div>
+
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="tipo_sangre">Tipo de Sangre:</label>
+            <select
+              id="tipo_sangre"
+              name="tipo_sangre"
+              value={formData.tipo_sangre}
+              onChange={handleChange}
+            >
+              <option value="">Seleccione</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+          </div>
+
+          <div className="form-group right-group">
+            <label htmlFor="diabetes">Diabetes</label>
+            <input
+              type="checkbox"
+              id="diabetes"
+              name="diabetes"
+              checked={formData.diabetes}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="enf_piel">Herpes-Enfermedades contagiosas de la piel</label>
+            <input
+              type="checkbox"
+              id="enf_piel"
+              name="enf_piel"
+              checked={formData.enf_piel}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-group right-group">
+            <label htmlFor="vih_sida">VIH/Sida</label>
+            <input
+              type="checkbox"
+              id="vih_sida"
+              name="vih_sida"
+              checked={formData.vih_sida}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+
+        <div className="button-group">
+          <button type="submit">Guardar</button>
+        </div>
       </form>
+
+
     </div>
   );
 }

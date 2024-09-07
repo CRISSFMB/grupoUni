@@ -93,7 +93,7 @@ const FormGeneralInfo = () => {
         En caso de no estar trabajando, deje estos campos o secciones en blanco.
       </h3>
       {errorMessage && <div className="error-message">{errorMessage}</div>}
-      <form onSubmit={handleSubmit} className="formulario">
+      {/* <form onSubmit={handleSubmit} className="formulario">
         <div className="form-row">
           <label htmlFor="lugar_trabajo">Lugar de trabajo:</label>
           <input
@@ -153,7 +153,79 @@ const FormGeneralInfo = () => {
         <div className="button-group">
           <button type="submit">Guardar</button>
         </div>
+      </form> */}
+
+<form onSubmit={handleSubmit} className="formulario">
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="lugar_trabajo">Lugar de trabajo:</label>
+            <input
+              type="text"
+              id="lugar_trabajo"
+              name="lugar_trabajo"
+              value={formData.lugar_trabajo}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group right-group">
+            <label htmlFor="origen_recursos">Origen de Recursos:</label>
+            <input
+              type="text"
+              id="origen_recursos"
+              name="origen_recursos"
+              value={formData.origen_recursos}
+              onChange={handleChange}
+              placeholder="¡Obligatorio!"
+            />
+          </div>
+        </div>
+
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="ocupacion">Ocupación:</label>
+            <input
+              type="text"
+              id="ocupacion"
+              name="ocupacion"
+              value={formData.ocupacion}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group right-group">
+            <label htmlFor="cargo">Cargo:</label>
+            <input
+              type="text"
+              id="cargo"
+              name="cargo"
+              value={formData.cargo}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="telefono_trabajo">Teléfono de Trabajo:</label>
+            <input
+              type="text"
+              id="telefono_trabajo"
+              name="telefono_trabajo"
+              value={formData.telefono_trabajo}
+              onChange={handleChange}
+            />
+            </div>
+          <div className="form-group">
+          </div>
+        </div>  
+
+        <div className="button-group">
+          <button type="submit">Guardar</button>
+        </div>
       </form>
+
+
+
+
     </div>
   );
 };
