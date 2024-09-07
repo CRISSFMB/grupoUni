@@ -84,7 +84,7 @@ function FormPersonalStudies() {
     //     );
     //   }
     // }
-    navigate("formInstitutionalServices");
+    navigate("personalIncome");
   };
 
   return (
