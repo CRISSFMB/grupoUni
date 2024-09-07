@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../../assets/log.png";
-import "../css/FormPersonalAdresse.css";
+import "../css/formGeneral.css";
 const FormPersonalAdresse = () => {
   const location = useLocation();
   const { ci } = location.state || {};
