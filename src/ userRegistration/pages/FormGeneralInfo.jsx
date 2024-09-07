@@ -83,6 +83,8 @@ const FormGeneralInfo = () => {
     //     );
     //   }
     // }
+
+    navigate("FormHealthInformation");
   };
   return (
     <div className="container">
