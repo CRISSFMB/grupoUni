@@ -20,8 +20,8 @@ function HomePageRegister() {
   };
   return (
     <>
-      <Carrousel />
-      <div className="container1">
+      {/* <Carrousel /> */}
+      {/* <div className="container1">
         <div className="image-group1">
           <img
             src={puce}
@@ -36,7 +36,7 @@ function HomePageRegister() {
             onClick={handleRightImageClick}
           />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
