@@ -98,7 +98,7 @@ function FormMatricula() {
   return (
     <div className="container">
       {/* Muestra el logo en el formulario */}
-      <img src={logo} alt="Logo ISTEC" className="log" />
+      <img src={logo} alt="Logo ISTEC" className="logo1" />
       <h1>SOLICITUD DE MATRÍCULA</h1>
       <h2 className="text-xl font-semibold mt-6">Datos Personales:</h2>
 
@@ -145,7 +145,7 @@ function FormMatricula() {
 
         {/* Campo para celular */}
         <div className="form-row">
-          <label htmlFor="celular">Celular:</label>
+          <label htmlFor="celular">Celular:  </label>
           <input
             type="number"
             id="celular"
