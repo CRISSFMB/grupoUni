@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/log.png";
-import "../css/formMatricula.css";
+import "../css/formGeneral.css";
 import { useNavigate } from "react-router-dom";
 
 function FormMatricula() {
