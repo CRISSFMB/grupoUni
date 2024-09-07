@@ -1,0 +1,83 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 100px;
+    background-color: #e4e4e4;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(146, 146, 146, 0.1);
+    font-size: 18px;
+  
+  }
+  
+  .formulario {
+    width: 100%;
+  }
+  
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+  }
+  
+  .form-group:last-child {
+    margin-right: 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .phone-input {
+    background-image: url("phone-icon.png");
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+  }
+  
+  
+  
+  .button-group button {
+    padding: 20px 20px;
+    background-color: #3973f0;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .button-group button:hover {
+    background-color:  #68b1ecd7;;
+  }
+  
+  
+  .logo {
+    background-color: rgb(255, 171, 171);
+  }
+  
+  .logo img {
+    display: flex;
+    justify-content: center;
+  }
+  

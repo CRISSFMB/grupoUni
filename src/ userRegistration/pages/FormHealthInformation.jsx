@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/log.png";
 import { useNavigate, useLocation } from "react-router-dom";
-import "../css/formHealthInformation.css";
-
+import "../css/formGeneral.css";
 function FormHealtInformation() {
   const location = useLocation();
   const { ci } = location.state || {};

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import logo from "../../assets/log.png"; // Importa el logo
-import "../css/formGeneralInfo.css";
-
+import log from "../../assets/log.png"; // Importa el logo
+import "../css/formGeneral.css";
 import { useNavigate, useLocation } from "react-router-dom"; // Importa useNavigate para redirección
 
 const FormGeneralInfo = () => {
@@ -88,7 +87,7 @@ const FormGeneralInfo = () => {
   };
   return (
     <div className="container">
-      <img src={logo} alt="Logo ISTEC" className="logo" /> {/* Añadir logo */}
+      <img src={log} alt="Logo ISTEC" className="log" /> {/* Añadir logo */}
       <h1 className="text-xl font-semibold mt-6">Información General:</h1>
       <h3>
         En caso de no estar trabajando, deje estos campos o secciones en blanco.

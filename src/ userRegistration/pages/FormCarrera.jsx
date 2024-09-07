@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import logo from "../../assets/log.png";
-import "../css/formCarrera.css";
+import log from "../../assets/log.png";
+import "../css/formGeneral.css";
 
 import { useNavigate } from "react-router-dom";
 
 function FormCarrera() {
   const [formData, setFormData] = useState({
+    id_carrera:"",
     carrera: "",
   });
 
@@ -25,7 +26,7 @@ function FormCarrera() {
   // Función para validar el formulario antes del envío
   const validateForm = () => {
     // Verifica si el campo de carrera tiene un valor
-    if (!formData.carrera) {
+    if (!formData.nom_carrera) {
       alert("Debe seleccionar una carrera");
       return false;
     }
@@ -48,21 +49,21 @@ function FormCarrera() {
   return (
     <div className="container">
       {/* Muestra el logo en el formulario */}
-      <img src={logo} alt="Logo ISTEC" className="logo" />
-      <h1>Carrera:</h1>
+      <img src={log} alt="Logo ISTEC" className="log" />
+      <h1 h1>Carrera:</h1>
 
       {/* Formulario para la selección de carrera */}
-      <form onSubmit={handleSubmit} className="formulario">
-        <div className="form-row">
-          <label htmlFor="carrera">Carrera a Seguir:</label>
+      <form onSubmit={handleSubmit} className="formulario1">
+        <div className="form-row1">
+          <label htmlFor="nom_carrera">Carrera a Seguir:</label>
           <select
-            id="carrera"
-            name="carrera"
-            value={formData.carrera}
+            id="nom_carrera"
+            name="nom_carrera"
+            value={formData.nom_carrera}
             onChange={handleChange}
             required
           >
-            <option value="">Seleccione una carrera</option>
+            <option value="">Seleccione una Carrera</option>
             <option value="MEDICINA GENERAL">Medicina General</option>
             <option value="INGENIERIA AGRICOLA">Ingeniería Agrícola</option>
             <option value="LICENCIATURA EN ADMINISTRACION DE EMPRESAS">
