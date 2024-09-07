@@ -1,8 +1,8 @@
 import React from "react";
 import "./Carrousel.css";
 
-import istecLogoCarrouse from "../../assetsCarrousel/logo-istec.png";
-import puceLogoCarrouse from "../../assetsCarrousel/logo-puce.png";
+import istecLogoCarrouse from "../../../assetsCarrousel/logo-istec.png";
+import puceLogoCarrouse from "../../../assetsCarrousel/logo-puce.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

@@ -1,0 +1,25 @@
+.BienvenidoContainer {
+  background-image: url("/src/assets/bienvenido.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 811px;
+  height: 533px;
+  border-radius: 3rem;
+  box-shadow: 6px 5px 10px #338161;
+  animation: bounce 3s ease-out forwards;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -2,26 +2,33 @@ import logo from "../../assets/istec2.png";
 import puce from "../../assets/PE.png"; // Imagen izquierda
 import istec from "../../assets/logo-istec.png"; // Imagen derecha
 
-import Carrousel from "../components/Carrousel";
-
 import "../css/homePageRegister.css";
 
 import { useNavigate } from "react-router-dom";
+import BienvenidoHome from "../components/homeComponents/BienvenidoHome";
+import { useEffect, useState } from "react";
+import SolicitudBeca from "../components/homeComponents/SolicitudBeca";
 
 function HomePageRegister() {
-  const navigate = useNavigate();
+  const [mostrarBienvenido, setMostrarBienvenido] = useState(true);
 
-  const handleLeftImageClick = () => {
-    navigate("formCarrera");
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMostrarBienvenido(false);
+    }, 5000); // Cambiar después de 5 segundos (5000 milisegundos)
+
+    return () => clearTimeout(timer); // Limpiar el temporizador al desmontar
+  }, []);
+
+  const navigate = useNavigate();
 
   const handleRightImageClick = () => {
     navigate("/isteccarrera");
   };
   return (
     <>
-      <Carrousel />
-      <div className="container1">
+      {/* <Carrousel /> */}
+      {/* <div className="container1">
         <div className="image-group1">
           <img
             src={puce}
@@ -36,7 +43,9 @@ function HomePageRegister() {
             onClick={handleRightImageClick}
           />
         </div>
-      </div>
+      </div> */}
+
+      {mostrarBienvenido ? <BienvenidoHome /> : <SolicitudBeca />}
     </>
   );
 }

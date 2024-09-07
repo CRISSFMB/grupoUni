@@ -1,0 +1,10 @@
+.SolicitudBeca {
+  background-image: url("/src/assets/solicitudBeca.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 811px;
+  height: 533px;
+  border-radius: 3rem;
+  box-shadow: 6px 5px 10px hsl(209, 64%, 35%);
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/log.png"; // Importa el logo
-import "../css/formFamilyInformation.css";
+import "../css/formfamilyinformation.css";
 
 import { useNavigate, useLocation } from "react-router-dom"; // Importa useNavigate para redirección
 
