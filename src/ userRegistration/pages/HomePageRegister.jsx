@@ -2,18 +2,25 @@ import logo from "../../assets/istec2.png";
 import puce from "../../assets/PE.png"; // Imagen izquierda
 import istec from "../../assets/logo-istec.png"; // Imagen derecha
 
-import Carrousel from "../components/Carrousel";
-
 import "../css/homePageRegister.css";
 
 import { useNavigate } from "react-router-dom";
+import BienvenidoHome from "../components/homeComponents/BienvenidoHome";
+import { useEffect, useState } from "react";
+import SolicitudBeca from "../components/homeComponents/SolicitudBeca";
 
 function HomePageRegister() {
-  const navigate = useNavigate();
+  const [mostrarBienvenido, setMostrarBienvenido] = useState(true);
 
-  const handleLeftImageClick = () => {
-    navigate("formCarrera");
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setMostrarBienvenido(false);
+    }, 5000); // Cambiar después de 5 segundos (5000 milisegundos)
+
+    return () => clearTimeout(timer); // Limpiar el temporizador al desmontar
+  }, []);
+
+  const navigate = useNavigate();
 
   const handleRightImageClick = () => {
     navigate("/isteccarrera");
@@ -37,6 +44,8 @@ function HomePageRegister() {
           />
         </div>
       </div> */}
+
+      {mostrarBienvenido ? <BienvenidoHome /> : <SolicitudBeca />}
     </>
   );
 }

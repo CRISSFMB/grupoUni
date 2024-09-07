@@ -10,6 +10,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  justify-content: space-evenly;
 }
 
 *,
@@ -49,4 +50,33 @@ img {
 
 .yandri {
   display: flex;
+}
+
+.custom-button {
+  padding: 20px 70px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2px;
+}
+
+.custom-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.custom-button:active {
+  background-color: #388e3c;
+  transform: translateY(1px);
+}
+
+.custom-button.disabled {
+  background-color: #ddd;
+  color: #999;
+  cursor: not-allowed;
 }
