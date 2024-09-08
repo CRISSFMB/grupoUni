@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 function FormCarrera() {
   const [formData, setFormData] = useState({
-    id_carrera:"",
+    id_carrera: "",
     carrera: "",
   });
 
@@ -49,12 +49,12 @@ function FormCarrera() {
   return (
     <div className="container">
       {/* Muestra el logo en el formulario */}
-      <img src={log} alt="Logo ISTEC" className="log" />
-      <h1 h1>Carrera:</h1>
+      <img src={log} alt="Logo PUCE" className="logo" />
+      <h1>Carrera:</h1>
 
       {/* Formulario para la selección de carrera */}
       <form onSubmit={handleSubmit} className="formulario1">
-        <div className="form-row1">
+        <div className="form-row">
           <label htmlFor="nom_carrera">Carrera a Seguir:</label>
           <select
             id="nom_carrera"
@@ -63,18 +63,12 @@ function FormCarrera() {
             onChange={handleChange}
             required
           >
-            <option value="">Seleccione una Carrera</option>
+            <option value="">Seleccione una carrera</option>
             <option value="MEDICINA GENERAL">Medicina General</option>
             <option value="INGENIERIA AGRICOLA">Ingeniería Agrícola</option>
-            <option value="LICENCIATURA EN ADMINISTRACION DE EMPRESAS">
-              Licenciatura en Administración de Empresas
-            </option>
-            <option value="LICENCIATURA EN ENFERMERIA">
-              Licenciatura en Enfermería
-            </option>
-            <option value="INTERPRETE DE LENGUAS AMAZONICAS">
-              Intérprete de Lenguas Amazónicas
-            </option>
+            <option value="LICENCIATURA EN ADMINISTRACION DE EMPRESAS">Licenciatura en Administración de Empresas</option>
+            <option value="LICENCIATURA EN ENFERMERIA">Licenciatura en Enfermería</option>
+            <option value="INTERPRETE DE LENGUAS AMAZONICAS">Intérprete de Lenguas Amazónicas</option>
             <option value="MEDICINA VETERINARIA">Medicina Veterinaria</option>
           </select>
         </div>
@@ -84,6 +78,8 @@ function FormCarrera() {
         </div>
       </form>
     </div>
+
+
   );
 }
 
