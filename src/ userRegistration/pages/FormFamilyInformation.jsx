@@ -192,7 +192,7 @@ function FormFamilyInformation() {
           <button type="submit">Guardar</button>
         </div> */}
         <div className="form-row">
-          <div className="form-group left-group">
+          <div className="ml8 form-group left-group">
             <label htmlFor="hijos">Hijos:</label>
             <input
               type="number"
@@ -210,6 +210,7 @@ function FormFamilyInformation() {
               id="nivel_formacion_padre"
               name="nivel_formacion_padre"
               value={formData.nivel_formacion_padre}
+              className="long-select"
               onChange={handleChange}>
               <option value="">Seleccione una Opción</option>
               <option value="Estudio Basico">Estudio Básico</option>
@@ -223,7 +224,7 @@ function FormFamilyInformation() {
         </div>
 
         <div className="form-row">
-          <div className="form-group left-group">
+          <div className="ml8 form-group left-group">
             <label htmlFor="miembros_hogar">Miembros del Hogar:</label>
             <input
               type="number"
@@ -232,6 +233,7 @@ function FormFamilyInformation() {
               value={formData.miembros_hogar}
               onChange={handleChange}
               placeholder="1"
+              
             />
           </div>
 
@@ -241,6 +243,7 @@ function FormFamilyInformation() {
               id="nivel_formacion_madre"
               name="nivel_formacion_madre"
               value={formData.nivel_formacion_madre}
+              className="long-select"
               onChange={handleChange}>
               <option value="">Seleccione una Opción</option>
               <option value="Estudio Basico">Estudio Básico</option>
@@ -254,7 +257,7 @@ function FormFamilyInformation() {
         </div>
 
         <div className="form-row">
-          <div className="form-group left-group">
+          <div className="ml8 form-group left-group">
             <label htmlFor="familiar_bono">Bono Familiar($):</label>
             <input
               type="number"
@@ -272,6 +275,7 @@ function FormFamilyInformation() {
               id="Padre_o_Madre_soltera"
               name="Padre_o_Madre_soltera"
               value={formData.Padre_o_Madre_soltera}
+              className="long-select"
               onChange={handleChange}> 
               <option value="">Seleccione una Opción   {'     '}               </option>
               <option value="si">Sí  </option>

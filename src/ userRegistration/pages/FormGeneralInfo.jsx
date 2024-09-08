@@ -125,6 +125,7 @@ const FormGeneralInfo = () => {
           name="origen_recursos"
           value={formData.origen_recursos}
           onChange={handleChange}
+          className="long-select-recursos"
           
         >
           

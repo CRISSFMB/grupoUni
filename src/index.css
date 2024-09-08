@@ -64,24 +64,25 @@ img {
 
 .custom-button {
   padding: 20px 70px;
-  background-color: #4caf50;
+  background-color: #3973f0;
   color: white;
-  border: none;
+  border: 2px solid transparent; /* Borde inicial transparente */
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0); /* Efecto inicial sin sombra */
   margin-bottom: 2px;
 }
 
 .custom-button:hover {
-  background-color: #45a049;
-  transform: translateY(-2px);
+  border-color: #ffffff; /* Cambia el color del borde al hacer hover */
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6); /* Añade un brillo al borde */
 }
 
+
 .custom-button:active {
-  background-color: #388e3c;
+  background-color: #0f46bb;
   transform: translateY(1px);
 }
 
@@ -93,6 +94,13 @@ img {
 
 .Yandrifinalcss{
   display: flex;
+}
+
+.button-container {
+  display: flex; /* Los botones estarán en la misma fila */
+  justify-content: space-around; /* Puedes ajustar el espacio entre los botones */
+  gap: 140px; /* Ajusta el espacio entre los botones */
+  margin-bottom: 6px;
 }
 
 

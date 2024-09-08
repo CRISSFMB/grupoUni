@@ -143,8 +143,9 @@ function FormHealtInformation() {
               name="tipo_sangre"
               value={formData.tipo_sangre}
               onChange={handleChange}
+              
             >
-              <option value="">Seleccione</option>
+              <option value="">Seleccione </option>
               <option value="A+">A+</option>
               <option value="A-">A-</option>
               <option value="B+">B+</option>

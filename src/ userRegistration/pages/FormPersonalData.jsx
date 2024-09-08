@@ -103,7 +103,7 @@ function FormPersonalData() {
 
   <form onSubmit={handleSubmit} className="datos formulario">
     <div className="form-row">
-      <div className="form-group left-group">
+      <div className="ml8  form-group left-group">
         <label htmlFor="pueblo_nacionalidad">Pueblo Nacionalidad:</label>
         <input
           type="text"
@@ -115,13 +115,14 @@ function FormPersonalData() {
         />
       </div>
 
-      <div className="form-group right-group">
+      <div className=" form-group right-group">
         <label htmlFor="etnia">Etnia:</label>
         <select
           id="etnia"
           name="etnia"
           value={formData.etnia}
           onChange={handleChange}
+          className="long-select"
         >
           <option value="">Seleccione una Opción</option>
           <option value="kichwa">Kichwa</option>
@@ -151,7 +152,7 @@ function FormPersonalData() {
     </div>
 
     <div className="form-row">
-      <div className="form-group left-group">
+      <div className="ml8 form-group left-group">
         <label htmlFor="canton_nacimiento">Cantón Nacimiento:</label>
         <input
           type="text"
@@ -169,6 +170,7 @@ function FormPersonalData() {
           name="sexo"
           value={formData.sexo}
           onChange={handleChange}
+          className="long-select"
         >
           <option value="">Seleccione una Opción</option>
           <option value="masculino">Masculino</option>
@@ -178,7 +180,7 @@ function FormPersonalData() {
     </div>
 
     <div className="form-row">
-      <div className="form-group left-group">
+      <div className="ml8 form-group left-group">
         <label htmlFor="nacionalidad">Nacionalidad:</label>
         <input
           type="text"
@@ -196,6 +198,7 @@ function FormPersonalData() {
           name="estado_civil"
           value={formData.estado_civil}
           onChange={handleChange}
+          className="long-select"
         >
           <option value="">Seleccione una Opción</option>
           <option value="soltero">Soltero/a</option>
@@ -208,7 +211,7 @@ function FormPersonalData() {
     </div>
 
     <div className="form-row">
-      <div className="form-group left-group">
+      <div className="ml8 form-group left-group">
         <label htmlFor="provincia_nacimiento">Provincia Nacimiento:</label>
         <input
           type="text"

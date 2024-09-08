@@ -17,8 +17,10 @@ const SolicitudBeca = () => {
 
   return (
     <>
-      <Button onClick={handleLeftImageClick}>SI</Button>
-      <Button onClick={handleLeftImageClick}>NO</Button>
+      <div className="button-container">
+        <Button onClick={handleLeftImageClick}>SI</Button>
+        <Button onClick={handleLeftImageClick}>NO</Button>
+    </div>
       <div className="SolicitudBeca"></div>;
     </>
   );

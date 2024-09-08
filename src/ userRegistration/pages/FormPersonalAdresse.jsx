@@ -101,7 +101,7 @@ const FormPersonalAdresse = () => {
 
       <form onSubmit={handleSubmit} className="datos formulario">
         <div className="form-row">
-          <div className="form-group left-group">
+          <div className="ml8 form-group left-group">
             <label htmlFor="barrio_recinto">Barrio/Recinto:</label>
             <input
               type="text"
@@ -119,8 +119,9 @@ const FormPersonalAdresse = () => {
               name="sector"
               value={formData.sector}
               onChange={handleChange}
+               className="long-select"
             >
-              <option value="">Seleccione</option>
+              <option value="">Seleccione una Opción</option>
               <option value="Urbano">Urbano</option>
               <option value="Rural">Rural</option>
             </select>
@@ -128,7 +129,7 @@ const FormPersonalAdresse = () => {
         </div>
 
         <div className="form-row">
-          <div className="form-group left-group">
+          <div className="ml8 form-group left-group">
             <label htmlFor="parroquia">Parroquia:</label>
             <input
               type="text"
@@ -146,8 +147,9 @@ const FormPersonalAdresse = () => {
               name="canton"
               value={formData.canton}
               onChange={handleChange}
+               className="long-select"
             >
-              <option value="">Seleccione</option>
+              <option value="">Seleccione una Opción</option>
               <option value="cuyabeno">Cuyabeno</option>
               <option value="gonzalopizarro">Gonzalo Pizarro</option>
               <option value="lagoagrio">Lago Agrio</option>
@@ -159,7 +161,7 @@ const FormPersonalAdresse = () => {
         </div>
 
         <div className="form-row">
-          <div className="form-group">
+          <div className="ml8 form-group">
             <label htmlFor="provincia">Provincia:</label>
             <input
               type="text"
