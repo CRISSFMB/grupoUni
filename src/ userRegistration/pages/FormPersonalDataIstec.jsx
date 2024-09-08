@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import logo from "../../assets/log.png";
+import logo from "../../assets/logo.png";
 import "../css/formGeneral.css";
 import { useNavigate, useLocation } from "react-router-dom";
-function FormPersonalData() {
+
+function FormPersonalDataIstec() {
   const location = useLocation();
   const { ci } = location.state || {};
   console.log("CI recibido:", ci);
@@ -230,4 +231,4 @@ function FormPersonalData() {
   );
 }
 
-export default FormPersonalData;
+export default FormPersonalDataIstec;
