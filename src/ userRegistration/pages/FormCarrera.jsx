@@ -90,7 +90,6 @@ function FormCarrera() {
             // name="nom_carrera"
             // value={formData.nom_carrera}
             onChange={handleChange}
-            required
           >
             <option value="">Seleccione una carrera</option>
 
