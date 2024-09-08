@@ -115,16 +115,15 @@ function FormDiscapacidad() {
 
     return (
       <div className="container">
-        <img src={logo} alt="Logo ISTEC" className="logo" />
-        <h1 className="text-xl font-semibold mt-6">Discapacidad</h1>
+      <img src={logo} alt="Logo ISTEC" className="logo" />
+      <h1 className="text-xl font-semibold mt-6">Discapacidad</h1>
 
-        {errorMessage && <div className="error-message">{errorMessage}</div>}
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
 
-        <form onSubmit={handleSubmit} className="formulario">
-          <div className="form-row">
-            <label htmlFor="discapacidad.porcentaje_discapacidad">
-              Porcentaje Discapacidad:
-            </label>
+      <form onSubmit={handleSubmit} className="formulario">
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="discapacidad.porcentaje_discapacidad">Porcentaje Discapacidad:</label>
             <input
               type="number"
               id="discapacidad.porcentaje_discapacidad"
@@ -133,7 +132,21 @@ function FormDiscapacidad() {
               onChange={handleChange}
             />
           </div>
-          <div className="form-row">
+
+          <div className="form-group right-group">
+            <label htmlFor="emergencias.nombre_contacto">Nombre del Contacto:</label>
+            <input
+              type="text"
+              id="emergencias.nombre_contacto"
+              name="emergencias.nombre_contacto"
+              value={formData.emergencias.nombre_contacto}
+              onChange={soloLetras} // Usamos la función soloLetras
+            />
+          </div>
+        </div>
+
+        <div className="form-row">
+          <div className="form-group left-group">
             <label htmlFor="discapacidad.nro_carnet">Número de Carnet:</label>
             <input
               type="number"
@@ -143,39 +156,9 @@ function FormDiscapacidad() {
               onChange={handleChange}
             />
           </div>
-          <div className="form-row">
-            <label htmlFor="discapacidad.tipo_discapacidad">
-              Tipo de Discapacidad:
-            </label>
-            <input
-              type="text"
-              id="discapacidad.tipo_discapacidad"
-              name="discapacidad.tipo_discapacidad"
-              value={formData.discapacidad.tipo_discapacidad}
-              onChange={handleChange}
-            />
-          </div>
 
-          <h3 style={{ color: "red" }} className="text-xl font-semibold mt-6">
-            En caso de Emergencia llamar:
-          </h3>
-
-          <div className="form-row">
-            <label htmlFor="emergencias.nombre_contacto">
-              Nombre del Contacto:
-            </label>
-            <input
-              type="text"
-              id="emergencias.nombre_contacto"
-              name="emergencias.nombre_contacto"
-              value={formData.emergencias.nombre_contacto}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="form-row">
-            <label htmlFor="emergencias.contacto_emergencia">
-              Número de Contacto:
-            </label>
+          <div className="form-group right-group">
+            <label htmlFor="emergencias.contacto_emergencia">Número de Contacto:</label>
             <input
               type="number"
               id="emergencias.contacto_emergencia"
@@ -184,12 +167,28 @@ function FormDiscapacidad() {
               onChange={handleChange}
             />
           </div>
+        </div>
 
-          <div className="button-group">
-            <button type="submit">Guardar</button>
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="discapacidad.tipo_discapacidad">Tipo de Discapacidad:</label>
+            <input
+              type="text"
+              id="discapacidad.tipo_discapacidad"
+              name="discapacidad.tipo_discapacidad"
+              value={formData.discapacidad.tipo_discapacidad}
+              onChange={soloLetras} // Usamos la función soloLetras
+            />
+           </div>
+          <div className="form-group">
           </div>
-        </form>
-      </div>
+        </div>  
+
+        <div className="button-group">
+          <button type="submit">Guardar</button>
+        </div>
+      </form>
+    </div>
     );
   };
 }
