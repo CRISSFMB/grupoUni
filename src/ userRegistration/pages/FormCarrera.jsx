@@ -5,20 +5,30 @@ import "../css/formGeneral.css";
 import { useNavigate } from "react-router-dom";
 
 function FormCarrera() {
+  const [dataCarrera, setdataCarrera] = useState([]);
   const getDataCarrera = async () => {
     try {
       const url = "http://127.0.0.1:8000/api/MostrarMalla";
       const response = await fetch(url);
       const data = await response.json();
-      console.log(data);
-      console.log("data de la base de datos");
+
+      const carrerasDataApi = data.map((carrera) => {
+        return {
+          id_malla: carrera.id_malla,
+          mallacurricular: carrera.mallacurricular,
+          nombrecarrera: carrera.nombrecarrera,
+          universidad: carrera.universidad,
+        };
+      });
+
+      setdataCarrera(carrerasDataApi);
     } catch (error) {
       console.log("error");
     }
   };
 
   useEffect(() => {
-    // getDataCarrera();
+    getDataCarrera();
   }, []);
 
   const navigate = useNavigate();
@@ -83,18 +93,12 @@ function FormCarrera() {
             required
           >
             <option value="">Seleccione una carrera</option>
-            <option value="MEDICINA GENERAL">Medicina General</option>
-            <option value="INGENIERIA AGRICOLA">Ingeniería Agrícola</option>
-            <option value="LICENCIATURA EN ADMINISTRACION DE EMPRESAS">
-              Licenciatura en Administración de Empresas
-            </option>
-            <option value="LICENCIATURA EN ENFERMERIA">
-              Licenciatura en Enfermería
-            </option>
-            <option value="INTERPRETE DE LENGUAS AMAZONICAS">
-              Intérprete de Lenguas Amazónicas
-            </option>
-            <option value="MEDICINA VETERINARIA">Medicina Veterinaria</option>
+
+            {dataCarrera.map((item, index) => (
+              <option key={index} value={item.nombrecarrera}>
+                {item.nombrecarrera}
+              </option>
+            ))}
           </select>
         </div>
 
