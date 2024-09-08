@@ -94,25 +94,25 @@ const FormPersonalAdresse = () => {
 
   return (
     <div className="container">
-      <img src={logo} alt="Logo ISTEC" className="log" />
+      <img src={logo} alt="Logo ISTEC" className="logA" />
       <h1 className="text-xl font-semibold mt-6">Residencia:</h1>
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}
 
       <form onSubmit={handleSubmit} className="formulario">
         <div className="form-row">
-          <div className="form-group left-group">
-            <label htmlFor="barrio_recinto">Barrio/Recinto:</label>
-            <input
-              type="text"
-              id="barrio_recinto"
-              name="barrio_recinto"
-              value={formData.barrio_recinto}
-              onChange={handleChange}
-            />
-          </div>
+          
+          <label htmlFor="barrio_recinto">Barrio/Recinto:</label>
+          <input
+            type="text"
+            id="barrio_recinto"
+            name="barrio_recinto"
+            value={formData.barrio_recinto}
+            onChange={handleChange}
+          />
+        </div>
 
-          <div className="form-group right-group">
+        <div className="form-row">
             <label htmlFor="sector">Sector:</label>
             <select
               id="sector"
@@ -125,58 +125,53 @@ const FormPersonalAdresse = () => {
               <option value="Rural">Rural</option>
             </select>
           </div>
+
+        <div className="form-row">
+          <label htmlFor="parroquia">Parroquia:</label>
+          <input
+            type="text"
+            id="parroquia"
+            name="parroquia"
+            value={formData.parroquia}
+            onChange={handleChange}
+          />
         </div>
 
         <div className="form-row">
-          <div className="form-group left-group">
-            <label htmlFor="parroquia">Parroquia:</label>
-            <input
-              type="text"
-              id="parroquia"
-              name="parroquia"
-              value={formData.parroquia}
-              onChange={handleChange}
-            />
-          </div>
-
-          <div className="form-group right-group">
-            <label htmlFor="canton">Cantón:</label>
-            <select
-              id="canton"
-              name="canton"
-              value={formData.canton}
-              onChange={handleChange}
-            >
-              <option value="">Seleccione</option>
-              <option value="cuyabeno">Cuyabeno</option>
-              <option value="gonzalopizarro">Gonzalo Pizarro</option>
-              <option value="lagoagrio">Lago Agrio</option>
-              <option value="putumayo">Putumayo</option>
-              <option value="shushufinfi">Shushufinfi</option>
-              <option value="noamazonico">No Amazónico</option>
-            </select>
-          </div>
+          <label htmlFor="canton">Cantón:</label>
+          <select
+            id="canton"
+            name="canton"
+            value={formData.canton}
+            onChange={handleChange}
+          >
+            <option value="">Seleccione</option>
+            <option value="cuyabeno">Cuyabeno</option>
+            <option value="gonzalopizarro">Gonzalo Pizarro</option>
+            <option value="lagoagrio">Lago Agrio</option>
+            <option value="putumayo">Putumayo</option>
+            <option value="shushufinfi">Shushufinfi</option>
+            <option value="noamazonico">No Amazonico</option>
+          </select>
         </div>
 
         <div className="form-row">
-          <div className="form-group">
-            <label htmlFor="provincia">Provincia:</label>
-            <input
-              type="text"
-              id="provincia"
-              name="provincia"
-              value={formData.provincia}
-              onChange={handleChange}
-            />
-           </div>
-          <div className="form-group">
-          </div>
-        </div>  
+          <label htmlFor="provincia">Provincia:</label>
+          <input
+            type="text"
+            id="provincia"
+            name="provincia"
+            value={formData.provincia}
+            onChange={handleChange}
+          />
+        </div>
+
         <div className="button-group">
           <button type="submit">Guardar</button>
         </div>
       </form>
     </div>
+    
   );
 };
 
