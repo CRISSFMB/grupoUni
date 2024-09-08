@@ -11,65 +11,56 @@ import FormPersonalStudies from "../pages/FormPersonalStudies";
 import PersonalIncome from "../pages/PersonalIncome";
 import FormFamilyInformation from "../pages/FormFamilyInformation";
 import FormDiscapacidad from "../pages/FormDiscapacidad";
+import HomePucePerro from "../pages/HomePucePerro";
 
 const UserRegistrationRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePagesRegister />} />
-
-      {/* carrera */}
-      <Route path="formCarrera" element={<FormCarrera />} />
-
+      <Route path="/homePucePerro/formCarrera" element={<FormCarrera />} />
       {/* matricula */}
-      <Route path="formCarrera/formMatricula" element={<FormMatricula />} />
+      <Route
+        path="/homePucePerro/formCarrera/formMatricula"
+        element={<FormMatricula />}
+      />
 
       {/* datos personales */}
       <Route
-        path="/formCarrera/formMatricula/formPersonalData"
+        path="/homePucePerro//formCarrera/formMatricula/formPersonalData"
         element={<FormPersonalData />}
       />
       {/* residencia o direccion */}
       <Route path="formPersonalAdresse" element={<FormPersonalAdresse />} />
-
       {/* informacion general */}
       <Route path="formGeneralInfo" element={<FormGeneralInfo />} />
-
       {/* informacion salud */}
       <Route
         path="/formGeneralInfo/FormHealthInformation"
         element={<FormHealtInformation />}
       />
-
       {/* servicios */}
       <Route
         path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices"
         element={<FormInstitutionalServices />}
       />
-
       {/* estudios personales */}
       <Route
         path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies"
         element={<FormPersonalStudies />}
       />
-
       {/* ingresosPersonales */}
-
       <Route
         path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies/personalIncome"
         element={<PersonalIncome />}
       />
-
       {/* familyInfomation */}
-      <Route
-        path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies/personalIncome/formFamilyInformation"
-        element={<FormFamilyInformation />}
-      />
-
+      <Route path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies/personalIncome/formFamilyInformation" />
       {/* formDiscapacidad */}
       <Route
         path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies/personalIncome/formFamilyInformation/formDiscapacidad"
         element={<FormDiscapacidad />}
       />
+      <Route path="/homePucePerro" element={<HomePucePerro />} />
     </Routes>
   );
 };
