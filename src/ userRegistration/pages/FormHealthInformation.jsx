@@ -156,19 +156,7 @@ function FormHealtInformation() {
             </select>
           </div>
 
-          <div className="form-group right-group">
-            <label htmlFor="diabetes">Diabetes</label>
-            <input
-              type="checkbox"
-              id="diabetes"
-              name="diabetes"
-              checked={formData.diabetes}
-              onChange={handleChange}
-            />
-          </div>
-        </div>
 
-        <div className="form-row">
           <div className="form-group left-group">
             <label htmlFor="enf_piel">Herpes-Enfermedades contagiosas de la piel</label>
             <input
@@ -180,7 +168,19 @@ function FormHealtInformation() {
             />
           </div>
 
-          <div className="form-group right-group">
+
+          <div className="mb form-group right-group ">
+            <label htmlFor="diabetes">Diabetes</label>
+            <input
+              type="checkbox"
+              id="diabetes"
+              name="diabetes"
+              checked={formData.diabetes}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="mb form-group right-group">
             <label htmlFor="vih_sida">VIH/Sida</label>
             <input
               type="checkbox"
@@ -190,7 +190,11 @@ function FormHealtInformation() {
               onChange={handleChange}
             />
           </div>
+
+          
         </div>
+
+       
 
         <div className="button-group">
           <button type="submit">Guardar</button>

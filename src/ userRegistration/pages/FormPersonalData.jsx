@@ -101,7 +101,7 @@ function FormPersonalData() {
 
   {errorMessage && <div className="error-message">{errorMessage}</div>}
 
-  <form onSubmit={handleSubmit} className="formulario">
+  <form onSubmit={handleSubmit} className="datos formulario">
     <div className="form-row">
       <div className="form-group left-group">
         <label htmlFor="pueblo_nacionalidad">Pueblo Nacionalidad:</label>
@@ -153,7 +153,7 @@ function FormPersonalData() {
           value={formData.sexo}
           onChange={handleChange}
         >
-          <option value="">Seleccione</option>
+          <option value="">Seleccione una Opción</option>
           <option value="masculino">Masculino</option>
           <option value="femenino">Femenino</option>
         </select>
@@ -180,7 +180,7 @@ function FormPersonalData() {
           value={formData.estado_civil}
           onChange={handleChange}
         >
-          <option value="">Seleccione</option>
+          <option value="">Seleccione una Opción</option>
           <option value="soltero">Soltero/a</option>
           <option value="casado">Casado/a</option>
           <option value="divorciado">Divorciado/a</option>

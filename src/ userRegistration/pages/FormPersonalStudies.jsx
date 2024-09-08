@@ -87,13 +87,13 @@ function FormPersonalStudies() {
   };
 
   return (
-    <div className="container">
+    <div className=" container  ">
   <img src={logo} alt="Logo ISTEC" className="log" />
   <h1 className="text-xl font-semibold mt-6">Datos Personales:</h1>
 
   {errorMessage && <div className="error-message">{errorMessage}</div>}
 
-  <form onSubmit={handleSubmit} className="formulario">
+  <form onSubmit={handleSubmit} className="datos formulario">
     <div className="form-row">
       <div className="form-group">
         <label htmlFor="pueblo_nacionalidad">Pueblo Nacionalidad:</label>
@@ -145,7 +145,7 @@ function FormPersonalStudies() {
           value={formData.sexo}
           onChange={handleChange}
         >
-          <option value="">Seleccione</option>
+          <option value="">Seleccione una Opción</option>
           <option value="masculino">Masculino</option>
           <option value="femenino">Femenino</option>
         </select>
@@ -172,7 +172,7 @@ function FormPersonalStudies() {
           value={formData.estado_civil}
           onChange={handleChange}
         >
-          <option value="">Seleccione</option>
+          <option value="">Seleccione una Opción</option>
           <option value="soltero">Soltero/a</option>
           <option value="casado">Casado/a</option>
           <option value="divorciado">Divorciado/a</option>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/log.png"; // Importa el logo
-import "../css/formfamilyinformation.css";
+import "../css/formGeneral.css";
 
 import { useNavigate, useLocation } from "react-router-dom"; // Importa useNavigate para redirección
 
@@ -89,10 +89,10 @@ function FormFamilyInformation() {
   return (
 
     <div className="container">
-      <img src={logo} alt="Logo ISTEC" className="logo" /> {/* Añadir logo */}
+      <img src={logo} alt="Logo ISTEC" className="log" /> {/* Añadir logo */}
       <h1 className="text-xl font-semibold mt-6">Informacion Familiar</h1>
       {errorMessage && <div className="error-message">{errorMessage}</div>}
-      <form onSubmit={handleSubmit} className="formulario">
+      <form onSubmit={handleSubmit} className="datos formulario">
         {/* <div className="form-row">
           <label htmlFor="nivel_formacion_padre">Nivel formacion Padre</label>
           <select
@@ -272,10 +272,10 @@ function FormFamilyInformation() {
               id="Padre_o_Madre_soltera"
               name="Padre_o_Madre_soltera"
               value={formData.Padre_o_Madre_soltera}
-              onChange={handleChange}>
-              <option value="">Seleccione una Opción</option>
-              <option value="si">Sí</option>
-              <option value="no">No</option>
+              onChange={handleChange}> 
+              <option value="">Seleccione una Opción   {'     '}               </option>
+              <option value="si">Sí  </option>
+              <option value="no">No </option>
             </select>
           </div>
         </div>
