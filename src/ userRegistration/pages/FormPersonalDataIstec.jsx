@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import logo from "../../assets/log.png";
+import logo from "../../assets/logo.png";
 import "../css/formGeneral.css";
 import { useNavigate, useLocation } from "react-router-dom";
-function FormPersonalData() {
+
+function FormPersonalDataIstec() {
   const location = useLocation();
   const { ci } = location.state || {};
   console.log("CI recibido:", ci);
@@ -101,7 +102,7 @@ function FormPersonalData() {
 
   {errorMessage && <div className="error-message">{errorMessage}</div>}
 
-  <form onSubmit={handleSubmit} className="datos formulario">
+  <form onSubmit={handleSubmit} className="formulario">
     <div className="form-row">
       <div className="form-group left-group">
         <label htmlFor="pueblo_nacionalidad">Pueblo Nacionalidad:</label>
@@ -170,7 +171,7 @@ function FormPersonalData() {
           value={formData.sexo}
           onChange={handleChange}
         >
-          <option value="">Seleccione una Opción</option>
+          <option value="">Seleccione</option>
           <option value="masculino">Masculino</option>
           <option value="femenino">Femenino</option>
         </select>
@@ -197,7 +198,7 @@ function FormPersonalData() {
           value={formData.estado_civil}
           onChange={handleChange}
         >
-          <option value="">Seleccione una Opción</option>
+          <option value="">Seleccione</option>
           <option value="soltero">Soltero/a</option>
           <option value="casado">Casado/a</option>
           <option value="divorciado">Divorciado/a</option>
@@ -230,4 +231,4 @@ function FormPersonalData() {
   );
 }
 
-export default FormPersonalData;
+export default FormPersonalDataIstec;

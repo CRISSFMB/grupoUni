@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../css/formGeneral.css";
-import logo from "../../assets/log.png";
+import logo from "../../assets/logo.png";
 import { useNavigate, useLocation } from "react-router-dom";
 
-function FormInstitutionalServices() {
+function FormInstitutionalServicesIstec() {
   const location = useLocation();
   const { ci } = location.state || {};
   const [formData, setFormData] = useState({
@@ -393,7 +393,7 @@ function FormInstitutionalServices() {
 
 return (
 <div className="container">
-<img src={logo} alt="Logo ISTEC" className="log" />
+<img src={logo} alt="Logo ISTEC" className="logo" />
 <h1 className="text-xl font-semibold mt-6">
   Datos institucionales sobre los servicios:
 </h1>
@@ -504,4 +504,4 @@ return (
   );
 }
 
-export default FormInstitutionalServices;
+export default FormInstitutionalServicesIstec;

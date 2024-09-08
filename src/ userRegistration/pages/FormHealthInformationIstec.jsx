@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import log from "../../assets/log.png";
+import logo from "../../assets/logo.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../css/formGeneral.css";
 
 
-function FormHealtInformation() {
+function FormHealtInformationIstec() {
   const location = useLocation();
   const { ci } = location.state || {};
   console.log("CI recibido:", ci);
@@ -93,7 +93,7 @@ function FormHealtInformation() {
   return (
   
     <div className="container">
-      <img src={log} alt="logo Puce" className="log" />
+      <img src={logo} alt="logo Puce" className="logo" />
       <h1>Información Salud:</h1>
 
       <h3 className="text-xl font-semibold mt-6">Datos institucionales sobre salud:</h3>
@@ -156,7 +156,19 @@ function FormHealtInformation() {
             </select>
           </div>
 
+          <div className="form-group right-group">
+            <label htmlFor="diabetes">Diabetes</label>
+            <input
+              type="checkbox"
+              id="diabetes"
+              name="diabetes"
+              checked={formData.diabetes}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
 
+        <div className="form-row">
           <div className="form-group left-group">
             <label htmlFor="enf_piel">Herpes-Enfermedades contagiosas de la piel</label>
             <input
@@ -168,19 +180,7 @@ function FormHealtInformation() {
             />
           </div>
 
-
-          <div className="mb form-group right-group ">
-            <label htmlFor="diabetes">Diabetes</label>
-            <input
-              type="checkbox"
-              id="diabetes"
-              name="diabetes"
-              checked={formData.diabetes}
-              onChange={handleChange}
-            />
-          </div>
-
-          <div className="mb form-group right-group">
+          <div className="form-group right-group">
             <label htmlFor="vih_sida">VIH/Sida</label>
             <input
               type="checkbox"
@@ -190,11 +190,7 @@ function FormHealtInformation() {
               onChange={handleChange}
             />
           </div>
-
-          
         </div>
-
-       
 
         <div className="button-group">
           <button type="submit">Guardar</button>
@@ -204,4 +200,4 @@ function FormHealtInformation() {
   );
 }
 
-export default FormHealtInformation;
+export default FormHealtInformationIstec;

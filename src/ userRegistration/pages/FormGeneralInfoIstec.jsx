@@ -3,7 +3,7 @@ import log from "../../assets/log.png"; // Importa el logo
 import "../css/formGeneral.css";
 import { useNavigate, useLocation } from "react-router-dom"; // Importa useNavigate para redirección
 
-const FormGeneralInfo = () => {
+const FormGeneralInfoIstec = () => {
   const location = useLocation();
   const { ci } = location.state || {};
   console.log("CI recibido:", ci);
@@ -107,38 +107,17 @@ const FormGeneralInfo = () => {
           onChange={handleChange}
         />
       </div>
-      {/* <div className="form-group right-group">
+      <div className="form-group right-group">
         <label htmlFor="origen_recursos">Origen de Recursos:</label>
         <input
-          type=""
+          type="text"
           id="origen_recursos"
           name="origen_recursos"
           value={formData.origen_recursos}
           onChange={handleChange}
           placeholder="¡Obligatorio!"
         />
-      </div> */}
-      <div className="form-group right-group">
-        <label htmlFor="origen_recursos">Origen de Recursos:</label>
-        <select
-          id="origen_recursos"
-          name="origen_recursos"
-          value={formData.origen_recursos}
-          onChange={handleChange}
-          
-        >
-          
-          <option value="recursos_propios">Recursos propios</option>
-          <option value="padres_tutores">Padres tutores</option>
-          <option value="pareja_sentimental">Pareja sentimental</option>
-          <option value="hermanos">Hermanos</option>
-          <option value="otros_miembros_hogar">Otros miembros del hogar</option>
-          <option value="otros_familiares">Otros familiares</option>
-          <option value="becas_estudio">Becas de estudio</option>
-          <option value="credito_educativo">Credito educativo</option>
-        </select>
       </div>
-    
     </div>
 
     {/* Segunda fila */}
@@ -191,4 +170,4 @@ const FormGeneralInfo = () => {
   );
 };
 
-export default FormGeneralInfo;
+export default FormGeneralInfoIstec;

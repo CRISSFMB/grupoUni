@@ -83,8 +83,20 @@ function PersonalIncomeIstec() {
 
       <form onSubmit={handleSubmit} className="formulario">
         <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="empleo_ingresos">
+              ¿En qué emplea sus ingresos?:
+            </label>
+            <input
+              type="text"
+              id="empleo_ingresos"
+              name="empleo_ingresos"
+              value={formData.empleo_ingresos}
+              onChange={handleChange}
+            />
+          </div>
           <div className="form-group right-group">
-            <label htmlFor="ingresos_mensuales">Ingresos Propios ($):</label>
+            <label htmlFor="ingresos_mensuales">Ingresos Mensuales ($):</label>
             <input
               type="number"
               id="ingresos_mensuales"
@@ -93,24 +105,6 @@ function PersonalIncomeIstec() {
               onChange={handleChange}
             />
           </div>
-
-          <div className="form-group right-group">
-        <label htmlFor="estado_civil">¿En qué emplea sus ingresos?:</label>
-        <select
-          id="empleo_ingresos"
-          name="empleo_ingresos"
-          value={formData.empleo_ingresos}
-          onChange={handleChange}
-        >
-          <option value="">Seleccione una Opción</option>
-          <option value="casado">Financiar sus Estudios </option>
-          <option value="divorciado">Para mantemer su hogar</option>
-          <option value="viudo">Gatos Personal</option>
-          
-        </select>
-      </div>
-
-          
         </div>
 
         <div className="form-row">
@@ -125,67 +119,8 @@ function PersonalIncomeIstec() {
               placeholder="Opcional"
             />
           </div>
-          <div className="form-group right-group">
-            <label htmlFor="ingresos_mensuales">Ingresos De la Madre ($):</label>
-            <input
-              type="number"
-              id="ingresos_mensuales"
-              name="ingresos_mensuales"
-              value={formData.ingresos_mensuales}
-              onChange={handleChange}
-            />
-          </div>
-          
+          <div className="form-group"></div>
         </div>
-
-        <div className="form-row">
-          <div className="form-group left-group">
-            <label htmlFor="bono">Ingresos del Conyunge ($):</label>
-            <input
-              type="number"
-              id="bono"
-              name="bono"
-              value={formData.bono}
-              onChange={handleChange}
-              placeholder="Opcional"
-            />
-          </div>
-          <div className="form-group right-group">
-            <label htmlFor="ingresos_mensuales">Ingresos Del Padre ($):</label>
-            <input
-              type="number"
-              id="ingresos_mensuales"
-              name="ingresos_mensuales"
-              value={formData.ingresos_mensuales}
-              onChange={handleChange}
-            />
-          </div>
-          
-        </div>
-
-        <div className="form-row">
-          <div className="form-group left-group">
-            <label htmlFor="bono">Otros Ingresos ($):</label>
-            <input
-              type="number"
-              id="bono"
-              name="bono"
-              value={formData.bono}
-              onChange={handleChange}
-              placeholder="Opcional"
-            />
-          </div>
-
-          <div className="form-group left-group">
-            
-           
-          </div>
-
-          
-          
-        </div>
-
-
 
         <div className="button-group">
           <button type="submit">Guardar</button>

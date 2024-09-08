@@ -99,7 +99,7 @@ const FormPersonalAdresse = () => {
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}
 
-      <form onSubmit={handleSubmit} className="datos formulario">
+      <form onSubmit={handleSubmit} className="formulario">
         <div className="form-row">
           <div className="form-group left-group">
             <label htmlFor="barrio_recinto">Barrio/Recinto:</label>

@@ -1,26 +1,25 @@
 import React, { useState } from "react";
-import logo from "../../assets/log.png";
+import logo from "../../assets/logo.png";
 import "../css/formGeneral.css";
 import { useNavigate, useLocation } from "react-router-dom";
-function FormPersonalData() {
+
+function FormPersonalStudiesIstec() {
   const location = useLocation();
   const { ci } = location.state || {};
   console.log("CI recibido:", ci);
 
   const [formData, setFormData] = useState({
     id_ci: ci || "",
-    etnia: "",
-    estado_civil: "",
-    pueblo_nacionalidad: "",
-    provincia_nacimiento: "",
-    sexo: "",
-    nacionalidad: "",
-    canton_nacimiento: "",
+    nom_colegio: "",
+    tipo_colegio: "",
+    ciudad: "",
+    provincia: "",
+    canton: "",
+    titulo: "",
   });
 
   const [errorMessage, setErrorMessage] = useState("");
-  const [isFormValid, setIsFormValid] = useState(false);
-  const navigate = useNavigate(); // Inicializa useNavigate
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,51 +29,43 @@ function FormPersonalData() {
     });
   };
 
-  const validateForm = () => {
-    const requiredFields = [
-      "etnia",
-      "estado_civil",
-      "sexo",
-      "provincia_nacimiento",
-      "nacionalidad",
-      "canton_nacimiento",
-    ];
+  //   const validateForm = () => {
+  //     const requiredFields = [
+  //       "nom_colegio",
+  //       "tipo_colegio",
+  //       "ciudad",
+  //       "provincia",
+  //       "canton",
+  //       "titulo",
+  //     ];
 
-    for (let field of requiredFields) {
-      if (!formData[field]) {
-        setErrorMessage("Todos los campos obligatorios deben estar llenos.");
-        setIsFormValid(false);
-        return false;
-      }
-    }
+  //     for (let field of requiredFields) {
+  //       if (!formData[field]) {
+  //         alert("Todos los campos son obligatorios");
+  //         return false;
+  //       }
+  //     }
 
-    setErrorMessage("");
-    setIsFormValid(true);
-    return true;
-  };
+  //     return true;
+  //   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Previene el comportamiento predeterminado de enviar el formulario
-    navigate("/formPersonalAdresse");
-    console.log("objeto para enviar al  backend");
-    console.log(formData);
+    e.preventDefault();
+
     // if (validateForm()) {
-    //   console.log("Datos del formulario:", formData); // Muestra los datos del formulario en la consola
+    //   console.log("Datos del formulario:", formData);
 
     //   try {
-    //     const response = await fetch(
-    //       "http://127.0.0.1:8000/api/datos/Ingresar/Estudiante",
-    //       {
-    //         method: "POST",
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(formData),
-    //       }
-    //     );
+    //     const response = await fetch("http://127.0.0.1:8000/api/Estudios2", {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify(formData),
+    //     });
 
     //     if (!response.ok) {
-    //       throw new Error(`Status: ${response.status}`);
+    //       throw new Error(`Error en la solicitud: ${response.status}`);
     //     }
 
     //     const data = await response.json();
@@ -84,7 +75,7 @@ function FormPersonalData() {
     //     setErrorMessage(
     //       "¡Formulario completado correctamente! Puede continuar."
     //     );
-    //     navigate("/formPersonalAdresse", { state: { ci: formData.id_ci } });
+    //     navigate("/formulariopuce7", { state: { ci: formData.id_ci } });
     //   } catch (error) {
     //     console.error("Error al crear estudiante:", error);
     //     setErrorMessage(
@@ -92,6 +83,7 @@ function FormPersonalData() {
     //     );
     //   }
     // }
+    navigate("personalIncome");
   };
 
   return (
@@ -101,9 +93,9 @@ function FormPersonalData() {
 
   {errorMessage && <div className="error-message">{errorMessage}</div>}
 
-  <form onSubmit={handleSubmit} className="datos formulario">
+  <form onSubmit={handleSubmit} className="formulario">
     <div className="form-row">
-      <div className="form-group left-group">
+      <div className="form-group">
         <label htmlFor="pueblo_nacionalidad">Pueblo Nacionalidad:</label>
         <input
           type="text"
@@ -115,7 +107,7 @@ function FormPersonalData() {
         />
       </div>
 
-      <div className="form-group right-group">
+      <div className="form-group">
         <label htmlFor="etnia">Etnia:</label>
         <select
           id="etnia"
@@ -124,34 +116,17 @@ function FormPersonalData() {
           onChange={handleChange}
         >
           <option value="">Seleccione una Opción</option>
-          <option value="kichwa">Kichwa</option>
-          <option value="awa">Awa</option>
-          <option value="chachi">Chachi</option>
-          <option value="epera">Epera</option>
-          <option value="asachia">Tsachila</option>
-          <option value="achuar">Achuar</option>
-          <option value="cofan">Cofan</option>
-          <option value="secoya">Secoya</option>
-          <option value="shiwiar">Shiwiar</option>
-          <option value="shuar">Shuar</option>
-          <option value="waorani">Waorani</option>
-          <option value="sapara">Sapara</option>
-          <option value="andoa">Andoa</option>
-          <option value="siona">Siona</option>
-          <option value="siokopae">Siokopae</option>
-          {/* <option value="indigena">Indigena</option>
+          <option value="indigena">Indigena</option>
           <option value="blanco">Blanco/a</option>
           <option value="mestizo">Mestizo/a</option>
-          <option value="mulato">Mulato/a</option> */}
-          <option value="otro">Otro/a</option>
-          
-      
+          <option value="mulato">Mulato/a</option>
+          <option value="afromericano">Afroamericano/a</option>
         </select>
       </div>
     </div>
 
     <div className="form-row">
-      <div className="form-group left-group">
+      <div className="form-group">
         <label htmlFor="canton_nacimiento">Cantón Nacimiento:</label>
         <input
           type="text"
@@ -162,7 +137,7 @@ function FormPersonalData() {
         />
       </div>
 
-      <div className="form-group right-group">
+      <div className="form-group">
         <label htmlFor="sexo">Sexo:</label>
         <select
           id="sexo"
@@ -170,7 +145,7 @@ function FormPersonalData() {
           value={formData.sexo}
           onChange={handleChange}
         >
-          <option value="">Seleccione una Opción</option>
+          <option value="">Seleccione</option>
           <option value="masculino">Masculino</option>
           <option value="femenino">Femenino</option>
         </select>
@@ -178,7 +153,7 @@ function FormPersonalData() {
     </div>
 
     <div className="form-row">
-      <div className="form-group left-group">
+      <div className="form-group">
         <label htmlFor="nacionalidad">Nacionalidad:</label>
         <input
           type="text"
@@ -189,7 +164,7 @@ function FormPersonalData() {
         />
       </div>
 
-      <div className="form-group right-group">
+      <div className="form-group">
         <label htmlFor="estado_civil">Estado Civil:</label>
         <select
           id="estado_civil"
@@ -197,7 +172,7 @@ function FormPersonalData() {
           value={formData.estado_civil}
           onChange={handleChange}
         >
-          <option value="">Seleccione una Opción</option>
+          <option value="">Seleccione</option>
           <option value="soltero">Soltero/a</option>
           <option value="casado">Casado/a</option>
           <option value="divorciado">Divorciado/a</option>
@@ -208,7 +183,7 @@ function FormPersonalData() {
     </div>
 
     <div className="form-row">
-      <div className="form-group left-group">
+      <div className="form-group">
         <label htmlFor="provincia_nacimiento">Provincia Nacimiento:</label>
         <input
           type="text"
@@ -218,7 +193,7 @@ function FormPersonalData() {
           onChange={handleChange}
         />
       </div>
-      <div className="form-group right-group"></div>
+      <div className="form-group"></div>
     </div>
 
     <div className="button-group">
@@ -230,4 +205,4 @@ function FormPersonalData() {
   );
 }
 
-export default FormPersonalData;
+export default FormPersonalStudiesIstec;
