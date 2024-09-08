@@ -6,11 +6,15 @@ import { Outlet, useNavigate } from "react-router-dom";
 
 function FormCarrera() {
   const getDataCarrera = async () => {
-    const url = "/SubMalla";
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-    console.log("enviando");
+    try {
+      const url = "http:/SubMalla";
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log(data);
+      console.log("data de la base de datos");
+    } catch (error) {
+      console.log("error");
+    }
   };
 
   useEffect(() => {
@@ -33,31 +37,31 @@ function FormCarrera() {
     });
   };
 
-  const validateForm = () => {
-    if (!formData.nom_carrera) {
-      alert("Debe seleccionar una carrera");
-      return false;
-    }
+  // const validateForm = () => {
+  //   if (!formData.nom_carrera) {
+  //     alert("Debe seleccionar una carrera");
+  //     return false;
+  //   }
 
-    setErrorMessage("");
-    return true;
-  };
+  //   setErrorMessage("");
+  //   return true;
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (validateForm()) {
-      console.log("Datos del formulario:", formData);
-      setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
-      navigate("formMatricula");
-      console.log(formData);
-    }
+    // if (validateForm()) {
+    //   console.log("Datos del formulario:", formData);
+    //   setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
+    //   navigate("formMatricula");
+    //   console.log(formData);
+    // }
   };
 
   return (
     <div className="container">
       <img src={log} alt="Logo ISTEC" className="log" />
-      <h1 h1>Carrera:</h1>
+      <h1>Carrera:</h1>
 
       {/* Muestra el logo en el formulario */}
       <img src={log} alt="Logo PUCE" className="logo" />
