@@ -63,11 +63,7 @@ function FormCarrera() {
       <img src={log} alt="Logo ISTEC" className="log" />
       <h1>Carrera:</h1>
 
-      {/* Muestra el logo en el formulario */}
-      <img src={log} alt="Logo PUCE" className="logo" />
-      <h1>Carrera:</h1>
-
-      {/* Formulario para la selección de carrera */}
+      
 
       <form onSubmit={handleSubmit} className="formulario1">
         <div className="form-row">
