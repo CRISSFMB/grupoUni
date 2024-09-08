@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import log from "../../assets/log.png";
 import "../css/formGeneral.css";
 
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function FormCarrera() {
   const getDataCarrera = async () => {
@@ -18,7 +18,7 @@ function FormCarrera() {
   };
 
   useEffect(() => {
-    getDataCarrera();
+    // getDataCarrera();
   }, []);
 
   const navigate = useNavigate();
@@ -53,7 +53,7 @@ function FormCarrera() {
     // if (validateForm()) {
     //   console.log("Datos del formulario:", formData);
     //   setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
-    //   navigate("formMatricula");
+    navigate("formMatricula");
     //   console.log(formData);
     // }
   };
