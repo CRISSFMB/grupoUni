@@ -96,7 +96,8 @@ function FormMatricula() {
   };
 
   return (
-  <div className="container">
+
+    <div className="container">
       {/* Muestra el logo en el formulario */}
       <img src={logo} alt="Logo ISTEC" className="logo1" />
       <h1>SOLICITUD DE MATRÍCULA</h1>
@@ -185,6 +186,9 @@ function FormMatricula() {
         </div>
       </form>
     </div>
+    
+    
+
   );
   
 }
