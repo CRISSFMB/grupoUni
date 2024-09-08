@@ -64,7 +64,7 @@ function FormCarrera() {
       <h1>Carrera:</h1>
 
       {/* Muestra el logo en el formulario */}
-      <img src={log} alt="Logo PUCE" className="logo" />
+      <img src={log} alt="Logo PUCE" className="log" />
       <h1>Carrera:</h1>
 
       {/* Formulario para la selección de carrera */}
