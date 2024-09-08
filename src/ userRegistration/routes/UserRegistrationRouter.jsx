@@ -26,7 +26,7 @@ const UserRegistrationRouter = () => {
 
       {/* datos personales */}
       <Route
-        path="/homePucePerro//formCarrera/formMatricula/formPersonalData"
+        path="/homePucePerro/formCarrera/formMatricula/formPersonalData"
         element={<FormPersonalData />}
       />
       {/* residencia o direccion */}
@@ -54,7 +54,10 @@ const UserRegistrationRouter = () => {
         element={<PersonalIncome />}
       />
       {/* familyInfomation */}
-      <Route path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies/personalIncome/formFamilyInformation" />
+      <Route 
+      path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies/personalIncome/formFamilyInformation" 
+      element={<FormFamilyInformation />}
+      />
       {/* formDiscapacidad */}
       <Route
         path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies/personalIncome/formFamilyInformation/formDiscapacidad"
