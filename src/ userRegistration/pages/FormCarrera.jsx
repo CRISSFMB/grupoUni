@@ -1,31 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import log from "../../assets/log.png";
 import "../css/formGeneral.css";
 
-import { useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 function FormCarrera() {
+  const getDataCarrera = async () => {
+    const url = "/SubMalla";
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+    console.log("enviando");
+  };
+
+  useEffect(() => {
+    getDataCarrera();
+  }, []);
+
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    id_carrera:"",
+    id_carrera: "",
     carrera: "",
   });
 
   const [errorMessage, setErrorMessage] = useState("");
 
-  const navigate = useNavigate();
-
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setFormData({
       ...formData,
       [name]: value,
     });
   };
 
-  // Función para validar el formulario antes del envío
   const validateForm = () => {
-    // Verifica si el campo de carrera tiene un valor
     if (!formData.nom_carrera) {
       alert("Debe seleccionar una carrera");
       return false;
@@ -39,7 +47,7 @@ function FormCarrera() {
     e.preventDefault();
 
     if (validateForm()) {
-      console.log("Datos del formulario:", formData); // Muestra los datos del formulario en la consola
+      console.log("Datos del formulario:", formData);
       setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
       navigate("formMatricula");
       console.log(formData);
@@ -48,11 +56,8 @@ function FormCarrera() {
 
   return (
     <div className="container">
-      {/* Muestra el logo en el formulario */}
       <img src={log} alt="Logo ISTEC" className="log" />
       <h1 h1>Carrera:</h1>
-
-      {/* Formulario para la selección de carrera */}
       <form onSubmit={handleSubmit} className="formulario1">
         <div className="form-row1">
           <label htmlFor="nom_carrera">Carrera a Seguir:</label>
