@@ -96,99 +96,98 @@ function FormMatricula() {
   };
 
   return (
-
     <div className="container">
       {/* Muestra el logo en el formulario */}
       <img src={logo} alt="Logo ISTEC" className="logo1" />
       <h1>SOLICITUD DE MATRÍCULA</h1>
       <h2 className="text-xl font-semibold mt-6">Datos Personales:</h2>
-
+  
       {/* Muestra el mensaje de error si hay alguno */}
       {errorMessage && <div className="error-message">{errorMessage}</div>}
-
+  
       {/* Formulario para la entrada de datos */}
       <form onSubmit={handleSubmit} className="formulario">
-        {/* Campo para nombres */}
+        {/* Fila 1: Nombres y Apellidos */}
         <div className="form-row">
-          <label htmlFor="nombres">Nombres:</label>
-          <input
-            type="text"
-            id="nombres"
-            name="nombres"
-            value={formData.nombres}
-            onChange={handleChange}
-          />
+          <div className="form-group">
+            <label htmlFor="nombres">Nombres:</label>
+            <input
+              type="text"
+              id="nombres"
+              name="nombres"
+              value={formData.nombres}
+              onChange={handleChange}
+            />
+          </div>
+  
+          <div className="form-group">
+            <label htmlFor="apellidos">Apellidos:</label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              value={formData.apellidos}
+              onChange={handleChange}
+            />
+          </div>
         </div>
-
-        {/* Campo para apellidos */}
+  
+        {/* Fila 2: Teléfono y Celular */}
         <div className="form-row">
-          <label htmlFor="apellidos">Apellidos:</label>
-          <input
-            type="text"
-            id="apellidos"
-            name="apellidos"
-            value={formData.apellidos}
-            onChange={handleChange}
-          />
+          <div className="form-group">
+            <label htmlFor="numero_telefonico">Teléfono:</label>
+            <input
+              type="number"
+              id="numero_telefonico"
+              name="numero_telefonico"
+              value={formData.numero_telefonico}
+              onChange={handleChange}
+            />
+          </div>
+  
+          <div className="form-group">
+            <label htmlFor="celular">Celular:</label>
+            <input
+              type="number"
+              id="celular"
+              name="celular"
+              value={formData.celular}
+              onChange={handleChange}
+            />
+          </div>
         </div>
-
-        {/* Campo para teléfono */}
+  
+        {/* Fila 3: Cédula y Fecha de nacimiento */}
         <div className="form-row">
-          <label htmlFor="numero_telefonico">Teléfono:</label>
-          <input
-            type="number"
-            id="numero_telefonico"
-            name="numero_telefonico"
-            value={formData.numero_telefonico}
-            onChange={handleChange}
-          />
+          <div className="form-group">
+            <label htmlFor="ci">Cédula:</label>
+            <input
+              type="number"
+              id="ci"
+              name="ci"
+              value={formData.ci}
+              onChange={handleChange}
+            />
+          </div>
+  
+          <div className="form-group">
+            <label htmlFor="edad">Fecha de nacimiento:</label>
+            <input
+              type="date"
+              id="edad"
+              name="edad"
+              value={formData.edad}
+              onChange={handleChange}
+            />
+          </div>
         </div>
-
-        {/* Campo para celular */}
-        <div className="form-row">
-          <label htmlFor="celular">Celular:  </label>
-          <input
-            type="number"
-            id="celular"
-            name="celular"
-            value={formData.celular}
-            onChange={handleChange}
-          />
-        </div>
-
-        {/* Campo para cédula */}
-        <div className="form-row">
-          <label htmlFor="ci">Cédula:</label>
-          <input
-            type="number"
-            id="ci"
-            name="ci"
-            value={formData.ci}
-            onChange={handleChange}
-          />
-        </div>
-
-        {/* Campo para fecha de nacimiento */}
-        <div className="form-row">
-          <label htmlFor="edad">Fecha de nacimiento:</label>
-          <input
-            type="date"
-            id="edad"
-            name="edad"
-            value={formData.edad}
-            onChange={handleChange}
-          />
-        </div>
-
+  
         {/* Botón para enviar el formulario */}
         <div className="button-group">
           <button type="submit">Guardar</button>
         </div>
       </form>
     </div>
-    
-    
-
   );
 }
 
