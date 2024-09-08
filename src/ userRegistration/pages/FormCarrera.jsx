@@ -5,73 +5,77 @@ import "../css/formGeneral.css";
 import { Outlet, useNavigate } from "react-router-dom";
 
 function FormCarrera() {
-  const getDataCarrera = async () => {
-    try {
-      const url = "http://127.0.0.1:8000/api/MostrarMalla";
-      const response = await fetch(url);
-      const data = await response.json();
-      console.log(data);
-      console.log("data de la base de datos");
-    } catch (error) {
-      console.log("error");
-    }
-  };
-
-  useEffect(() => {
-    getDataCarrera();
-  }, []);
-
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    id_carrera: "",
-    carrera: "",
-  });
-
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  // const validateForm = () => {
-  //   if (!formData.nom_carrera) {
-  //     alert("Debe seleccionar una carrera");
-  //     return false;
+  // const getDataCarrera = async () => {
+  //   try {
+  //     const url = "http://127.0.0.1:8000/api/MostrarMalla";
+  //     const response = await fetch(url);
+  //     const data = await response.json();
+  //     console.log(data);
+  //     console.log("data de la base de datos");
+  //   } catch (error) {
+  //     console.log("error");
   //   }
-
-  //   setErrorMessage("");
-  //   return true;
   // };
+
+  // useEffect(() => {
+  //   getDataCarrera();
+  // }, []);
+
+  // const navigate = useNavigate();
+  // const [formData, setFormData] = useState({
+  //   id_carrera: "",
+  //   carrera: "",
+  // });
+
+  // const [errorMessage, setErrorMessage] = useState("");
+
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData({
+  //     ...formData,
+  //     [name]: value,
+  //   });
+  // };
+
+  const validateForm = () => {
+    if (!formData.nom_carrera) {
+      alert("Debe seleccionar una carrera");
+      return false;
+    }
+
+    setErrorMessage("");
+    return true;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // if (validateForm()) {
-    //   console.log("Datos del formulario:", formData);
-    //   setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
-    //   navigate("formMatricula");
-    //   console.log(formData);
-    // }
+    if (validateForm()) {
+      console.log("Datos del formulario:", formData);
+      setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
+      navigate("formMatricula");
+      console.log(formData);
+    }
   };
 
   return (
     <div className="container">
-      <img src={log} alt="Logo ISTEC" className="log" />
+      
+
+      {/* Muestra el logo en el formulario */}
+      <img src={log} alt="Logo PUCE" className="log" />
       <h1>Carrera:</h1>
 
-      
+      {/* Formulario para la selección de carrera */}
+
 
       <form onSubmit={handleSubmit} className="formulario1">
         <div className="form-row">
           <label htmlFor="nom_carrera">Carrera a Seguir:</label>
           <select
-            id="nom_carrera"
-            name="nom_carrera"
-            value={formData.nom_carrera}
+            // id="nom_carrera"
+            // name="nom_carrera"
+            // value={formData.nom_carrera}
             onChange={handleChange}
             required
           >
