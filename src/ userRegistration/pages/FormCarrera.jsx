@@ -56,16 +56,15 @@ function FormCarrera() {
 
   return (
     <div className="container">
-<<<<<<< HEAD
       <img src={log} alt="Logo ISTEC" className="log" />
       <h1 h1>Carrera:</h1>
-=======
+
       {/* Muestra el logo en el formulario */}
       <img src={log} alt="Logo PUCE" className="logo" />
       <h1>Carrera:</h1>
 
       {/* Formulario para la selección de carrera */}
->>>>>>> 7d52d636a9d2d810ebfc7937dee1322700983ecc
+
       <form onSubmit={handleSubmit} className="formulario1">
         <div className="form-row">
           <label htmlFor="nom_carrera">Carrera a Seguir:</label>
@@ -79,9 +78,15 @@ function FormCarrera() {
             <option value="">Seleccione una carrera</option>
             <option value="MEDICINA GENERAL">Medicina General</option>
             <option value="INGENIERIA AGRICOLA">Ingeniería Agrícola</option>
-            <option value="LICENCIATURA EN ADMINISTRACION DE EMPRESAS">Licenciatura en Administración de Empresas</option>
-            <option value="LICENCIATURA EN ENFERMERIA">Licenciatura en Enfermería</option>
-            <option value="INTERPRETE DE LENGUAS AMAZONICAS">Intérprete de Lenguas Amazónicas</option>
+            <option value="LICENCIATURA EN ADMINISTRACION DE EMPRESAS">
+              Licenciatura en Administración de Empresas
+            </option>
+            <option value="LICENCIATURA EN ENFERMERIA">
+              Licenciatura en Enfermería
+            </option>
+            <option value="INTERPRETE DE LENGUAS AMAZONICAS">
+              Intérprete de Lenguas Amazónicas
+            </option>
             <option value="MEDICINA VETERINARIA">Medicina Veterinaria</option>
           </select>
         </div>
@@ -91,8 +96,6 @@ function FormCarrera() {
         </div>
       </form>
     </div>
-
-
   );
 }
 
