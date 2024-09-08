@@ -41,7 +41,7 @@ function FormInstitutionalServicesIstec() {
   //   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    navigate("formPersonalStudies");
+    navigate("formPersonalStudiesIs");
     //     const validationMessage = validateForm();
     //     if (validationMessage) {
     //       console.log(validationMessage);

@@ -90,7 +90,7 @@ function FormMatriculaIstec() {
     //   }
     // }
 
-    navigate("formPersonalData");
+    navigate("formPersonalDataIs");
 
     console.log(formData);
   };

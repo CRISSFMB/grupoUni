@@ -48,7 +48,7 @@ function PersonalIncomeIstec() {
     //   }
 
     console.log("Datos del formulario:", formData);
-    navigate("formFamilyInformation");
+    navigate("formFamilyInformationIs");
 
     //   try {
     //     const response = await fetch(

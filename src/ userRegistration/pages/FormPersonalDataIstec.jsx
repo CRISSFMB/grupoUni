@@ -56,7 +56,7 @@ function FormPersonalDataIstec() {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Previene el comportamiento predeterminado de enviar el formulario
-    navigate("/formPersonalAdresse");
+    navigate("/formPersonalAdresseIs");
     console.log("objeto para enviar al  backend");
     console.log(formData);
     // if (validateForm()) {

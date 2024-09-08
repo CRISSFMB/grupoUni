@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import logo from "../../assets/log.png";
+import logo from "../../assets/logo.png";
 import "../css/formGeneral.css";
-const FormPersonalAdresse = () => {
+const FormPersonalAdresseIstec = () => {
   const location = useLocation();
   const { ci } = location.state || {};
   console.log("CI recibido:", ci);
@@ -89,7 +89,7 @@ const FormPersonalAdresse = () => {
     // }
     console.log("datos de direccion que se van a enviar al backend");
     console.log(formData);
-    navigate("/formGeneralInfo");
+    navigate("/formGeneralInfoIs");
   };
 
   return (
@@ -182,4 +182,4 @@ const FormPersonalAdresse = () => {
   );
 };
 
-export default FormPersonalAdresse;
+export default FormPersonalAdresseIstec;

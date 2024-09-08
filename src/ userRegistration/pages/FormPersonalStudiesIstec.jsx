@@ -83,7 +83,7 @@ function FormPersonalStudiesIstec() {
     //     );
     //   }
     // }
-    navigate("personalIncome");
+    navigate("personalIncomeIs");
   };
 
   return (

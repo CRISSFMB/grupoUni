@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import log from "../../assets/log.png"; // Importa el logo
+import log from "../../assets/logo.png"; // Importa el logo
 import "../css/formGeneral.css";
 import { useNavigate, useLocation } from "react-router-dom"; // Importa useNavigate para redirección
 
@@ -83,7 +83,7 @@ const FormGeneralInfoIstec = () => {
     //   }
     // }
 
-    navigate("FormHealthInformation");
+    navigate("FormHealthInformationIs");
   };
   return (
     <div className="container">

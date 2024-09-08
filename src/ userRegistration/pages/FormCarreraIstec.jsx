@@ -63,7 +63,7 @@ function FormCarreraistec() {
     // if (validateForm()) {
     //   console.log("Datos del formulario:", formData);
     //   setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
-    navigate("formMatricula");
+    navigate("formMatriculaIs");
     //   console.log(formData);
     // }
 

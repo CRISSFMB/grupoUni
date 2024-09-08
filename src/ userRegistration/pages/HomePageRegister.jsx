@@ -27,7 +27,7 @@ function HomePageRegister() {
   };
 
   const handleRightImageClick = () => {
-    navigate("formCarrera");
+    navigate("formCarreraIs");
   };
   return (
     <>
