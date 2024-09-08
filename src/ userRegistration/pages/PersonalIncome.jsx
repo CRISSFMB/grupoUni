@@ -48,7 +48,7 @@ function PersonalIncome() {
     //   }
 
     console.log("Datos del formulario:", formData);
-    navigate("FormFamilyInformation");
+    navigate("formFamilyInformation");
 
     //   try {
     //     const response = await fetch(
