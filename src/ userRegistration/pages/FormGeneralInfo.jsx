@@ -107,17 +107,38 @@ const FormGeneralInfo = () => {
           onChange={handleChange}
         />
       </div>
-      <div className="form-group right-group">
+      {/* <div className="form-group right-group">
         <label htmlFor="origen_recursos">Origen de Recursos:</label>
         <input
-          type="text"
+          type=""
           id="origen_recursos"
           name="origen_recursos"
           value={formData.origen_recursos}
           onChange={handleChange}
           placeholder="¡Obligatorio!"
         />
+      </div> */}
+      <div className="form-group right-group">
+        <label htmlFor="origen_recursos">Origen de Recursos:</label>
+        <select
+          id="origen_recursos"
+          name="origen_recursos"
+          value={formData.origen_recursos}
+          onChange={handleChange}
+          
+        >
+          
+          <option value="recursos_propios">Recursos propios</option>
+          <option value="padres_tutores">Padres tutores</option>
+          <option value="pareja_sentimental">Pareja sentimental</option>
+          <option value="hermanos">Hermanos</option>
+          <option value="otros_miembros_hogar">Otros miembros del hogar</option>
+          <option value="otros_familiares">Otros familiares</option>
+          <option value="becas_estudio">Becas de estudio</option>
+          <option value="credito_educativo">Credito educativo</option>
+        </select>
       </div>
+    
     </div>
 
     {/* Segunda fila */}

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import logo from "../../assets/log.png";
+import logo from "../../assets/logo.png";
 import "../css/formGeneral.css";
 
 import { useNavigate, useLocation } from "react-router-dom";
 
-function FormDiscapacidad() {
+function FormDiscapacidadIstec() {
   const location = useLocation();
   const { ci } = location.state || {};
 
@@ -196,7 +196,7 @@ function FormDiscapacidad() {
          >
            <option value="">Seleccione una Opción</option>
            <option value="discapacidad_fisica">Discapacidad fisica</option>
-           <option value="discapacidad_intelectual">Discapacidad intelectual</option>
+           <option value="discapacidad_itelectual">Discapacidad itelectual</option>
            <option value="discapacidad_mental">Discapacidad mental</option>
            <option value="discapacidad_sensorial">Discapacidad sensorial</option>
            <option value="discapacidad_auditiva">Discapacidad auditiva</option>
@@ -216,4 +216,4 @@ function FormDiscapacidad() {
   };
 }
 
-export default FormDiscapacidad;
+export default FormDiscapacidadIstec;
