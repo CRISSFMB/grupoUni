@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import logo from "../../assets/log.png";
+import log from "../../assets/log.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../css/formGeneral.css";
+
+
 function FormHealtInformation() {
   const location = useLocation();
   const { ci } = location.state || {};
@@ -89,108 +91,16 @@ function FormHealtInformation() {
   };
 
   return (
+  
     <div className="container">
-      <img src={logo} alt="Logo ISTEC" className="logo" />
+      <img src={log} alt="logo Puce" className="log" />
       <h1>Información Salud:</h1>
 
-      <h3 className="text-xl font-semibold mt-6">
-        Datos institucionales sobre salud:
-      </h3>
+      <h3 className="text-xl font-semibold mt-6">Datos institucionales sobre salud:</h3>
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}
 
-      {/* <form onSubmit={handleSubmit} className="formulario">
-        <div className="form-row">
-          <label htmlFor="catastrofica">
-            ¿Tiene alguna enfermedad catastrófica?
-          </label>
-          <select
-            id="catastrofica"
-            name="catastrofica"
-            value={formData.catastrofica}
-            onChange={handleChange}
-          >
-            <option value="">Seleccione</option>
-            <option value="si">Sí</option>
-            <option value="no">No</option>
-          </select>
-        </div>
-
-        {formData.catastrofica === "si" && (
-          <div className="form-row">
-            <label htmlFor="enfermedad">Nombre de la enfermedad:</label>
-            <input
-              type="text"
-              id="enfermedad"
-              name="enfermedad"
-              value={formData.enfermedad}
-              onChange={handleChange}
-            />
-          </div>
-        )}
-
-        <div className="form-row">
-          <label htmlFor="tipo_sangre">Tipo de Sangre:</label>
-          <select
-            id="tipo_sangre"
-            name="tipo_sangre"
-            value={formData.tipo_sangre}
-            onChange={handleChange}
-          >
-            <option value="">Seleccione</option>
-            <option value="A+">A+</option>
-            <option value="A-">A-</option>
-            <option value="B+">B+</option>
-            <option value="B-">B-</option>
-            <option value="AB+">AB+</option>
-            <option value="AB-">AB-</option>
-            <option value="O+">O+</option>
-            <option value="O-">O-</option>
-          </select>
-        </div>
-
-        <h4>Seleccione si tiene alguna de estas enfermedades:</h4>
-
-        <div className="form-row">
-          <label htmlFor="diabetes">Diabetes</label>
-          <input
-            type="checkbox"
-            id="diabetes"
-            name="diabetes"
-            checked={formData.diabetes}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="form-row">
-          <label htmlFor="enf_piel">
-            Herpes-Enfermedades contagiosas de la piel
-          </label>
-          <input
-            type="checkbox"
-            id="enf_piel"
-            name="enf_piel"
-            checked={formData.enf_piel}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="form-row">
-          <label htmlFor="vih_sida">VHI/Sida</label>
-          <input
-            type="checkbox"
-            id="vih_sida"
-            name="vih_sida"
-            checked={formData.vih_sida}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="button-group">
-          <button type="submit">Guardar</button>
-        </div>
-      </form> */}
-       <form onSubmit={handleSubmit} className="formulario">
+      <form onSubmit={handleSubmit} className="formulario">
         <div className="form-row">
           <div className="form-group left-group">
             <label htmlFor="catastrofica">¿Tiene alguna enfermedad catastrófica?</label>
@@ -286,8 +196,6 @@ function FormHealtInformation() {
           <button type="submit">Guardar</button>
         </div>
       </form>
-
-
     </div>
   );
 }

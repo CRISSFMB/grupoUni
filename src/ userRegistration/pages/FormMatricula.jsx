@@ -97,17 +97,13 @@ function FormMatricula() {
 
   return (
     <div className="container">
-      {/* Muestra el logo en el formulario */}
-      <img src={logo} alt="Logo ISTEC" className="logo1" />
+      <img src={logo} alt="Logo ISTEC" className="log" />
       <h1>SOLICITUD DE MATRÍCULA</h1>
-      <h2 className="text-xl font-semibold mt-6">Datos Personales:</h2>
-  
-      {/* Muestra el mensaje de error si hay alguno */}
+      <h2 className="text-xl font-semibold mt-6">Datosnales:</h2>
+
       {errorMessage && <div className="error-message">{errorMessage}</div>}
-  
-      {/* Formulario para la entrada de datos */}
+
       <form onSubmit={handleSubmit} className="formulario">
-        {/* Fila 1: Nombres y Apellidos */}
         <div className="form-row">
           <div className="form-group">
             <label htmlFor="nombres">Nombres:</label>
@@ -119,7 +115,7 @@ function FormMatricula() {
               onChange={handleChange}
             />
           </div>
-  
+
           <div className="form-group">
             <label htmlFor="apellidos">Apellidos:</label>
             <input
@@ -131,45 +127,45 @@ function FormMatricula() {
             />
           </div>
         </div>
-  
-        {/* Fila 2: Teléfono y Celular */}
+
         <div className="form-row">
           <div className="form-group">
             <label htmlFor="numero_telefonico">Teléfono:</label>
             <input
-              type="number"
+              type="text"
               id="numero_telefonico"
               name="numero_telefonico"
               value={formData.numero_telefonico}
               onChange={handleChange}
+              className="phone-input"
             />
           </div>
-  
+
           <div className="form-group">
             <label htmlFor="celular">Celular:</label>
             <input
-              type="number"
+              type="text"
               id="celular"
               name="celular"
               value={formData.celular}
               onChange={handleChange}
+              className="phone-input"
             />
           </div>
         </div>
-  
-        {/* Fila 3: Cédula y Fecha de nacimiento */}
+
         <div className="form-row">
           <div className="form-group">
             <label htmlFor="ci">Cédula:</label>
             <input
-              type="number"
+              type="text"
               id="ci"
               name="ci"
               value={formData.ci}
               onChange={handleChange}
             />
           </div>
-  
+
           <div className="form-group">
             <label htmlFor="edad">Fecha de nacimiento:</label>
             <input
@@ -181,13 +177,15 @@ function FormMatricula() {
             />
           </div>
         </div>
-  
-        {/* Botón para enviar el formulario */}
+
         <div className="button-group">
           <button type="submit">Guardar</button>
         </div>
       </form>
+
     </div>
+
+
   );
   
 }
