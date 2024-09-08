@@ -10,6 +10,7 @@ import FormInstitutionalServices from "../pages/FormInstitutionalServices";
 import FormPersonalStudies from "../pages/FormPersonalStudies";
 import PersonalIncome from "../pages/PersonalIncome";
 import FormFamilyInformation from "../pages/FormFamilyInformation";
+import FormDiscapacidad from "../pages/FormDiscapacidad";
 
 const UserRegistrationRouter = () => {
   return (
@@ -57,9 +58,17 @@ const UserRegistrationRouter = () => {
         path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies/personalIncome"
         element={<PersonalIncome />}
       />
+
+      {/* familyInfomation */}
       <Route
-        path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies/FormFamilyInformation"
+        path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies/personalIncome/formFamilyInformation"
         element={<FormFamilyInformation />}
+      />
+
+      {/* formDiscapacidad */}
+      <Route
+        path="/formGeneralInfo/FormHealthInformation/formInstitutionalServices/formPersonalStudies/personalIncome/formFamilyInformation/formDiscapacidad"
+        element={<FormDiscapacidad />}
       />
     </Routes>
   );
