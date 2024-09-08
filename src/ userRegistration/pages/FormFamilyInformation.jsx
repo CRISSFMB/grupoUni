@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/log.png"; // Importa el logo
-import "../css/formFamilyInformation.css";
+import "../css/formfamilyinformation.css";
 
 import { useNavigate, useLocation } from "react-router-dom"; // Importa useNavigate para redirección
 
@@ -87,12 +87,13 @@ function FormFamilyInformation() {
   };
 
   return (
+
     <div className="container">
       <img src={logo} alt="Logo ISTEC" className="logo" /> {/* Añadir logo */}
       <h1 className="text-xl font-semibold mt-6">Informacion Familiar</h1>
       {errorMessage && <div className="error-message">{errorMessage}</div>}
       <form onSubmit={handleSubmit} className="formulario">
-        <div className="form-row">
+        {/* <div className="form-row">
           <label htmlFor="nivel_formacion_padre">Nivel formacion Padre</label>
           <select
             id="nivel_formacion_padre"
@@ -185,11 +186,107 @@ function FormFamilyInformation() {
             onChange={handleChange}
             placeholder="Opcional"
           />
+        </div> */}
+
+        {/* <div className="button-group">
+          <button type="submit">Guardar</button>
+        </div> */}
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="hijos">Hijos:</label>
+            <input
+              type="number"
+              id="hijos"
+              name="hijos"
+              value={formData.hijos}
+              onChange={handleChange}
+              placeholder="0"
+            />
+          </div>
+
+          <div className="form-group right-group">
+            <label htmlFor="nivel_formacion_padre">Nivel Formación Padre:</label>
+            <select
+              id="nivel_formacion_padre"
+              name="nivel_formacion_padre"
+              value={formData.nivel_formacion_padre}
+              onChange={handleChange}>
+              <option value="">Seleccione una Opción</option>
+              <option value="Estudio Basico">Estudio Básico</option>
+              <option value="Estudio Basico Incompleto">Estudio Básico Incompleto</option>
+              <option value="Bachillerato">Bachillerato</option>
+              <option value="Bachillerato Incompleto">Bachillerato Incompleto</option>
+              <option value="Estudio Superior">Estudio Superior</option>
+              <option value="Estudio Superior Incompleto">Estudio Superior Incompleto</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="miembros_hogar">Miembros del Hogar:</label>
+            <input
+              type="number"
+              id="miembros_hogar"
+              name="miembros_hogar"
+              value={formData.miembros_hogar}
+              onChange={handleChange}
+              placeholder="1"
+            />
+          </div>
+
+          <div className="form-group right-group">
+            <label htmlFor="nivel_formacion_madre">Nivel Formación Madre:</label>
+            <select
+              id="nivel_formacion_madre"
+              name="nivel_formacion_madre"
+              value={formData.nivel_formacion_madre}
+              onChange={handleChange}>
+              <option value="">Seleccione una Opción</option>
+              <option value="Estudio Basico">Estudio Básico</option>
+              <option value="Estudio Basico Incompleto">Estudio Básico Incompleto</option>
+              <option value="Bachillerato">Bachillerato</option>
+              <option value="Bachillerato Incompleto">Bachillerato Incompleto</option>
+              <option value="Estudio Superior">Estudio Superior</option>
+              <option value="Estudio Superior Incompleto">Estudio Superior Incompleto</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="familiar_bono">Bono Familiar($):</label>
+            <input
+              type="number"
+              id="familiar_bono"
+              name="familiar_bono"
+              value={formData.familiar_bono}
+              onChange={handleChange}
+              placeholder="Opcional"
+            />
+          </div>
+
+          <div className="form-group right-group">
+            <label htmlFor="Padre_o_Madre_soltera">Madre o Padre Soltero:</label>
+            <select
+              id="Padre_o_Madre_soltera"
+              name="Padre_o_Madre_soltera"
+              value={formData.Padre_o_Madre_soltera}
+              onChange={handleChange}>
+              <option value="">Seleccione una Opción</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
         </div>
 
         <div className="button-group">
           <button type="submit">Guardar</button>
         </div>
+
+
+
+
       </form>
     </div>
   );

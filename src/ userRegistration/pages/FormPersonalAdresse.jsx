@@ -94,14 +94,25 @@ const FormPersonalAdresse = () => {
 
   return (
     <div className="container">
-      <img src={logo} alt="Logo ISTEC" className="logo" />
+      <img src={logo} alt="Logo ISTEC" className="logA" />
       <h1 className="text-xl font-semibold mt-6">Residencia:</h1>
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}
 
       <form onSubmit={handleSubmit} className="formulario">
         <div className="form-row">
-          <div className="form-row">
+          
+          <label htmlFor="barrio_recinto">Barrio/Recinto:</label>
+          <input
+            type="text"
+            id="barrio_recinto"
+            name="barrio_recinto"
+            value={formData.barrio_recinto}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="form-row">
             <label htmlFor="sector">Sector:</label>
             <select
               id="sector"
@@ -114,16 +125,6 @@ const FormPersonalAdresse = () => {
               <option value="Rural">Rural</option>
             </select>
           </div>
-
-          <label htmlFor="barrio_recinto">Barrio/Recinto:</label>
-          <input
-            type="text"
-            id="barrio_recinto"
-            name="barrio_recinto"
-            value={formData.barrio_recinto}
-            onChange={handleChange}
-          />
-        </div>
 
         <div className="form-row">
           <label htmlFor="parroquia">Parroquia:</label>
@@ -170,6 +171,7 @@ const FormPersonalAdresse = () => {
         </div>
       </form>
     </div>
+    
   );
 };
 
