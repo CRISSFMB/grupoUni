@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 function FormCarrera() {
   const getDataCarrera = async () => {
     try {
-      const url = "http:/SubMalla";
+      const url = "http://127.0.0.1:8000/api/MostrarMalla";
       const response = await fetch(url);
       const data = await response.json();
       console.log(data);
@@ -56,15 +56,18 @@ function FormCarrera() {
     navigate("formMatricula");
     //   console.log(formData);
     // }
+
+    // if (validateForm()) {
+    //   console.log("Datos del formulario:", formData);
+    //   setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
+    //   console.log(formData);
+    // }
   };
 
   return (
     <div className="container">
-      <img src={log} alt="Logo ISTEC" className="log" />
-      <h1>Carrera:</h1>
-
       {/* Muestra el logo en el formulario */}
-      <img src={log} alt="Logo PUCE" className="logo" />
+      <img src={log} alt="Logo PUCE" className="log" />
       <h1>Carrera:</h1>
 
       {/* Formulario para la selección de carrera */}
@@ -73,9 +76,9 @@ function FormCarrera() {
         <div className="form-row">
           <label htmlFor="nom_carrera">Carrera a Seguir:</label>
           <select
-            id="nom_carrera"
-            name="nom_carrera"
-            value={formData.nom_carrera}
+            // id="nom_carrera"
+            // name="nom_carrera"
+            // value={formData.nom_carrera}
             onChange={handleChange}
             required
           >
