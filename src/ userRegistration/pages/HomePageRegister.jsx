@@ -1,16 +1,17 @@
 import "../css/homePageRegister.css";
-
 import { useNavigate } from "react-router-dom";
 import BienvenidoHome from "../components/homeComponents/BienvenidoHome";
 import { useEffect, useState } from "react";
 import SolicitudBeca from "../components/homeComponents/SolicitudBeca";
 
 import logo from "../../assets/istec2.png";
-import puce from "../../assets/PE.png"; // Imagen izquierda
-import istec from "../../assets/logo-istec.png"; // Imagen derecha
+import PUCE from "../../assets/PE.png"; // Imagen izquierda
+import ISTEC from "../../assets/logo-istec.png"; // Imagen derecha
 
 function HomePageRegister() {
   const [mostrarBienvenido, setMostrarBienvenido] = useState(true);
+  const [universidad, setUniversidad] = useState(""); // Variable para la universidad seleccionada
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,32 +21,31 @@ function HomePageRegister() {
     return () => clearTimeout(timer); // Limpiar el temporizador al desmontar
   }, []);
 
-  const navigate = useNavigate();
-
   const handleLeftImageClick = () => {
-    navigate("homePucePerro");
+    setUniversidad("PUCE"); // Almacenar "PUCE" cuando se haga clic en la imagen de la izquierda
+    navigate("homePucePerro", { state: { universidad: "PUCE" } }); // Pasar la variable a la siguiente página
   };
 
   const handleRightImageClick = () => {
-    navigate("formCarreraIs");
+    setUniversidad("ISTEC"); // Almacenar "ISTEC" cuando se haga clic en la imagen de la derecha
+    navigate("formCarreraIs", { state: { universidad: "ISTEC" } }); // Pasar la variable a la siguiente página
   };
+
   return (
     <>
-      {/* <Carrousel /> */}
-
       {mostrarBienvenido ? (
         <BienvenidoHome />
       ) : (
         <div className="container1">
           <div className="image-group1">
             <img
-              src={puce}
+              src={PUCE}
               alt="Imagen Izquierda"
               className="side-image1"
               onClick={handleLeftImageClick}
             />
             <img
-              src={istec}
+              src={ISTEC}
               alt="Imagen Derecha"
               className="side-image1"
               onClick={handleRightImageClick}
