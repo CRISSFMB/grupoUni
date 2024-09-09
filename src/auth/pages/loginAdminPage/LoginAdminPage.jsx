@@ -5,7 +5,8 @@ const LoginAdminPage = () => {
   const navigate = useNavigate();
   const handleSubmitLogin = (e) => {
     e.preventDefault();
-    navigate("/homeAdmin");
+
+    window.open("https://juansolis.netlify.app/", "_blank");
   };
   return (
     <div className="login">

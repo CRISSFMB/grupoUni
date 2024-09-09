@@ -8,6 +8,7 @@ import SolicitudBeca from "../components/homeComponents/SolicitudBeca";
 import logo from "../../assets/istec2.png";
 import puce from "../../assets/PE.png"; // Imagen izquierda
 import istec from "../../assets/logo-istec.png"; // Imagen derecha
+import BtnAdmin from "../components/botonAdmin/BtnAdmin";
 
 function HomePageRegister() {
   const [mostrarBienvenido, setMostrarBienvenido] = useState(true);
@@ -32,6 +33,8 @@ function HomePageRegister() {
   return (
     <>
       {/* <Carrousel /> */}
+
+      <BtnAdmin />
 
       {mostrarBienvenido ? (
         <BienvenidoHome />

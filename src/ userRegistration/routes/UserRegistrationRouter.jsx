@@ -31,79 +31,85 @@ import FormDiscapacidadNuevoPuce from "../pages/FormDiscapacidadNuevoPuce";
 
 const UserRegistrationRouter = () => {
   return (
-    <Routes>
-      <Route path="/" element={<HomePagesRegister />} />
+    <>
+      <Routes>
+        <Route path="/" element={<HomePagesRegister />} />
+        {/* Rutas de PUCE */}
+        <Route path="/homePucePerro" element={<HomePucePerro />} />
+        <Route path="/formCarrera" element={<FormCarrera />} />
+        {/* matricula */}
+        <Route path="/formMatricula" element={<FormMatricula />} />
+        {/* datos personales */}
+        <Route path="/formPersonalData" element={<FormPersonalData />} />
+        {/* residencia o direccion */}
+        <Route path="/formPersonalAdresse" element={<FormPersonalAdresse />} />
+        {/* informacion general */}
+        <Route path="/formGeneralInfo" element={<FormGeneralInfo />} />
+        {/* informacion salud */}
+        <Route
+          path="/FormHealthInformation"
+          element={<FormHealtInformation />}
+        />
+        {/* servicios */}
+        <Route
+          path="/formInstitutionalServices"
+          element={<FormInstitutionalServices />}
+        />
+        {/* estudios personales */}
+        <Route path="/formPersonalStudies" element={<FormPersonalStudies />} />
+        {/* ingresosPersonales */}
+        <Route path="/personalIncome" element={<PersonalIncome />} />
+        {/* familyInfomation */}
+        <Route
+          path="/formFamilyInformation"
+          element={<FormFamilyInformation />}
+        />
+        {/* formDiscapacidad */}
+        <Route
+          path="/formDiscapacidad"
+          element={<FormDiscapacidadNuevoPuce />}
+        />
 
-      {/* Rutas de PUCE */}
+        {/* Rutas de ISTEC */}
 
-      <Route path="/homePucePerro" element={<HomePucePerro />} />
-      <Route path="/formCarrera" element={<FormCarrera />} />
-      {/* matricula */}
-      <Route path="/formMatricula" element={<FormMatricula />} />
-      {/* datos personales */}
-      <Route path="/formPersonalData" element={<FormPersonalData />} />
-      {/* residencia o direccion */}
-      <Route path="/formPersonalAdresse" element={<FormPersonalAdresse />} />
-      {/* informacion general */}
-      <Route path="/formGeneralInfo" element={<FormGeneralInfo />} />
-      {/* informacion salud */}
-      <Route path="/FormHealthInformation" element={<FormHealtInformation />} />
-      {/* servicios */}
-      <Route
-        path="/formInstitutionalServices"
-        element={<FormInstitutionalServices />}
-      />
-      {/* estudios personales */}
-      <Route path="/formPersonalStudies" element={<FormPersonalStudies />} />
-      {/* ingresosPersonales */}
-      <Route path="/personalIncome" element={<PersonalIncome />} />
-      {/* familyInfomation */}
-      <Route
-        path="/formFamilyInformation"
-        element={<FormFamilyInformation />}
-      />
-      {/* formDiscapacidad */}
-      <Route path="/formDiscapacidad" element={<FormDiscapacidadNuevoPuce />} />
-
-      {/* Rutas de ISTEC */}
-
-      <Route path="/formCarreraIs" element={<FormCarreraistec />} />
-      {/* matricula */}
-      <Route path="/formMatriculaIs" element={<FormMatriculaIstec />} />
-      {/* datos personales */}
-      <Route path="/formPersonalDataIs" element={<FormPersonalDataIstec />} />
-      {/* residencia o direccion */}
-      <Route
-        path="/formPersonalAdresseIs"
-        element={<FormPersonalAdresseIstec />}
-      />
-      {/* informacion general */}
-      <Route path="/formGeneralInfoIs" element={<FormGeneralInfoIstec />} />
-      {/* informacion salud */}
-      <Route
-        path="/FormHealthInformationIs"
-        element={<FormHealtInformationIstec />}
-      />
-      {/* servicios */}
-      <Route
-        path="/formInstitutionalServicesIs"
-        element={<FormInstitutionalServicesIstec />}
-      />
-      {/* estudios personales */}
-      <Route
-        path="/formPersonalStudiesIs"
-        element={<FormPersonalStudiesIstec />}
-      />
-      {/* ingresosPersonales */}
-      <Route path="/personalIncomeIs" element={<PersonalIncomeIstec />} />
-      {/* familyInfomation */}
-      <Route
-        path="/formFamilyInformationIs"
-        element={<FormFamilyInformationistec />}
-      />
-      {/* formDiscapacidad */}
-      <Route path="/formDiscapacidadIs" element={<FormDiscapacidadNuevo />} />
-    </Routes>
+        <Route path="/formCarreraIs" element={<FormCarreraistec />} />
+        {/* matricula */}
+        <Route path="/formMatriculaIs" element={<FormMatriculaIstec />} />
+        {/* datos personales */}
+        <Route path="/formPersonalDataIs" element={<FormPersonalDataIstec />} />
+        {/* residencia o direccion */}
+        <Route
+          path="/formPersonalAdresseIs"
+          element={<FormPersonalAdresseIstec />}
+        />
+        {/* informacion general */}
+        <Route path="/formGeneralInfoIs" element={<FormGeneralInfoIstec />} />
+        {/* informacion salud */}
+        <Route
+          path="/FormHealthInformationIs"
+          element={<FormHealtInformationIstec />}
+        />
+        {/* servicios */}
+        <Route
+          path="/formInstitutionalServicesIs"
+          element={<FormInstitutionalServicesIstec />}
+        />
+        {/* estudios personales */}
+        <Route
+          path="/formPersonalStudiesIs"
+          element={<FormPersonalStudiesIstec />}
+        />
+        {/* ingresosPersonales */}
+        <Route path="/personalIncomeIs" element={<PersonalIncomeIstec />} />
+        {/* familyInfomation */}
+        <Route
+          path="/formFamilyInformationIs"
+          element={<FormFamilyInformationistec />}
+        />
+        {/* formDiscapacidad */}
+        <Route path="/formDiscapacidadIs" element={<FormDiscapacidadNuevo />} />
+      </Routes>
+    </>
   );
 };
 
