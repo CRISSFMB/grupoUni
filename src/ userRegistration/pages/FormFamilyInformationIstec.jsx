@@ -87,12 +87,7 @@ function FormFamilyInformationistec() {
   };
 
   return (
-<<<<<<< HEAD
     <div className="container">
-=======
-
-    <div className="form-row-istec ">
->>>>>>> e2a9dc774e0c75c48be89046bda382898c46bb7b
       <img src={logo} alt="Logo ISTEC" className="logo" /> {/* Añadir logo */}
       <h1 className="text-xl font-semibold mt-6">Informacion Familiar</h1>
       {errorMessage && <div className="error-message">{errorMessage}</div>}
@@ -216,13 +211,8 @@ function FormFamilyInformationistec() {
               id="nivel_formacion_padre"
               name="nivel_formacion_padre"
               value={formData.nivel_formacion_padre}
-<<<<<<< HEAD
               onChange={handleChange}
             >
-=======
-               className="long-select"
-              onChange={handleChange}>
->>>>>>> e2a9dc774e0c75c48be89046bda382898c46bb7b
               <option value="">Seleccione una Opción</option>
               <option value="Estudio Basico">Estudio Básico</option>
               <option value="Estudio Basico Incompleto">
@@ -250,7 +240,6 @@ function FormFamilyInformationistec() {
               value={formData.miembros_hogar}
               onChange={handleChange}
               placeholder="1"
-               
             />
           </div>
 
@@ -262,13 +251,8 @@ function FormFamilyInformationistec() {
               id="nivel_formacion_madre"
               name="nivel_formacion_madre"
               value={formData.nivel_formacion_madre}
-<<<<<<< HEAD
               onChange={handleChange}
             >
-=======
-               className="long-select"
-              onChange={handleChange}>
->>>>>>> e2a9dc774e0c75c48be89046bda382898c46bb7b
               <option value="">Seleccione una Opción</option>
               <option value="Estudio Basico">Estudio Básico</option>
               <option value="Estudio Basico Incompleto">
@@ -307,13 +291,8 @@ function FormFamilyInformationistec() {
               id="Padre_o_Madre_soltera"
               name="Padre_o_Madre_soltera"
               value={formData.Padre_o_Madre_soltera}
-<<<<<<< HEAD
               onChange={handleChange}
             >
-=======
-               className="long-select"
-              onChange={handleChange}>
->>>>>>> e2a9dc774e0c75c48be89046bda382898c46bb7b
               <option value="">Seleccione una Opción</option>
               <option value="si">Sí</option>
               <option value="no">No</option>

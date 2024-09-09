@@ -90,12 +90,7 @@ function FormHealtInformationIstec() {
   };
 
   return (
-<<<<<<< HEAD
     <div className="container">
-=======
-  
-    <div className="form-row-istec ">
->>>>>>> e2a9dc774e0c75c48be89046bda382898c46bb7b
       <img src={logo} alt="logo Puce" className="logo" />
       <h1>Información Salud:</h1>
 

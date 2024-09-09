@@ -86,7 +86,6 @@ const FormGeneralInfoIstec = () => {
     navigate("/FormHealthInformationIs");
   };
   return (
-<<<<<<< HEAD
     <div className="container">
       <img src={log} alt="Logo ISTEC" className="log" /> {/* Logo */}
       <h1 className="text-xl font-semibold mt-6">Información General:</h1>
@@ -165,40 +164,6 @@ const FormGeneralInfoIstec = () => {
           <button type="submit">Guardar</button>
         </div>
       </form>
-=======
-    <div className="form-row-istec ">
-  <img src={log} alt="Logo ISTEC" className="logo" /> {/* Logo */}
-  
-  <h1 className="text-xl font-semibold mt-6">Información General:</h1>
-  <h3>En caso de no estar trabajando, deje estos campos o secciones en blanco.</h3>
-  
-  {errorMessage && <div className="error-message">{errorMessage}</div>}
-
-  <form onSubmit={handleSubmit} className="formulario">
-    {/* Primera fila */}
-    <div className="form-row">
-      <div className="form-group left-group">
-        <label htmlFor="lugar_trabajo">Lugar de trabajo:</label>
-        <input
-          type="text"
-          id="lugar_trabajo"
-          name="lugar_trabajo"
-          value={formData.lugar_trabajo}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="form-group right-group">
-        <label htmlFor="origen_recursos">Origen de Recursos:</label>
-        <input
-          type="text"
-          id="origen_recursos"
-          name="origen_recursos"
-          value={formData.origen_recursos}
-          onChange={handleChange}
-          placeholder="¡Obligatorio!"
-        />
-      </div>
->>>>>>> e2a9dc774e0c75c48be89046bda382898c46bb7b
     </div>
   );
 };
