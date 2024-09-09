@@ -75,15 +75,19 @@ function FormCarreraistec() {
   };
 
   return (
-    <div className="container">
+    <div className="form-row-istec container" >
       {/* Muestra el logo en el formulario */}
-      <img src={logo} alt="Logo PUCE" className="log" />
+      <img src={logo} alt="Logo PUCE" className="logo" />
       <h1>Carrera:</h1>
 
       {/* Formulario para la selección de carrera */}
 
       <form onSubmit={handleSubmit} className="formulario1">
+<<<<<<< HEAD
         <div className="form-row">
+=======
+       <div className="form-row">
+>>>>>>> e2a9dc774e0c75c48be89046bda382898c46bb7b
           <label htmlFor="carrera">Carrera a Seguir:</label>
           <select
             id="carrera"
