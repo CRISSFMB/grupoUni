@@ -1,10 +1,11 @@
 import { Navigate, useNavigate } from "react-router-dom";
+import "../css/LoginAdmin.css";
 
 const LoginAdminPage = () => {
   const navigate = useNavigate();
   const handleSubmitLogin = (e) => {
     e.preventDefault();
-    navigate("HomeAdmin");
+    navigate("/homeAdmin");
   };
   return (
     <div className="login">

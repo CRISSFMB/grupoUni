@@ -9,10 +9,10 @@ const SolicitudBeca = () => {
   const navigate = useNavigate();
 
   const handleRightImageClick = () => {
-    navigate("formCarrera");
+    navigate("/formCarrera");
   };
   const handleLeftImageClick = () => {
-    navigate("formCarrera");
+    navigate("/formCarrera");
   };
 
   return (
@@ -20,7 +20,7 @@ const SolicitudBeca = () => {
       <div className="button-container">
         <Button onClick={handleLeftImageClick}>SI</Button>
         <Button onClick={handleLeftImageClick}>NO</Button>
-    </div>
+      </div>
       <div className="SolicitudBeca"></div>;
     </>
   );

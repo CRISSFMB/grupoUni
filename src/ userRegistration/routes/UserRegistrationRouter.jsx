@@ -27,6 +27,7 @@ import FormPersonalStudiesIstec from "../pages/FormPersonalStudiesIstec";
 import PersonalIncomeIstec from "../pages/PersonalIncomeIstec";
 import FormFamilyInformationistec from "../pages/FormFamilyInformationIstec";
 import FormDiscapacidadNuevo from "../pages/FormDiscapacidadNuevo";
+import FormDiscapacidadNuevoPuce from "../pages/FormDiscapacidadNuevoPuce";
 
 const UserRegistrationRouter = () => {
   return (
@@ -38,73 +39,31 @@ const UserRegistrationRouter = () => {
       <Route path="/homePucePerro" element={<HomePucePerro />} />
       <Route path="/formCarrera" element={<FormCarrera />} />
       {/* matricula */}
-      <Route
-        path="/formMatricula"
-        element={<FormMatricula />}
-      />
+      <Route path="/formMatricula" element={<FormMatricula />} />
       {/* datos personales */}
-      <Route
-        path="/formPersonalData"
-        element={<FormPersonalData />}
-      />
+      <Route path="/formPersonalData" element={<FormPersonalData />} />
       {/* residencia o direccion */}
       <Route path="/formPersonalAdresse" element={<FormPersonalAdresse />} />
       {/* informacion general */}
       <Route path="/formGeneralInfo" element={<FormGeneralInfo />} />
       {/* informacion salud */}
-      <Route
-        path="/FormHealthInformation"
-        element={<FormHealtInformation />}
-      />
+      <Route path="/FormHealthInformation" element={<FormHealtInformation />} />
       {/* servicios */}
       <Route
         path="/formInstitutionalServices"
         element={<FormInstitutionalServices />}
       />
       {/* estudios personales */}
-      <Route
-        path="/formPersonalStudies"
-        element={<FormPersonalStudies />}
-      />
+      <Route path="/formPersonalStudies" element={<FormPersonalStudies />} />
       {/* ingresosPersonales */}
-      <Route
-        path="/personalIncome"
-        element={<PersonalIncome />}
-      />
+      <Route path="/personalIncome" element={<PersonalIncome />} />
       {/* familyInfomation */}
       <Route
         path="/formFamilyInformation"
         element={<FormFamilyInformation />}
       />
       {/* formDiscapacidad */}
-      <Route
-        path="/formDiscapacidad"
-        element={<FormDiscapacidad />}
-      />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <Route path="/formDiscapacidad" element={<FormDiscapacidadNuevoPuce />} />
 
       {/* Rutas de ISTEC */}
 
