@@ -1,16 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navbar from '../Nav/Navbar';
-
-
+import React from "react";
+import Navbar from "../Nav/Navbar";
 
 function Bienestar() {
-   
-    return (
-        <div>
-            Bienestar
-        </div>
-    );
+  return <div>Bienestar</div>;
 }
 
 export default Bienestar;

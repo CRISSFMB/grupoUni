@@ -1,9 +1,0 @@
-/* Puce.css */
-.container {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    height: 100vh; /* Usa el 100% del alto de la ventana del navegador */
-    
-  }
-  

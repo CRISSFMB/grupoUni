@@ -5,10 +5,6 @@ import { Link } from "react-router-dom";
 const HomeAdmin = () => {
   return (
     <>
-      <header>
-        <h1>Admin</h1>
-      </header>
-
       <nav className="navegacion">
         <ul>
           <li>
