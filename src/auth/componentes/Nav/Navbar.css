@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    color: #ccc; /* Color gris claro */
+    padding: 10px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.navegacion {
+    position: fixed;
+    left: 0;
+    width: 220px;
+    background-color:transparent; /* Fondo semitransparente */
+    color: #ccc; /* Color gris claro para el texto */
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease;
+}
+
+.navegacion ul {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navegacion ul li {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.navegacion ul li a {
+    color: #ccc; /* Color gris claro */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    transition: color 0.3s ease;
+    padding: 10px 0;
+}
+
+.navegacion ul li a:hover {
+    color: #ffffff; /* Blanco al pasar el mouse */
+}
+
+.navegacion ul li a::after {
+    content: ""; 
+    display: block;
+    width: 0; 
+    height: 2px; 
+    background: #ffffff; /* Línea blanca */
+    transition: width 0.3s ease; 
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navegacion ul li a:hover::after {
+    width: 100%;
+}
+
+.content {
+    margin-left: 240px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    color: white; /* Para que el texto sea visible con el fondo */
+}
+
+@media (max-width: 768px) {
+    .navegacion {
+        width: 180px; 
+        padding: 15px;
+    }
+
+    .navegacion ul li {
+        margin-bottom: 30px; 
+    }
+
+    .navegacion ul li a {
+        font-size: 16px; 
+    }
+
+    .content {
+        margin-left: 200px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .navegacion {
+        width: 100%; 
+        height: auto; 
+        position: relative; 
+        padding: 10px;
+        box-shadow: none; 
+    }
+
+    .navegacion ul {
+        flex-direction: row; 
+        justify-content: space-around; 
+    }
+
+    .navegacion ul li {
+        margin-bottom: 0; 
+        margin-right: 15px; 
+    }
+
+    .navegacion ul li a {
+        font-size: 14px; 
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}

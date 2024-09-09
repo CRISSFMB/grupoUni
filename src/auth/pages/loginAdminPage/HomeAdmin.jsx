@@ -1,12 +1,28 @@
 import React from "react";
+import "./HomeAdmin.css";
+import { Link } from "react-router-dom";
 
 const HomeAdmin = () => {
   return (
-    <div>
-      <h1>HOMEADMIN</h1>
+    <>
+      <header>
+        <h1>Admin</h1>
+      </header>
 
-      <hr />
-    </div>
+      <nav className="navegacion">
+        <ul>
+          <li>
+            <Link to="/istec">Istec</Link>
+          </li>
+          <li>
+            <Link to="/puce">Puce</Link>
+          </li>
+          <li>
+            <Link to="/bienestar">Bienestar</Link>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 };
 

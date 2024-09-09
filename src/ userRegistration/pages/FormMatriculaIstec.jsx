@@ -90,7 +90,7 @@ function FormMatriculaIstec() {
     //   }
     // }
 
-    navigate("formPersonalDataIs");
+    navigate("/formPersonalDataIs");
 
     console.log(formData);
   };
@@ -182,12 +182,8 @@ function FormMatriculaIstec() {
           <button type="submit">Guardar</button>
         </div>
       </form>
-
     </div>
-
-
   );
-  
 }
 
 export default FormMatriculaIstec;
