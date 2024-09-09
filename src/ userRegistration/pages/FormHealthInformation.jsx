@@ -87,7 +87,7 @@ function FormHealtInformation() {
     //   }
     // }
 
-    navigate("formInstitutionalServices");
+    navigate("/formInstitutionalServices");
   };
 
   return (

@@ -63,7 +63,7 @@ function FormCarrera() {
     // if (validateForm()) {
     //   console.log("Datos del formulario:", formData);
     //   setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
-    navigate("formMatricula");
+    navigate("/formMatricula"); //Siempre tiene que haber un /
     //   console.log(formData);
     // }
 

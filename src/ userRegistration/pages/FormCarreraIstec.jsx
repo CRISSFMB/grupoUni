@@ -75,7 +75,7 @@ function FormCarreraistec() {
   };
 
   return (
-    <div className="form-row-istec container">
+    <div className=" container">
       {/* Muestra el logo en el formulario */}
       <img src={logo} alt="Logo PUCE" className="logo" />
       <h1>Carrera:</h1>

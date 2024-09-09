@@ -23,11 +23,11 @@ function HomePageRegister() {
   const navigate = useNavigate();
 
   const handleLeftImageClick = () => {
-    navigate("homePucePerro");
+    navigate("/homePucePerro");
   };
 
   const handleRightImageClick = () => {
-    navigate("formCarreraIs");
+    navigate("/formCarreraIs");
   };
   return (
     <>

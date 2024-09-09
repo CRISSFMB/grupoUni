@@ -137,55 +137,9 @@ select option {
 }
 
 
-.mb {
-  margin-top: 19px;
-}
-
-.ml8 {
-  margin-left: -8rem;
-}
-
-
-
-.datos {
-  
-  width: 100%;
-  position: relative;
-  left: 8rem;
-}
-
-.long-select {
-  width: 385px;
-}
 
 
 
 
 
-.form-row-istec {
-  position: relative;
-  width: 140%;
 
-  
-  background-color: transparent;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    font-size: 18px;
-    background-color: rgba(255, 255, 255, 0.4); 
-   border-radius: 8px; 
-   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
-   padding: 20px; 
-   padding-top: 150px;
-
-  
-}
-
-.logo {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100%; 
-  height: auto; 
-  z-index: 1; 
-}

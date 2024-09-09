@@ -41,7 +41,7 @@ function FormInstitutionalServices() {
   //   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    navigate("formPersonalStudies");
+    navigate("/formPersonalStudies");
     //     const validationMessage = validateForm();
     //     if (validationMessage) {
     //       console.log(validationMessage);

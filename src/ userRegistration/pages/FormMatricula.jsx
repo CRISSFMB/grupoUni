@@ -90,7 +90,7 @@ function FormMatricula() {
     //   }
     // }
 
-    navigate("formPersonalData");
+    navigate("/formPersonalData");
 
     console.log(formData);
   };

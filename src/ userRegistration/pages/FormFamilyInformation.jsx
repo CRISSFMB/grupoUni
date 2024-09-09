@@ -63,7 +63,7 @@ function FormFamilyInformation() {
 
     console.log("Datos del formulario:", formData);
 
-    navigate("formDiscapacidad");
+    navigate("/formDiscapacidad");
 
     // try {
     //   const response = await fetch("http://127.0.0.1:8000/api/Familia2", {
@@ -275,7 +275,7 @@ function FormFamilyInformation() {
               id="Padre_o_Madre_soltera"
               name="Padre_o_Madre_soltera"
               value={formData.Padre_o_Madre_soltera}
-              className="long-select"
+              
               onChange={handleChange}> 
               <option value="">Seleccione una Opción   {'     '}               </option>
               <option value="si">Sí  </option>
