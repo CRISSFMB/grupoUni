@@ -1,0 +1,60 @@
+/* Estilos para LoginAdminPage con transición verde y azul */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background: linear-gradient(135deg, #004b3f, #daeaf1); /* Gradiente verde a azul */
+    color: #fff;
+    border-radius: 5%;
+    transition: background 0.5s ease-in-out; /* Transición suave */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff; /* Mantén el color del texto en blanco para contraste */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    outline: 2px solid #00aaff; /* Borde azul al enfocar */
+  }
+  
+  button[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #00aaff; /* Cambia de verde a azul al hacer hover */
+  }
+  
