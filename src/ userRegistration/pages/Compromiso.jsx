@@ -9,7 +9,7 @@ function Compromiso() {
     };
 
     return (
-        <div className="form-container">
+        <div className="container">
             {/* Sección del encabezado con imagen y resolución */}
             <div className="header">
                 <img src={logo} alt="Logo ISTEC" className="logo" /> {/* Añadir logo */}

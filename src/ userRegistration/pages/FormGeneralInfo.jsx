@@ -83,7 +83,7 @@ const FormGeneralInfo = () => {
     //   }
     // }
 
-    navigate("FormHealthInformation");
+    navigate("/FormHealthInformation");
   };
   return (
     <div className="container">
@@ -125,7 +125,7 @@ const FormGeneralInfo = () => {
           name="origen_recursos"
           value={formData.origen_recursos}
           onChange={handleChange}
-          className="long-select-recursos"
+          
           
         >
           

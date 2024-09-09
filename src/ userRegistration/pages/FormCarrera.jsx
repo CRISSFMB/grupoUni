@@ -71,8 +71,19 @@ function FormCarrera() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Navega a la siguiente página después de la selección
-    navigate("formMatricula", { state: { carrera: formData.carrera, universidad } });
+
+    // if (validateForm()) {
+    //   console.log("Datos del formulario:", formData);
+    //   setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
+    navigate("/formMatricula"); //Siempre tiene que haber un /
+    //   console.log(formData);
+    // }
+
+    // if (validateForm()) {
+    //   console.log("Datos del formulario:", formData);
+    //   setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
+    //   console.log(formData);
+    // }
   };
 
   return (

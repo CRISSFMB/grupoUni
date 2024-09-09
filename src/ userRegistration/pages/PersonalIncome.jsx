@@ -1,6 +1,6 @@
 import "../css/formGeneral.css";
 import React, { useState } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/log.png";
 import { useNavigate, useLocation } from "react-router-dom";
 
 function PersonalIncomeIstec() {
@@ -48,7 +48,7 @@ function PersonalIncomeIstec() {
     //   }
 
     console.log("Datos del formulario:", formData);
-    navigate("formFamilyInformation");
+    navigate("/formFamilyInformation");
 
     //   try {
     //     const response = await fetch(

@@ -5,17 +5,7 @@ import { Route, Routes } from "react-router-dom";
 const AuthRouters = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomeAdmin />} />
-      <Route path="/login/HomeAdmin/*" element={<HomeAdmin />} />
-
-      {/* aqui van todas las rutas de el admin */}
-      {/* aqui van todas las rutas de el admin */}
-      {/* aqui van todas las rutas de el admin */}
-      {/* aqui van todas las rutas de el admin */}
-      {/* aqui van todas las rutas de el admin */}
-      {/* aqui van todas las rutas de el admin */}
-      {/* aqui van todas las rutas de el admin */}
-      {/* aqui van todas las rutas de el admin */}
+      <Route path="/login" element={<HomeAdmin />} />
     </Routes>
   );
 };

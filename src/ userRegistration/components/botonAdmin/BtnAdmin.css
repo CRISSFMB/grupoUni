@@ -1,0 +1,9 @@
+.btnAdmin {
+  background-color: rgb(56, 239, 81);
+  padding: 20px;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

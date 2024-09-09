@@ -3,7 +3,6 @@ import logo from "../../assets/logo.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../css/formGeneral.css";
 
-
 function FormHealtInformationIstec() {
   const location = useLocation();
   const { ci } = location.state || {};
@@ -87,23 +86,26 @@ function FormHealtInformationIstec() {
     //   }
     // }
 
-    navigate("formInstitutionalServicesIs");
+    navigate("/formInstitutionalServicesIs");
   };
 
   return (
-  
     <div className="container">
       <img src={logo} alt="logo Puce" className="logo" />
       <h1>Información Salud:</h1>
 
-      <h3 className="text-xl font-semibold mt-6">Datos institucionales sobre salud:</h3>
+      <h3 className="text-xl font-semibold mt-6">
+        Datos institucionales sobre salud:
+      </h3>
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}
 
       <form onSubmit={handleSubmit} className="formulario">
         <div className="form-row">
           <div className="form-group left-group">
-            <label htmlFor="catastrofica">¿Tiene alguna enfermedad catastrófica?</label>
+            <label htmlFor="catastrofica">
+              ¿Tiene alguna enfermedad catastrófica?
+            </label>
             <select
               id="catastrofica"
               name="catastrofica"
@@ -170,7 +172,9 @@ function FormHealtInformationIstec() {
 
         <div className="form-row">
           <div className="form-group left-group">
-            <label htmlFor="enf_piel">Herpes-Enfermedades contagiosas de la piel</label>
+            <label htmlFor="enf_piel">
+              Herpes-Enfermedades contagiosas de la piel
+            </label>
             <input
               type="checkbox"
               id="enf_piel"

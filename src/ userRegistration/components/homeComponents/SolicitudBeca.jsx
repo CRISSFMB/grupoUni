@@ -38,5 +38,4 @@ const SolicitudBeca = () => {
     </>
   );
 };
-
 export default SolicitudBeca;

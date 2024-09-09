@@ -83,90 +83,88 @@ const FormGeneralInfoIstec = () => {
     //   }
     // }
 
-    navigate("FormHealthInformationIs");
+    navigate("/FormHealthInformationIs");
   };
   return (
     <div className="container">
-  <img src={log} alt="Logo ISTEC" className="log" /> {/* Logo */}
-  
-  <h1 className="text-xl font-semibold mt-6">Información General:</h1>
-  <h3>En caso de no estar trabajando, deje estos campos o secciones en blanco.</h3>
-  
-  {errorMessage && <div className="error-message">{errorMessage}</div>}
+      <img src={log} alt="Logo ISTEC" className="log" /> {/* Logo */}
+      <h1 className="text-xl font-semibold mt-6">Información General:</h1>
+      <h3>
+        En caso de no estar trabajando, deje estos campos o secciones en blanco.
+      </h3>
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
+      <form onSubmit={handleSubmit} className="formulario">
+        {/* Primera fila */}
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="lugar_trabajo">Lugar de trabajo:</label>
+            <input
+              type="text"
+              id="lugar_trabajo"
+              name="lugar_trabajo"
+              value={formData.lugar_trabajo}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group right-group">
+            <label htmlFor="origen_recursos">Origen de Recursos:</label>
+            <input
+              type="text"
+              id="origen_recursos"
+              name="origen_recursos"
+              value={formData.origen_recursos}
+              onChange={handleChange}
+              placeholder="¡Obligatorio!"
+            />
+          </div>
+        </div>
 
-  <form onSubmit={handleSubmit} className="formulario">
-    {/* Primera fila */}
-    <div className="form-row">
-      <div className="form-group left-group">
-        <label htmlFor="lugar_trabajo">Lugar de trabajo:</label>
-        <input
-          type="text"
-          id="lugar_trabajo"
-          name="lugar_trabajo"
-          value={formData.lugar_trabajo}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="form-group right-group">
-        <label htmlFor="origen_recursos">Origen de Recursos:</label>
-        <input
-          type="text"
-          id="origen_recursos"
-          name="origen_recursos"
-          value={formData.origen_recursos}
-          onChange={handleChange}
-          placeholder="¡Obligatorio!"
-        />
-      </div>
+        {/* Segunda fila */}
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="ocupacion">Ocupación:</label>
+            <input
+              type="text"
+              id="ocupacion"
+              name="ocupacion"
+              value={formData.ocupacion}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group right-group">
+            <label htmlFor="cargo">Cargo:</label>
+            <input
+              type="text"
+              id="cargo"
+              name="cargo"
+              value={formData.cargo}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+
+        {/* Tercera fila */}
+        <div className="form-row">
+          <div className="form-group left-group">
+            <label htmlFor="telefono_trabajo">Teléfono de Trabajo:</label>
+            <input
+              type="text"
+              id="telefono_trabajo"
+              name="telefono_trabajo"
+              value={formData.telefono_trabajo}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group right-group">
+            {/* Espacio vacío en la segunda columna */}
+          </div>
+        </div>
+
+        <div className="button-group">
+          <button type="submit">Guardar</button>
+        </div>
+      </form>
     </div>
-
-    {/* Segunda fila */}
-    <div className="form-row">
-      <div className="form-group left-group">
-        <label htmlFor="ocupacion">Ocupación:</label>
-        <input
-          type="text"
-          id="ocupacion"
-          name="ocupacion"
-          value={formData.ocupacion}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="form-group right-group">
-        <label htmlFor="cargo">Cargo:</label>
-        <input
-          type="text"
-          id="cargo"
-          name="cargo"
-          value={formData.cargo}
-          onChange={handleChange}
-        />
-      </div>
-    </div>
-
-    {/* Tercera fila */}
-    <div className="form-row">
-      <div className="form-group left-group">
-        <label htmlFor="telefono_trabajo">Teléfono de Trabajo:</label>
-        <input
-          type="text"
-          id="telefono_trabajo"
-          name="telefono_trabajo"
-          value={formData.telefono_trabajo}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="form-group right-group">
-        {/* Espacio vacío en la segunda columna */}
-      </div>
-    </div>  
-
-    <div className="button-group">
-      <button type="submit">Guardar</button>
-    </div>
-  </form>
-</div>
-
   );
 };
 

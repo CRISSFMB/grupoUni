@@ -90,16 +90,16 @@ function FormMatriculaIstec() {
     //   }
     // }
 
-    navigate("formPersonalDataIs");
+    navigate("/formPersonalDataIs");
 
     console.log(formData);
   };
 
   return (
-    <div className="container">
+    <div className=" container ">
       <img src={logo} alt="Logo ISTEC" className="logo" />
       <h1>SOLICITUD DE MATRÍCULA</h1>
-      <h2 className="text-xl font-semibold mt-6">Datosnales:</h2>
+      <h2 className="text-xl font-semibold mt-6">Datos Personales:</h2>
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}
 
@@ -182,12 +182,8 @@ function FormMatriculaIstec() {
           <button type="submit">Guardar</button>
         </div>
       </form>
-
     </div>
-
-
   );
-  
 }
 
 export default FormMatriculaIstec;

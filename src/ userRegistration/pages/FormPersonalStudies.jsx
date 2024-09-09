@@ -83,7 +83,7 @@ function FormPersonalStudies() {
     //     );
     //   }
     // }
-    navigate("personalIncome");
+    navigate("/personalIncome");
   };
 
   return (
@@ -95,7 +95,7 @@ function FormPersonalStudies() {
 
   <form onSubmit={handleSubmit} className="datos formulario">
     <div className="form-row">
-      <div className="ml8 form-group">
+      <div className=" form-group">
         <label htmlFor="pueblo_nacionalidad">Pueblo Nacionalidad:</label>
         <input
           type="text"
@@ -114,7 +114,7 @@ function FormPersonalStudies() {
           name="etnia"
           value={formData.etnia}
           onChange={handleChange}
-           className="long-select"
+           
         >
           <option value="">Seleccione una Opción</option>
           <option value="indigena">Indigena</option>
@@ -127,7 +127,7 @@ function FormPersonalStudies() {
     </div>
 
     <div className="form-row">
-      <div className="ml8 form-group">
+      <div className=" form-group">
         <label htmlFor="canton_nacimiento">Cantón Nacimiento:</label>
         <input
           type="text"
@@ -145,7 +145,7 @@ function FormPersonalStudies() {
           name="sexo"
           value={formData.sexo}
           onChange={handleChange}
-           className="long-select"
+         
           
         >
           <option value="">Seleccione una Opción</option>
@@ -156,7 +156,7 @@ function FormPersonalStudies() {
     </div>
 
     <div className="form-row">
-      <div className="ml8 form-group">
+      <div className=" form-group">
         <label htmlFor="nacionalidad">Nacionalidad:</label>
         <input
           type="text"
@@ -174,7 +174,7 @@ function FormPersonalStudies() {
           name="estado_civil"
           value={formData.estado_civil}
           onChange={handleChange}
-          className="long-select"
+        
         >
           <option value="">Seleccione una Opción</option>
           <option value="soltero">Soltero/a</option>
@@ -187,7 +187,7 @@ function FormPersonalStudies() {
     </div>
 
     <div className="form-row">
-      <div className="ml8 form-group">
+      <div className=" form-group">
         <label htmlFor="provincia_nacimiento">Provincia Nacimiento:</label>
         <input
           type="text"
