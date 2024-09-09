@@ -21,6 +21,7 @@ const LoginAdminPage = () => {
     window.open("https://juansolis.netlify.app/", "_blank");
   };
 
+  // asd
   return (
     <div className="login">
       <h1>ISTECADMIN</h1>
