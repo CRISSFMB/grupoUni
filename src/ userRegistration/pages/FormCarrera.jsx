@@ -9,51 +9,25 @@ function FormCarrera() {
   const { eleccionquintil, universidad } = location.state || {};
   console.log("Universidad:", universidad);
   console.log("Eleccion del quintil:", eleccionquintil);
-  
+
   const [dataCarrera, setDataCarrera] = useState([]);
 
-  const getDataCarrera = () => {
-    if (!universidad) return; // Evita la petición si no hay universidad
-
-    // Reemplazar la universidad en la URL
+  const getDataCarrera = async () => {
     const url = `http://127.0.0.1:8000/api/MostrarMalla/${universidad}`;
-    
-    fetch(url , {
-      method: 'GET',
+
+    const response = await axios.get(url, {
       headers: {
-        'Content-Type': 'application/json',
-      }
-    })
-      .then((response) => {
-        // Verificar si la respuesta es exitosa
-        if (!response.ok) {
-          throw new Error(`Error en la respuesta: ${response.status} ${response.statusText}`);
-        }
-        return response.json(); // Parsear la respuesta como JSON
-      })
-      .then((data) => {
-        // Asegurarse de que data sea un array antes de mapear
-        if (!Array.isArray(data)) {
-          throw new Error('La respuesta no es un array.');
-        }
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
 
-        const carrerasDataApi = data.map((carrera) => ({
-          id_malla: carrera.id_malla,
-          mallacurricular: carrera.mallacurricular,
-          nombrecarrera: carrera.nombrecarrera,
-          universidad: carrera.universidad,
-        }));
-
-        setDataCarrera(carrerasDataApi);
-      })
-      .catch((error) => {
-        console.log("Error al obtener los datos:", error.message);
-      });
+    console.log(response);
   };
 
   useEffect(() => {
-    getDataCarrera(); // Llama a la función cuando se monta el componente
-  }, [universidad]); // Escucha los cambios en la variable universidad
+    getDataCarrera();
+  }, [universidad]);
 
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
