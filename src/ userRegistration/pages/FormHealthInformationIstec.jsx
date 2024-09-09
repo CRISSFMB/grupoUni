@@ -92,7 +92,7 @@ function FormHealtInformationIstec() {
 
   return (
   
-    <div className="container">
+    <div className="form-row-istec ">
       <img src={logo} alt="logo Puce" className="logo" />
       <h1>Información Salud:</h1>
 

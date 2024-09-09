@@ -87,8 +87,8 @@ function FormPersonalStudiesIstec() {
   };
 
   return (
-    <div className="container">
-  <img src={logo} alt="Logo ISTEC" className="log" />
+    <div className="form-row-istec ">
+  <img src={logo} alt="Logo ISTEC" className="logo" />
   <h1 className="text-xl font-semibold mt-6">Datos Personales:</h1>
 
   {errorMessage && <div className="error-message">{errorMessage}</div>}
@@ -104,6 +104,7 @@ function FormPersonalStudiesIstec() {
           value={formData.pueblo_nacionalidad}
           onChange={handleChange}
           placeholder="Opcional"
+          
         />
       </div>
 
@@ -114,6 +115,7 @@ function FormPersonalStudiesIstec() {
           name="etnia"
           value={formData.etnia}
           onChange={handleChange}
+           className="long-select"
         >
           <option value="">Seleccione una Opción</option>
           <option value="indigena">Indigena</option>
@@ -144,6 +146,7 @@ function FormPersonalStudiesIstec() {
           name="sexo"
           value={formData.sexo}
           onChange={handleChange}
+           className="long-select"
         >
           <option value="">Seleccione</option>
           <option value="masculino">Masculino</option>
@@ -171,6 +174,7 @@ function FormPersonalStudiesIstec() {
           name="estado_civil"
           value={formData.estado_civil}
           onChange={handleChange}
+           className="long-select"
         >
           <option value="">Seleccione</option>
           <option value="soltero">Soltero/a</option>

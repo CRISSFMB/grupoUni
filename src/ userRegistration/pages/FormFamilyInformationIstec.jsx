@@ -88,7 +88,7 @@ function FormFamilyInformationistec() {
 
   return (
 
-    <div className="container">
+    <div className="form-row-istec ">
       <img src={logo} alt="Logo ISTEC" className="logo" /> {/* Añadir logo */}
       <h1 className="text-xl font-semibold mt-6">Informacion Familiar</h1>
       {errorMessage && <div className="error-message">{errorMessage}</div>}
@@ -210,6 +210,7 @@ function FormFamilyInformationistec() {
               id="nivel_formacion_padre"
               name="nivel_formacion_padre"
               value={formData.nivel_formacion_padre}
+               className="long-select"
               onChange={handleChange}>
               <option value="">Seleccione una Opción</option>
               <option value="Estudio Basico">Estudio Básico</option>
@@ -232,6 +233,7 @@ function FormFamilyInformationistec() {
               value={formData.miembros_hogar}
               onChange={handleChange}
               placeholder="1"
+               
             />
           </div>
 
@@ -241,6 +243,7 @@ function FormFamilyInformationistec() {
               id="nivel_formacion_madre"
               name="nivel_formacion_madre"
               value={formData.nivel_formacion_madre}
+               className="long-select"
               onChange={handleChange}>
               <option value="">Seleccione una Opción</option>
               <option value="Estudio Basico">Estudio Básico</option>
@@ -272,6 +275,7 @@ function FormFamilyInformationistec() {
               id="Padre_o_Madre_soltera"
               name="Padre_o_Madre_soltera"
               value={formData.Padre_o_Madre_soltera}
+               className="long-select"
               onChange={handleChange}>
               <option value="">Seleccione una Opción</option>
               <option value="si">Sí</option>

@@ -1,6 +1,6 @@
 import "../css/formGeneral.css";
 import React, { useState } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/log.png";
 import { useNavigate, useLocation } from "react-router-dom";
 
 function PersonalIncomeIstec() {

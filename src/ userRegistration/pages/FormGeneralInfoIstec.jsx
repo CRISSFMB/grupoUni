@@ -86,8 +86,8 @@ const FormGeneralInfoIstec = () => {
     navigate("FormHealthInformationIs");
   };
   return (
-    <div className="container">
-  <img src={log} alt="Logo ISTEC" className="log" /> {/* Logo */}
+    <div className="form-row-istec ">
+  <img src={log} alt="Logo ISTEC" className="logo" /> {/* Logo */}
   
   <h1 className="text-xl font-semibold mt-6">Información General:</h1>
   <h3>En caso de no estar trabajando, deje estos campos o secciones en blanco.</h3>

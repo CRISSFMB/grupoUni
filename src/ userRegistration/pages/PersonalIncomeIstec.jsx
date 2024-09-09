@@ -75,8 +75,8 @@ function PersonalIncomeIstec() {
   };
 
   return (
-    <div className="container">
-      <img src={logo} alt="Logo ISTEC" className="log" />
+    <div className=" form-row-istec ">
+      <img src={logo} alt="Logo ISTEC" className="logo" />
       <h1 className="text-xl font-semibold mt-6">Ingresos Personales</h1>
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}

@@ -284,7 +284,7 @@ function FormInstitutionalServicesIstec() {
   //       </div>
   //     </form>
   //   </div>
-  <div className="container">
+  <div className="form-row-istec container">
   <img src={logo} alt="Logo ISTEC" className="logo" />
   <h1 className="text-xl font-semibold mt-6">
     Datos institucionales sobre los servicios:
@@ -392,7 +392,7 @@ function FormInstitutionalServicesIstec() {
 };
 
 return (
-<div className="container">
+<div className="form-row-istec ">
 <img src={logo} alt="Logo ISTEC" className="logo" />
 <h1 className="text-xl font-semibold mt-6">
   Datos institucionales sobre los servicios:
