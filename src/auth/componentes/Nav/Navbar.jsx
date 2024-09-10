@@ -8,13 +8,16 @@ function Navbar() {
       <nav className="navegacion">
         <ul>
           <li>
-            <Link to="/istec">Istec</Link>
+            <Link to="/login/HomeAdmin">Inicio</Link>
           </li>
           <li>
-            <Link to="/puce">Puce</Link>
+            <Link to="/login/HomeAdmin/istec">Istec</Link>
           </li>
           <li>
-            <Link to="/bienestar">Bienestar</Link>
+            <Link to="/login/HomeAdmin/puce">Puce</Link>
+          </li>
+          <li>
+            <Link to="/login/HomeAdmin/bienestar">Bienestar</Link>
           </li>
         </ul>
       </nav>
