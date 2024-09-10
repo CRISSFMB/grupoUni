@@ -90,13 +90,11 @@ function FormHealtInformationIstec() {
   };
 
   return (
-    <div className="container">
+    <div className="container2">
       <img src={logo} alt="logo Puce" className="logo" />
       <h1>Información Salud:</h1>
 
-      <h3 className="text-xl font-semibold mt-6">
-        Datos institucionales sobre salud:
-      </h3>
+      <p className="">Datos institucionales sobre salud:</p>
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}
 

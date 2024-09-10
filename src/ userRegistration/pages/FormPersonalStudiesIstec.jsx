@@ -87,7 +87,7 @@ function FormPersonalStudiesIstec() {
   };
 
   return (
-    <div className="container">
+    <div className="container2">
       <img src={logo} alt="Logo ISTEC" className="log" />
       <h1 className="text-xl font-semibold mt-6">Datos Personales:</h1>
 

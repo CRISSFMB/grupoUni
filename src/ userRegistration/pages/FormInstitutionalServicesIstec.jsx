@@ -284,12 +284,10 @@ function FormInstitutionalServicesIstec() {
       //       </div>
       //     </form>
       //   </div>
-      <div className="container">
+      <div className="container2">
         <img src={logo} alt="Logo ISTEC" className="logo" />
-        <h1 className="text-xl font-semibold mt-6">
-          Datos institucionales sobre los servicios:
-        </h1>
-        <h4>Seleccione los servicios que hará uso:</h4>
+        <h1>Datos institucionales sobre los servicios:</h1>
+        <h2>Seleccione los servicios que hará uso:</h2>
         <form onSubmit={handleSubmit} className="formulario">
           <div className="form-row">
             <label htmlFor="servicio1">Ludoteca</label>

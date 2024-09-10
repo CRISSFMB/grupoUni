@@ -93,7 +93,7 @@ const FormPersonalAdresse = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container2">
       <img src={logo} alt="Logo ISTEC" className="log" />
       <h1 className="text-xl font-semibold mt-6">Residencia:</h1>
 
@@ -119,7 +119,6 @@ const FormPersonalAdresse = () => {
               name="sector"
               value={formData.sector}
               onChange={handleChange}
-               
             >
               <option value="">Seleccione una Opción</option>
               <option value="Urbano">Urbano</option>
@@ -147,7 +146,6 @@ const FormPersonalAdresse = () => {
               name="canton"
               value={formData.canton}
               onChange={handleChange}
-               
             >
               <option value="">Seleccione una Opción</option>
               <option value="cuyabeno">Cuyabeno</option>
@@ -170,17 +168,14 @@ const FormPersonalAdresse = () => {
               value={formData.provincia}
               onChange={handleChange}
             />
-           </div>
-          <div className="form-group">
           </div>
-        </div>  
+          <div className="form-group"></div>
+        </div>
         <div className="button-group">
           <button type="submit">Guardar</button>
         </div>
       </form>
     </div>
-
-    
   );
 };
 

@@ -86,7 +86,7 @@ const FormGeneralInfoIstec = () => {
     navigate("/FormHealthInformationIs");
   };
   return (
-    <div className="container">
+    <div className="container2">
       <img src={log} alt="Logo ISTEC" className="log" /> {/* Logo */}
       <h1 className="text-xl font-semibold mt-6">Información General:</h1>
       <h3>

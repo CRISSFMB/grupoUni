@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../../assets/log.png";
 import "../css/formGeneral.css";
 import { useNavigate, useLocation } from "react-router-dom";
-import axios from 'axios';
-
+import axios from "axios";
 
 function FormMatricula() {
   const navigate = useNavigate();
@@ -66,10 +65,10 @@ function FormMatricula() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (validateForm()) {
       console.log("Datos del formulario:", formData);
-  
+
       try {
         // Envío de datos del estudiante usando axios
         const responseEstudiante = await axios.post(
@@ -81,24 +80,28 @@ function FormMatricula() {
             },
           }
         );
-  
+
         const estudianteData = responseEstudiante.data;
         console.log("Estudiante creado:", estudianteData);
-  
+
         // Navegación a la siguiente página pasando el CI
-        setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
-        navigate("/formPersonalData", { state: { id_ci: formData.ci, carrera, eleccionquintil } });
+        setErrorMessage(
+          "¡Formulario completado correctamente! Puede continuar."
+        );
+        navigate("/formPersonalData", {
+          state: { id_ci: formData.ci, carrera, eleccionquintil },
+        });
       } catch (error) {
         console.error("Error al enviar los datos:", error);
-        setErrorMessage("Error al enviar los datos. Por favor, intente nuevamente.");
+        setErrorMessage(
+          "Error al enviar los datos. Por favor, intente nuevamente."
+        );
       }
     }
   };
-  
-  
 
   return (
-    <div className="container">
+    <div className="container2">
       <img src={logo} alt="Logo ISTEC" className="log" />
       <h1>SOLICITUD DE MATRÍCULA</h1>
       <h2 className="text-xl font-semibold mt-6">Datos Personales:</h2>

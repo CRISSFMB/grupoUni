@@ -87,7 +87,7 @@ function FormFamilyInformationistec() {
   };
 
   return (
-    <div className="container">
+    <div className="container2">
       <img src={logo} alt="Logo ISTEC" className="logo" /> {/* Añadir logo */}
       <h1 className="text-xl font-semibold mt-6">Informacion Familiar</h1>
       {errorMessage && <div className="error-message">{errorMessage}</div>}
