@@ -20,12 +20,16 @@ const SolicitudBeca = () => {
 
   const handleRightImageClick = () => {
     setEleccionquintil("NO");
-    navigate("formCarrera", { state: { eleccionquintil: "NO", universidad: formData.universidad } });
+    navigate("/formCarrera", {
+      state: { eleccionquintil: "NO", universidad: formData.universidad },
+    });
   };
-  
+
   const handleLeftImageClick = () => {
     setEleccionquintil("SI");
-    navigate("formCarrera", { state: { eleccionquintil: "SI", universidad: formData.universidad } });
+    navigate("/formCarrera", {
+      state: { eleccionquintil: "SI", universidad: formData.universidad },
+    });
   };
 
   return (
