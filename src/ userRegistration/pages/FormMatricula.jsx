@@ -4,7 +4,6 @@ import "../css/formGeneral.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from 'axios';
 
-
 function FormMatricula() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -21,7 +20,7 @@ function FormMatricula() {
   }, [eleccionquintil, carrera]);
 
   const [formData, setFormData] = useState({
-    ci: "", // Inicializa con el valor de ci recibido o vacío
+    ci: "",
     nombres: "",
     apellidos: "",
     edad: "",
@@ -37,7 +36,7 @@ function FormMatricula() {
     const { name, value, type, checked } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: type === "checkbox" ? checked : value, // Actualiza correctamente el valor del campo
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
@@ -66,12 +65,11 @@ function FormMatricula() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (validateForm()) {
       console.log("Datos del formulario:", formData);
-  
+
       try {
-        // Envío de datos del estudiante usando axios
         const responseEstudiante = await axios.post(
           "http://127.0.0.1:8000/api/Ingresar/estudiante",
           formData,
@@ -81,21 +79,19 @@ function FormMatricula() {
             },
           }
         );
-  
+
         const estudianteData = responseEstudiante.data;
         console.log("Estudiante creado:", estudianteData);
-  
+
         // Navegación a la siguiente página pasando el CI
         setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
-        navigate("/formPersonalData", { state: { id_ci: formData.ci, carrera, eleccionquintil } });
+        navigate("/formPersonalData", { state: { ci: formData.ci, carrera, eleccionquintil } });
       } catch (error) {
         console.error("Error al enviar los datos:", error);
         setErrorMessage("Error al enviar los datos. Por favor, intente nuevamente.");
       }
     }
   };
-  
-  
 
   return (
     <div className="container">
@@ -134,7 +130,7 @@ function FormMatricula() {
           <div className="form-group">
             <label htmlFor="numero_telefonico">Teléfono:</label>
             <input
-              type="number"
+              type="tel"
               id="numero_telefonico"
               name="numero_telefonico"
               value={formData.numero_telefonico}
@@ -146,7 +142,7 @@ function FormMatricula() {
           <div className="form-group">
             <label htmlFor="celular">Celular:</label>
             <input
-              type="number"
+              type="tel"
               id="celular"
               name="celular"
               value={formData.celular}
@@ -160,7 +156,7 @@ function FormMatricula() {
           <div className="form-group">
             <label htmlFor="ci">Cédula:</label>
             <input
-              type="number"
+              type="text"
               id="ci"
               name="ci"
               value={formData.ci}

@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import log from "../../assets/log.png";
 import "../css/formGeneral.css";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 function FormCarrera() {
   const location = useLocation();
@@ -17,16 +16,23 @@ function FormCarrera() {
     const url = `http://127.0.0.1:8000/api/MostrarCarreras/${universidad}`;
 
     try {
-      const response = await axios.get(url, {
+      const response = await fetch(url, {
+        method: 'GET',
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
       });
 
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
       // Asignar los datos recibidos al estado
-      if (response.data && Array.isArray(response.data)) {
-        const carrerasDataApi = response.data.map((carrera) => ({
+      if (data && Array.isArray(data)) {
+        const carrerasDataApi = data.map((carrera) => ({
           id_carrera: carrera.id_carrera,
           nombrecarrera: carrera.nombrecarrera,
         }));
@@ -63,8 +69,7 @@ function FormCarrera() {
     e.preventDefault();
 
     // Navegar al formulario de matrícula pasando el quintil y la carrera seleccionada
-    navigate("/formMatricula", { state: { carrera: formData.carrera, eleccionquintil, } 
-    });
+    navigate("/formMatricula", { state: { carrera: formData.carrera, eleccionquintil } });
   };
 
   return (
