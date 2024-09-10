@@ -7,7 +7,7 @@ import Istec from "../auth/pages/AdminPage/istec";
 import Puce from "../auth/pages/AdminPage/puce";
 
 const AppRouter = () => (
-  <div className="center">
+  <div className="container">
     <Routes>
       <Route path="login" element={<LoginAdminPage />} />
       <Route path="/login/HomeAdmin" element={<AuthRouters />} />

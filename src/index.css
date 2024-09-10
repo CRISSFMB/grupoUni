@@ -5,23 +5,16 @@ html {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
   justify-content: space-evenly;
-  background: #373b44; /* fallback for old browsers */
+  background: #373b44;
   background: -webkit-linear-gradient(
     to right,
     #4286f4,
     #373b44
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #4286f4,
-    #373b44
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #4286f4, #373b44);
+  margin: 0;
+  padding: 0;
 }
 
 *,
@@ -47,39 +40,30 @@ img {
 }
 
 .container {
-  width: 90%;
-  max-width: 1301px;
+  width: 100%;
+  max-width: 1201px;
   margin: 0 auto;
+  height: 100vh;
 }
 
-.center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.LAZOOOOOOOOOOOOOOOOOOO {
-  display: flex;
-}
-
-.custom-button {
+/* .custom-button {
   padding: 20px 70px;
   background-color: #3973f0;
   color: white;
-  border: 2px solid transparent; /* Borde inicial transparente */
+  border: 2px solid transparent;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  box-shadow: 0 0 0px rgba(0, 0, 0, 0); /* Efecto inicial sin sombra */
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
   margin-bottom: 2px;
 }
 
 .custom-button:hover {
-  border-color: #ffffff; /* Cambia el color del borde al hacer hover */
-  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6); /* Añade un brillo al borde */
+  border-color: #ffffff;
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6);
 }
-
 
 .custom-button:active {
   background-color: #0f46bb;
@@ -92,20 +76,13 @@ img {
   cursor: not-allowed;
 }
 
-.Yandrifinalcss{
+.Yandrifinalcss {
   display: flex;
 }
 
 .button-container {
-  display: flex; /* Los botones estarán en la misma fila */
-  justify-content: space-around; /* Puedes ajustar el espacio entre los botones */
-  gap: 140px; /* Ajusta el espacio entre los botones */
+  display: flex;
+  justify-content: space-around;
+  gap: 140px;
   margin-bottom: 6px;
-}
-
-
-
-
-
-
-
+}  */

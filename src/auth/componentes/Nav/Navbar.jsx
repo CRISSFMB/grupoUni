@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <>
       <nav className="navegacion">
-        <ul>
+        <ul className="navegacion__list">
           <li>
             <Link to="/login/HomeAdmin">Inicio</Link>
           </li>

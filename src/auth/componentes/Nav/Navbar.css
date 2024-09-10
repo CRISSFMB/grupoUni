@@ -1,0 +1,13 @@
+.navegacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navegacion__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
