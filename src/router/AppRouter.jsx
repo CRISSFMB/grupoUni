@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import LoginAdminPage from "../auth/pages/loginAdminPage/LoginAdminPage";
-import UserRegistrationRouter from "../ userRegistration/routes/userRegistrationRouter";
+import UserRegistrationRouter from "../userRegistration/routes/UserRegistrationRouter";
 import AuthRouters from "../auth/routers/AuthRouters";
 
 const AppRouter = () => (

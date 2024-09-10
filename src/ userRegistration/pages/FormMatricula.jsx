@@ -1,33 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../assets/log.png";
 import "../css/formGeneral.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import axios from 'axios';
+
 
 function FormMatricula() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Obtener las variables eleccionquintil y carrera desde la ubicación
+  const { eleccionquintil, carrera } = location.state || {};
+
+  // Mostrar eleccionquintil y carrera en la consola al cargar el componente
+  useEffect(() => {
+    if (eleccionquintil || carrera) {
+      console.log("Elección del quintil:", eleccionquintil);
+      console.log("Nombre de la carrera:", carrera);
+    }
+  }, [eleccionquintil, carrera]);
+
   const [formData, setFormData] = useState({
-    ci: "",
+    ci: "", // Inicializa con el valor de ci recibido o vacío
     nombres: "",
-    matricula_cancelada: "",
     apellidos: "",
     edad: "",
     celular: "",
     numero_telefonico: "",
+    matricula_cancelada: "",
   });
 
   const [errorMessage, setErrorMessage] = useState("");
   const [isFormValid, setIsFormValid] = useState(false);
 
-  const navigate = useNavigate();
-
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: type === "checkbox" ? checked : value, // Actualiza correctamente el valor del campo
+    }));
   };
 
-  // Validar el formulario antes del envío
   const validateForm = () => {
     const requiredFields = [
       "ci",
@@ -51,55 +64,44 @@ function FormMatricula() {
     return true;
   };
 
-  // Manejar el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // if (validateForm()) {
-    //   console.log("Datos del formulario:", formData); // Muestra los datos del formulario en la consola
-
-    //   try {
-    //     const response = await fetch(
-    //       "http://127.0.0.1:8000/api/Ingresar/estudiante",
-    //       {
-    //         method: "POST",
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(formData),
-    //       }
-    //     );
-
-    //     if (!response.ok) {
-    //       throw new Error(`Status: ${response.status}`);
-    //     }
-
-    //     const data = await response.json();
-    //     console.log("Estudiante creado:", data);
-
-    //     // Redirige a la siguiente página solo si el envío fue exitoso
-    //     setErrorMessage(
-    //       "¡Formulario completado correctamente! Puede continuar."
-    //     );
-    //     navigate("/formulariopuce2", { state: { ci: formData.ci } });
-    //   } catch (error) {
-    //     console.error("Error al crear estudiante:", error);
-    //     setErrorMessage(
-    //       "Error al enviar los datos. Por favor, intente nuevamente."
-    //     );
-    //   }
-    // }
-
-    navigate("/formPersonalData");
-
-    console.log(formData);
+  
+    if (validateForm()) {
+      console.log("Datos del formulario:", formData);
+  
+      try {
+        // Envío de datos del estudiante usando axios
+        const responseEstudiante = await axios.post(
+          "http://127.0.0.1:8000/api/Ingresar/estudiante",
+          formData,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+  
+        const estudianteData = responseEstudiante.data;
+        console.log("Estudiante creado:", estudianteData);
+  
+        // Navegación a la siguiente página pasando el CI
+        setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
+        navigate("/formPersonalData", { state: { id_ci: formData.ci, carrera, eleccionquintil } });
+      } catch (error) {
+        console.error("Error al enviar los datos:", error);
+        setErrorMessage("Error al enviar los datos. Por favor, intente nuevamente.");
+      }
+    }
   };
+  
+  
 
   return (
     <div className="container">
       <img src={logo} alt="Logo ISTEC" className="log" />
       <h1>SOLICITUD DE MATRÍCULA</h1>
-      <h2 className="text-xl font-semibold mt-6">Datosnales:</h2>
+      <h2 className="text-xl font-semibold mt-6">Datos Personales:</h2>
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}
 
@@ -132,7 +134,7 @@ function FormMatricula() {
           <div className="form-group">
             <label htmlFor="numero_telefonico">Teléfono:</label>
             <input
-              type="text"
+              type="number"
               id="numero_telefonico"
               name="numero_telefonico"
               value={formData.numero_telefonico}
@@ -144,7 +146,7 @@ function FormMatricula() {
           <div className="form-group">
             <label htmlFor="celular">Celular:</label>
             <input
-              type="text"
+              type="number"
               id="celular"
               name="celular"
               value={formData.celular}
@@ -158,7 +160,7 @@ function FormMatricula() {
           <div className="form-group">
             <label htmlFor="ci">Cédula:</label>
             <input
-              type="text"
+              type="number"
               id="ci"
               name="ci"
               value={formData.ci}
@@ -182,12 +184,8 @@ function FormMatricula() {
           <button type="submit">Guardar</button>
         </div>
       </form>
-
     </div>
-
-
   );
-  
 }
 
 export default FormMatricula;

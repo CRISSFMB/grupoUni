@@ -9,12 +9,12 @@ function FormCarrera() {
   const location = useLocation();
   const { eleccionquintil, universidad } = location.state || {};
   console.log("Universidad:", universidad);
-  console.log("Eleccion del quintil:", eleccionquintil);
+  console.log("Elección del quintil:", eleccionquintil);
 
   const [dataCarrera, setDataCarrera] = useState([]);
 
   const getDataCarrera = async () => {
-    const url = `http://127.0.0.1:8000/api/MostrarMalla/${universidad}`;
+    const url = `http://127.0.0.1:8000/api/MostrarCarreras/${universidad}`;
 
     try {
       const response = await axios.get(url, {
@@ -24,14 +24,25 @@ function FormCarrera() {
         },
       });
 
-      console.log(response);
+      // Asignar los datos recibidos al estado
+      if (response.data && Array.isArray(response.data)) {
+        const carrerasDataApi = response.data.map((carrera) => ({
+          id_carrera: carrera.id_carrera,
+          nombrecarrera: carrera.nombrecarrera,
+        }));
+        setDataCarrera(carrerasDataApi);
+      } else {
+        console.error("Datos de respuesta inválidos.");
+      }
     } catch (error) {
-      console.log("error");
+      console.log("Error al obtener los datos:", error);
     }
   };
 
   useEffect(() => {
-    getDataCarrera();
+    if (universidad) {
+      getDataCarrera();
+    }
   }, [universidad]);
 
   const navigate = useNavigate();
@@ -51,18 +62,9 @@ function FormCarrera() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // if (validateForm()) {
-    //   console.log("Datos del formulario:", formData);
-    //   setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
-    navigate("/formMatricula"); //Siempre tiene que haber un /
-    //   console.log(formData);
-    // }
-
-    // if (validateForm()) {
-    //   console.log("Datos del formulario:", formData);
-    //   setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
-    //   console.log(formData);
-    // }
+    // Navegar al formulario de matrícula pasando el quintil y la carrera seleccionada
+    navigate("/formMatricula", { state: { carrera: formData.carrera, eleccionquintil, } 
+    });
   };
 
   return (
@@ -72,7 +74,7 @@ function FormCarrera() {
       <h1>Carrera:</h1>
 
       {/* Formulario para la selección de carrera */}
-      <form onSubmit={handleSubmit} className="formulario1">
+      <form onSubmit={handleSubmit} className="formulario">
         <div className="form-row">
           <label htmlFor="carrera">Carrera a Seguir:</label>
           <select
@@ -81,8 +83,8 @@ function FormCarrera() {
             onChange={handleChange}
           >
             <option value="">Seleccione una carrera</option>
-            {dataCarrera.map((item, index) => (
-              <option key={index} value={item.nombrecarrera}>
+            {dataCarrera.map((item) => (
+              <option key={item.id_carrera} value={item.nombrecarrera}>
                 {item.nombrecarrera}
               </option>
             ))}
