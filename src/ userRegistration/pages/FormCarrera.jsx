@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import log from "../../assets/log.png";
 import "../css/formGeneral.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function FormCarrera() {
   const location = useLocation();
