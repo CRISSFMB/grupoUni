@@ -1,26 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import log from "../../assets/log.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../css/formGeneral.css";
 
-function FormHealtInformation() {
+function FormHealthInformation() { // Corregido el nombre de la función
   const location = useLocation();
-  const { ci } = location.state || {};
-  console.log("CI recibido:", ci);
+  const { ci, eleccionquintil } = location.state || {}; 
+
+  // Efecto para verificar valores recibidos
+  useEffect(() => {
+    if (eleccionquintil || ci) {
+      console.log("Elección del quintil:", eleccionquintil);
+      console.log("CI recibido:", ci);
+    }
+  }, [eleccionquintil, ci]);
 
   const [formData, setFormData] = useState({
     id_ci: ci || "",
     enfermedad: "",
-    enf_piel: "",
-    diabetes: "",
+    enf_piel: false, // Inicializar como false
+    diabetes: false, // Inicializar como false
     tipo_sangre: "",
-    vih_sida: "",
+    vih_sida: false, // Inicializar como false
+    catastrofica: "", // Asegurarse de inicializar catastrofica
   });
 
   const [errorMessage, setErrorMessage] = useState("");
   const [isFormValid, setIsFormValid] = useState(false);
 
-  const navigate = useNavigate(); // Inicializa useNavigate
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -35,58 +43,53 @@ function FormHealtInformation() {
 
     for (let field of requiredFields) {
       if (!formData[field]) {
-        alert("Todos los campos son obligatorios");
+        setErrorMessage("Todos los campos son obligatorios");
         setIsFormValid(false);
         return false;
       }
     }
 
     if (formData.catastrofica === "si" && !formData.enfermedad) {
-      alert("Todos los campos son obligatorios");
+      setErrorMessage("Todos los campos son obligatorios");
       setIsFormValid(false);
       return false;
     }
 
-    setErrorMessage("");
+    setErrorMessage(""); 
     setIsFormValid(true);
     return true;
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault(); // Previene el comportamiento predeterminado de enviar el formulario
 
-    // if (validateForm()) {
-    //   console.log("Datos del formulario:", formData); // Muestra los datos del formulario en la consola
+    if (validateForm()) {
+      console.log("Datos del formulario:", formData); 
 
-    //   try {
-    //     const response = await fetch("http://127.0.0.1:8000/api/Info_salud2", {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify(formData),
-    //     });
+      try {
+        const response = await fetch("http://127.0.0.1:8000/api/Info_salud2", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
 
-    //     if (!response.ok) {
-    //       throw new Error(`Status: ${response.status}`);
-    //     }
+        if (!response.ok) {
+          throw new Error(`Status: ${response.status}`);
+        }
 
-    //     const data = await response.json();
-    //     console.log("Estudiante creado:", data);
+        const data = await response.json();
+        console.log("Estudiante creado:", data);
 
-    //     // Redirige a la siguiente página solo si el envío fue exitoso
-    //     setErrorMessage(
-    //       "¡Formulario completado correctamente! Puede continuar."
-    //     );
-    //     navigate("/formulariopuce6", { state: { ci: formData.id_ci } });
-    //   } catch (error) {
-    //     console.error("Error al crear estudiante:", error);
-    //     setErrorMessage(
-    //       "Error al enviar los datos. Por favor, intente nuevamente."
-    //     );
-    //   }
-    // }
-
-    navigate("/formInstitutionalServices");
+        // Redirige a la siguiente página solo si el envío fue exitoso
+        setErrorMessage("¡Formulario completado correctamente! Puede continuar.");
+        navigate("/formInstitutionalServices", { state: { ci: formData.id_ci, eleccionquintil } });
+      } catch (error) {
+        console.error("Error al crear estudiante:", error);
+        setErrorMessage("Error al enviar los datos. Por favor, intente nuevamente.");
+      }
+    }
   };
 
   return (
@@ -128,6 +131,7 @@ function FormHealtInformation() {
                 value={formData.enfermedad}
                 onChange={(e) => {
                   const letras = /^[A-Za-z\s]+$/;
+                  // Validar solo letras
                   if (e.target.value === "" || letras.test(e.target.value)) {
                     handleChange(e);
                   }
@@ -171,7 +175,7 @@ function FormHealtInformation() {
             />
           </div>
 
-          <div className="mb form-group right-group ">
+          <div className="mb form-group right-group">
             <label htmlFor="diabetes">Diabetes</label>
             <input
               type="checkbox"
@@ -202,4 +206,4 @@ function FormHealtInformation() {
   );
 }
 
-export default FormHealtInformation;
+export default FormHealthInformation; // Corregido el nombre de exportación

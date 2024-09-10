@@ -8,10 +8,8 @@ function FormMatricula() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Obtener las variables eleccionquintil y carrera desde la ubicación
   const { eleccionquintil, carrera } = location.state || {};
 
-  // Mostrar eleccionquintil y carrera en la consola al cargar el componente
   useEffect(() => {
     if (eleccionquintil || carrera) {
       console.log("Elección del quintil:", eleccionquintil);
@@ -83,18 +81,16 @@ function FormMatricula() {
         const estudianteData = responseEstudiante.data;
         console.log("Estudiante creado:", estudianteData);
 
-        // Navegación a la siguiente página pasando el CI
         setErrorMessage(
           "¡Formulario completado correctamente! Puede continuar."
         );
         navigate("/formPersonalData", {
-          state: { id_ci: formData.ci, carrera, eleccionquintil },
+          state: { ci: formData.ci, carrera, eleccionquintil },
         });
       } catch (error) {
         console.error("Error al enviar los datos:", error);
-        setErrorMessage(
-          "Error al enviar los datos. Por favor, intente nuevamente."
-        );
+        const errorResponse = error.response?.data?.message || "Error al enviar los datos. Por favor, intente nuevamente.";
+        setErrorMessage(errorResponse); // Muestra el mensaje de error real
       }
     }
   };
@@ -171,11 +167,11 @@ function FormMatricula() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="edad">Fecha de nacimiento:</label>
+            <label htmlFor="fecha_nacimiento">Fecha de nacimiento:</label>
             <input
               type="date"
               id="edad"
-              name="edad"
+              name="edad" 
               value={formData.edad}
               onChange={handleChange}
             />

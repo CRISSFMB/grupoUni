@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"; 
 import { useNavigate, useLocation } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/log.png";
 import "../css/formGeneral.css";
 
-const FormPersonalAdresseIstec = () => {
+const FormPersonalAdresse = () => {
   const location = useLocation();
   const { ci, eleccionquintil } = location.state || {}; 
 
@@ -176,4 +176,4 @@ const FormPersonalAdresseIstec = () => {
   );
 };
 
-export default FormPersonalAdresseIstec;
+export default FormPersonalAdresse;

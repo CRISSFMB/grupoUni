@@ -1,15 +1,24 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const FormDiscapacidadNuevo = () => {
+  const location = useLocation();
+  const { ci, eleccionquintil } = location.state || {}; 
+  useEffect(() => {
+    if (eleccionquintil || ci) {
+      console.log("Elección del quintil:", eleccionquintil);
+      console.log("CI recibido:", ci);
+    }
+  }, [eleccionquintil, ci]);
+
   const [formData, setFormData] = useState({
     emergencias: {
-      id_ci: "",
+      id_ci: ci || "",
       nombre_contacto: "",
       contacto_emergencia: "",
     },
     discapacidad: {
-      id_ci: "",
+      id_ci: ci || "",
       nro_carnet: "",
       tipo_discapacidad: "",
       porcentaje_discapacidad: "",

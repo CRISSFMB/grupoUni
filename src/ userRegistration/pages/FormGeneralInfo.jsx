@@ -1,12 +1,17 @@
-import React, { useState } from "react";
-import log from "../../assets/log.png"; // Importa el logo
+import React, { useEffect, useState } from "react";
+import log from "../../assets/log.png"; 
 import "../css/formGeneral.css";
-import { useNavigate, useLocation } from "react-router-dom"; // Importa useNavigate para redirección
+import { useNavigate, useLocation } from "react-router-dom"; 
 
 const FormGeneralInfo = () => {
   const location = useLocation();
-  const { ci } = location.state || {};
-  console.log("CI recibido:", ci);
+  const { ci, eleccionquintil } = location.state || {}; 
+  useEffect(() => {
+    if (eleccionquintil || ci) {
+      console.log("Elección del quintil:", eleccionquintil);
+      console.log("CI recibido:", ci);
+    }
+  }, [eleccionquintil, ci]);
 
   const [formData, setFormData] = useState({
     id_ci: ci || "",
@@ -20,7 +25,7 @@ const FormGeneralInfo = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [isFormValid, setIsFormValid] = useState(false);
 
-  const navigate = useNavigate(); // Inicializa useNavigate
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,46 +53,46 @@ const FormGeneralInfo = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // if (validateForm()) {
-    //   console.log("Datos del formulario:", formData); // Muestra los datos del formulario en la consola
+    if (validateForm()) {
+      console.log("Datos del formulario:", formData); 
 
-    //   try {
-    //     const response = await fetch(
-    //       "http://127.0.0.1:8000/api/Info_general/Ingresar",
-    //       {
-    //         method: "POST",
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(formData),
-    //       }
-    //     );
+      try {
+        const response = await fetch(
+          "http://127.0.0.1:8000/api/Info_general/Ingresar",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
 
-    //     if (!response.ok) {
-    //       throw new Error(`Status: ${response.status}`);
-    //     }
+        if (!response.ok) {
+          throw new Error(`Status: ${response.status}`);
+        }
 
-    //     const data = await response.json();
-    //     console.log("Estudiante creado:", data);
+        const data = await response.json();
+        console.log("Estudiante creado:", data);
 
-    //     // Redirige a la siguiente página solo si el envío fue exitoso
-    //     setErrorMessage(
-    //       "¡Formulario completado correctamente! Puede continuar."
-    //     );
-    //     navigate("/formulariopuce5", { state: { ci: formData.id_ci } });
-    //   } catch (error) {
-    //     console.error("Error al crear estudiante:", error);
-    //     setErrorMessage(
-    //       "Error al enviar los datos. Por favor, intente nuevamente."
-    //     );
-    //   }
-    // }
+        // Redirige a la siguiente página solo si el envío fue exitoso
+        setErrorMessage(
+          "¡Formulario completado correctamente! Puede continuar."
+        );
+        navigate("/FormHealthInformation", { state: { ci: formData.id_ci, eleccionquintil } });
+      } catch (error) {
+        console.error("Error al crear estudiante:", error);
+        setErrorMessage(
+          "Error al enviar los datos. Por favor, intente nuevamente."
+        );
+      }
+    }
 
-    navigate("/FormHealthInformation");
+    // navigate("/FormHealthInformation");
   };
   return (
     <div className="container2">
-      <img src={log} alt="Logo ISTEC" className="log" /> {/* Logo */}
+      <img src={log} alt="Logo PUCE" className="log" /> {/* Logo */}
       <h1 className="text-xl font-semibold mt-6">Información General:</h1>
       <h3>
         En caso de no estar trabajando, deje estos campos o secciones en blanco.
