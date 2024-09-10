@@ -7,18 +7,19 @@ const LoginAdminPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmitLogin = (e) => {
     e.preventDefault();
 
-    if (email !== "istecgrupo@gmail.com" || password !== "istecgrupo") {
-      setError("Credenciales incorrectas. Intenta de nuevo.");
-      return;
-    }
+    // if (email !== "istecgrupo@gmail.com" || password !== "istecgrupo") {
+    //   setError("Credenciales incorrectas. Intenta de nuevo.");
+    //   return;
+    // }
 
     setError("");
-
-    window.open("https://juansolis.netlify.app/", "_blank");
+    navigate("/HomeAdmin/carrera");
+    console.log("enviando login");
   };
 
   return (

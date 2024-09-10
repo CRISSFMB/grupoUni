@@ -75,12 +75,9 @@ function FormCarreraistec() {
   };
 
   return (
-    <div className=" container">
-      {/* Muestra el logo en el formulario */}
+    <div className="container2">
       <img src={logo} alt="Logo PUCE" className="logo" />
       <h1>Carrera:</h1>
-
-      {/* Formulario para la selección de carrera */}
 
       <form onSubmit={handleSubmit} className="formulario1">
         <div className="form-row">

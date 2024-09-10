@@ -12,7 +12,7 @@ body {
     #4286f4,
     #373b44
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4286f4, #373b44);
+  background: linear-gradient(113deg, #0a8497, #daeaf1);
   margin: 0;
   padding: 0;
 }
@@ -44,45 +44,7 @@ img {
   max-width: 1201px;
   margin: 0 auto;
   height: 100vh;
-}
-
-/* .custom-button {
-  padding: 20px 70px;
-  background-color: #3973f0;
-  color: white;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease,
-    box-shadow 0.3s ease, border-color 0.3s ease;
-  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
-  margin-bottom: 2px;
-}
-
-.custom-button:hover {
-  border-color: #ffffff;
-  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6);
-}
-
-.custom-button:active {
-  background-color: #0f46bb;
-  transform: translateY(1px);
-}
-
-.custom-button.disabled {
-  background-color: #ddd;
-  color: #999;
-  cursor: not-allowed;
-}
-
-.Yandrifinalcss {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
-.button-container {
-  display: flex;
-  justify-content: space-around;
-  gap: 140px;
-  margin-bottom: 6px;
-}  */
