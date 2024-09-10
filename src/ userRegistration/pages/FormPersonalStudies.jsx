@@ -80,7 +80,7 @@ function FormPersonalStudies() {
         setErrorMessage(
           "¡Formulario completado correctamente! Puede continuar."
         );
-        navigate("/personalIncome", { state: { ci: formData.id_ci } });
+        navigate("/personalIncome", { state: { ci: formData.id_ci, eleccionquintil } });
       } catch (error) {
         console.error("Error al crear estudiante:", error);
         setErrorMessage(
