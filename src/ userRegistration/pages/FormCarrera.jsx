@@ -16,14 +16,18 @@ function FormCarrera() {
   const getDataCarrera = async () => {
     const url = `http://127.0.0.1:8000/api/MostrarMalla/${universidad}`;
 
-    const response = await axios.get(url, {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
+    try {
+      const response = await axios.get(url, {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
 
-    console.log(response);
+      console.log(response);
+    } catch (error) {
+      console.log("error");
+    }
   };
 
   useEffect(() => {
