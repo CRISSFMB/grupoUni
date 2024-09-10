@@ -1,9 +1,3 @@
-.InicioAdmin {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 200px 1fr;
-}
 .ContendAdminPage {
   width: 100%;
   display: flex;

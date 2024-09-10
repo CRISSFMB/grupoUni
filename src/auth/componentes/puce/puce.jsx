@@ -1,11 +1,8 @@
-// src/pages/Puce.jsx
-import React from "react";
-import Navbar from "../../componentes/Nav/Navbar";
+import "./puce.css";
 
 function Puce() {
   return (
     <div className="puce">
-      <Navbar />
       <div className="header">
         <h1>Carreras de PUCE</h1>
         <div className="buttons">

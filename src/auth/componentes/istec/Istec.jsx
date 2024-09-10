@@ -1,11 +1,8 @@
-// src/pages/Istec.jsx
-import React from "react";
-import Navbar from "../../componentes/Nav/Navbar";
+import "./istec.css";
 
 function Istec() {
   return (
     <div className="istec">
-      <Navbar />
       <div className="header">
         <h1>Carreras de ISTEC</h1>
         <div className="buttons">
@@ -19,7 +16,6 @@ function Istec() {
           <li>Carrera 1</li>
           <li>Carrera 2</li>
           <li>Carrera 3</li>
-          {/* Aquí puedes agregar más carreras */}
         </ul>
       </div>
     </div>

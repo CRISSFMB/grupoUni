@@ -1,12 +1,28 @@
 import React, { useState } from "react";
-import Navbar from "../../componentes/Nav/Navbar";
+
+import "./bienestar.css";
 
 function Bienestar() {
   // Ejemplo de estudiantes
   const [estudiantes, setEstudiantes] = useState([
-    { id: 1, nombre: "Juan Pérez", carrera: "Ingeniería", fechaInscripcion: "2023-09-01" },
-    { id: 2, nombre: "Ana Gómez", carrera: "Medicina", fechaInscripcion: "2023-09-02" },
-    { id: 3, nombre: "Luis López", carrera: "Arquitectura", fechaInscripcion: "2023-09-03" },
+    {
+      id: 1,
+      nombre: "Juan Pérez",
+      carrera: "Ingeniería",
+      fechaInscripcion: "2023-09-01",
+    },
+    {
+      id: 2,
+      nombre: "Ana Gómez",
+      carrera: "Medicina",
+      fechaInscripcion: "2023-09-02",
+    },
+    {
+      id: 3,
+      nombre: "Luis López",
+      carrera: "Arquitectura",
+      fechaInscripcion: "2023-09-03",
+    },
   ]);
 
   const [orden, setOrden] = useState("fecha"); // "fecha" o "carrera"
@@ -22,8 +38,7 @@ function Bienestar() {
   };
 
   return (
-    <div>
-      <Navbar />
+    <div className="bienestar">
       <h1>Bienestar Estudiantil</h1>
       <div>
         <label>

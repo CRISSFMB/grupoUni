@@ -8,16 +8,16 @@ function Navbar() {
       <nav className="navegacion">
         <ul className="navegacion__list">
           <li>
-            <Link to="/login/HomeAdmin">Inicio</Link>
+            <Link to="/HomeAdmin/carrera">Inicio</Link>
           </li>
           <li>
-            <Link to="/login/HomeAdmin/istec">Istec</Link>
+            <Link to="/HomeAdmin/istec">Istec</Link>
           </li>
           <li>
-            <Link to="/login/HomeAdmin/puce">Puce</Link>
+            <Link to="/HomeAdmin/puce">Puce</Link>
           </li>
           <li>
-            <Link to="/login/HomeAdmin/bienestar">Bienestar</Link>
+            <Link to="/HomeAdmin/bienestar">Bienestar</Link>
           </li>
         </ul>
       </nav>
