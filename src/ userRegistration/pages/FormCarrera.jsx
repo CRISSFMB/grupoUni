@@ -69,11 +69,13 @@ function FormCarrera() {
     e.preventDefault();
 
     // Navegar al formulario de matrícula pasando el quintil y la carrera seleccionada
-    navigate("/formMatricula", { state: { carrera: formData.carrera, eleccionquintil } });
+    navigate("/formMatricula", {
+      state: { carrera: formData.carrera, eleccionquintil },
+    });
   };
 
   return (
-    <div className="container">
+    <div className="container2">
       {/* Muestra el logo en el formulario */}
       <img src={log} alt="Logo PUCE" className="log" />
       <h1>Carrera:</h1>

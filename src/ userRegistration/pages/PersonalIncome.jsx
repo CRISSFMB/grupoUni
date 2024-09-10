@@ -75,7 +75,7 @@ function PersonalIncomeIstec() {
   };
 
   return (
-    <div className="container">
+    <div className="container2">
       <img src={logo} alt="Logo ISTEC" className="log" />
       <h1 className="text-xl font-semibold mt-6">Ingresos Personales</h1>
 
@@ -95,22 +95,19 @@ function PersonalIncomeIstec() {
           </div>
 
           <div className="form-group right-group">
-        <label htmlFor="estado_civil">¿En qué emplea sus ingresos?:</label>
-        <select
-          id="empleo_ingresos"
-          name="empleo_ingresos"
-          value={formData.empleo_ingresos}
-          onChange={handleChange}
-        >
-          <option value="">Seleccione una Opción</option>
-          <option value="casado">Financiar sus Estudios </option>
-          <option value="divorciado">Para mantemer su hogar</option>
-          <option value="viudo">Gatos Personal</option>
-          
-        </select>
-      </div>
-
-          
+            <label htmlFor="estado_civil">¿En qué emplea sus ingresos?:</label>
+            <select
+              id="empleo_ingresos"
+              name="empleo_ingresos"
+              value={formData.empleo_ingresos}
+              onChange={handleChange}
+            >
+              <option value="">Seleccione una Opción</option>
+              <option value="casado">Financiar sus Estudios </option>
+              <option value="divorciado">Para mantemer su hogar</option>
+              <option value="viudo">Gatos Personal</option>
+            </select>
+          </div>
         </div>
 
         <div className="form-row">
@@ -126,7 +123,9 @@ function PersonalIncomeIstec() {
             />
           </div>
           <div className="form-group right-group">
-            <label htmlFor="ingresos_mensuales">Ingresos De la Madre ($):</label>
+            <label htmlFor="ingresos_mensuales">
+              Ingresos De la Madre ($):
+            </label>
             <input
               type="number"
               id="ingresos_mensuales"
@@ -135,7 +134,6 @@ function PersonalIncomeIstec() {
               onChange={handleChange}
             />
           </div>
-          
         </div>
 
         <div className="form-row">
@@ -160,7 +158,6 @@ function PersonalIncomeIstec() {
               onChange={handleChange}
             />
           </div>
-          
         </div>
 
         <div className="form-row">
@@ -176,16 +173,8 @@ function PersonalIncomeIstec() {
             />
           </div>
 
-          <div className="form-group left-group">
-            
-           
-          </div>
-
-          
-          
+          <div className="form-group left-group"></div>
         </div>
-
-
 
         <div className="button-group">
           <button type="submit">Guardar</button>

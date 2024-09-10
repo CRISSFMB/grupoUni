@@ -1,10 +1,10 @@
-/* .login {
+.login {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 50vh;
-  background: linear-gradient(135deg, #004b3f, #daeaf1);
+  background: linear-gradient(135deg, #05a3bb, #daeaf1);
   color: #fff;
   border-radius: 5%;
   transition: background 0.5s ease-in-out;
@@ -55,4 +55,4 @@ form {
   button[type="submit"]:hover {
     background-color: #00aaff;
   }
-} */
+}

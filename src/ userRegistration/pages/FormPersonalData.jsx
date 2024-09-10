@@ -120,7 +120,7 @@ function FormPersonalData() {
   };
 
   return (
-    <div className="container">
+    <div className="container2">
       <img src={logo} alt="Logo ISTEC" className="log" />
       <h1 className="text-xl font-semibold mt-6">Datos Personales:</h1>
 
@@ -128,24 +128,24 @@ function FormPersonalData() {
 
       <form onSubmit={handleSubmit} className="datos formulario">
         <div className="form-row">
-          <div className="form-group left-group">
+          <div className="  form-group left-group">
             <label htmlFor="pueblo_nacionalidad">Pueblo Nacionalidad:</label>
             <input
               type="text"
               id="pueblo_nacionalidad"
               name="pueblo_nacionalidad"
-              value={formData.Datos_estudiante.pueblo_nacionalidad}
+              value={formData.pueblo_nacionalidad}
               onChange={handleChange}
               placeholder="Opcional"
             />
           </div>
 
-          <div className="form-group right-group">
+          <div className=" form-group right-group">
             <label htmlFor="etnia">Etnia:</label>
             <select
               id="etnia"
               name="etnia"
-              value={formData.Datos_estudiante.etnia}
+              value={formData.etnia}
               onChange={handleChange}
             >
               <option value="">Seleccione una Opción</option>
@@ -153,7 +153,7 @@ function FormPersonalData() {
               <option value="awa">Awa</option>
               <option value="chachi">Chachi</option>
               <option value="epera">Epera</option>
-              <option value="tsachila">Tsachila</option>
+              <option value="asachia">Tsachila</option>
               <option value="achuar">Achuar</option>
               <option value="cofan">Cofan</option>
               <option value="secoya">Secoya</option>
@@ -164,6 +164,10 @@ function FormPersonalData() {
               <option value="andoa">Andoa</option>
               <option value="siona">Siona</option>
               <option value="siokopae">Siokopae</option>
+              {/* <option value="indigena">Indigena</option>
+          <option value="blanco">Blanco/a</option>
+          <option value="mestizo">Mestizo/a</option>
+          <option value="mulato">Mulato/a</option> */}
               <option value="otro">Otro/a</option>
             </select>
           </div>
@@ -176,7 +180,7 @@ function FormPersonalData() {
               type="text"
               id="canton_nacimiento"
               name="canton_nacimiento"
-              value={formData.Datos_estudiante.canton_nacimiento}
+              value={formData.canton_nacimiento}
               onChange={handleChange}
             />
           </div>
@@ -186,7 +190,7 @@ function FormPersonalData() {
             <select
               id="sexo"
               name="sexo"
-              value={formData.Datos_estudiante.sexo}
+              value={formData.sexo}
               onChange={handleChange}
             >
               <option value="">Seleccione una Opción</option>
@@ -197,13 +201,13 @@ function FormPersonalData() {
         </div>
 
         <div className="form-row">
-          <div className="form-group left-group">
+          <div className=" form-group left-group">
             <label htmlFor="nacionalidad">Nacionalidad:</label>
             <input
               type="text"
               id="nacionalidad"
               name="nacionalidad"
-              value={formData.Datos_estudiante.nacionalidad}
+              value={formData.nacionalidad}
               onChange={handleChange}
             />
           </div>
@@ -213,7 +217,7 @@ function FormPersonalData() {
             <select
               id="estado_civil"
               name="estado_civil"
-              value={formData.Datos_estudiante.estado_civil}
+              value={formData.estado_civil}
               onChange={handleChange}
             >
               <option value="">Seleccione una Opción</option>
@@ -227,13 +231,13 @@ function FormPersonalData() {
         </div>
 
         <div className="form-row">
-          <div className="form-group left-group">
+          <div className=" form-group left-group">
             <label htmlFor="provincia_nacimiento">Provincia Nacimiento:</label>
             <input
               type="text"
               id="provincia_nacimiento"
               name="provincia_nacimiento"
-              value={formData.Datos_estudiante.provincia_nacimiento}
+              value={formData.provincia_nacimiento}
               onChange={handleChange}
             />
           </div>

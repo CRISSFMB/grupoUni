@@ -8,6 +8,7 @@
   border-radius: 3rem;
   box-shadow: 6px 5px 10px #338161;
   animation: bounce 3s ease-out forwards;
+  margin: 0 auto;
 }
 
 @keyframes bounce {

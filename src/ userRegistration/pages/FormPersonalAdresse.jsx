@@ -90,8 +90,8 @@ const FormPersonalAdresseIstec = () => {
   
 
   return (
-    <div className="container">
-      <img src={logo} alt="Logo ISTEC" className="logo" />
+    <div className="container2">
+      <img src={logo} alt="Logo ISTEC" className="log" />
       <h1 className="text-xl font-semibold mt-6">Residencia:</h1>
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}
@@ -166,8 +166,8 @@ const FormPersonalAdresseIstec = () => {
               onChange={handleChange}
             />
           </div>
+          <div className="form-group"></div>
         </div>
-        
         <div className="button-group">
           <button type="submit">Guardar</button>
         </div>

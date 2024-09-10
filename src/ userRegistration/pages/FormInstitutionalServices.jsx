@@ -67,440 +67,440 @@ function FormInstitutionalServices() {
     //     }
     //   };
     return (
-  //     <div className="container">
-  //       <img src={logo} alt="Logo ISTEC" className="logo" />
-  //       <h1 className="text-xl font-semibold mt-6">
-  //         Datos institucionales sobre los servicios:
-  //       </h1>
-  //       <h4>Seleccione los servicios que hará uso:</h4>
-  //       <form onSubmit={handleSubmit} className="formulario">
-  //         <div className="form-row">
-  //           <label htmlFor="servicio1">Ludoteca</label>
-  //           <input
-  //             type="checkbox"
-  //             id="servicio1"
-  //             name="servicio1"
-  //             checked={formData.servicio1}
-  //             onChange={handleChange}
-  //           />
-  //           <select
-  //             id="frecuencia1"
-  //             name="frecuencia1"
-  //             value={formData.frecuencia1}
-  //             onChange={handleChange}
-  //             disabled={!formData.servicio1}
-  //           >
-  //             <option value="">Seleccione</option>
-  //             <option value="pocas">Pocas veces</option>
-  //             <option value="normalmente">Normalmente</option>
-  //             <option value="bastante">Bastante</option>
-  //             <option value="siempre">Siempre</option>
-  //           </select>
-  //         </div>
-  //         <div className="form-row">
-  //           <label htmlFor="servicio2">Villas de Hospedaje</label>
-  //           <input
-  //             type="checkbox"
-  //             id="servicio2"
-  //             name="servicio2"
-  //             checked={formData.servicio2}
-  //             onChange={handleChange}
-  //           />
-  //           <select
-  //             id="frecuencia2"
-  //             name="frecuencia2"
-  //             value={formData.frecuencia2}
-  //             onChange={handleChange}
-  //             disabled={!formData.servicio2}
-  //           >
-  //             <option value="">Seleccione</option>
-  //             <option value="pocas">Pocas veces</option>
-  //             <option value="normalmente">Normalmente</option>
-  //             <option value="bastante">Bastante</option>
-  //             <option value="siempre">Siempre</option>
-  //           </select>
-  //         </div>
-  //         <div className="form-row">
-  //           <label htmlFor="servicio3">Servicio de Autobús</label>
-  //           <input
-  //             type="checkbox"
-  //             id="servicio3"
-  //             name="servicio3"
-  //             checked={formData.servicio3}
-  //             onChange={handleChange}
-  //           />
-  //           <select
-  //             id="frecuencia3"
-  //             name="frecuencia3"
-  //             value={formData.frecuencia3}
-  //             onChange={handleChange}
-  //             disabled={!formData.servicio3}
-  //           >
-  //             <option value="">Seleccione</option>
-  //             <option value="pocas">Pocas veces</option>
-  //             <option value="normalmente">Normalmente</option>
-  //             <option value="bastante">Bastante</option>
-  //             <option value="siempre">Siempre</option>
-  //           </select>
-  //         </div>
-  //         <div className="form-row">
-  //           <label htmlFor="servicio4">Alquiler de Computadoras</label>
-  //           <input
-  //             type="checkbox"
-  //             id="servicio4"
-  //             name="servicio4"
-  //             checked={formData.servicio4}
-  //             onChange={handleChange}
-  //           />
-  //           <select
-  //             id="frecuencia4"
-  //             name="frecuencia4"
-  //             value={formData.frecuencia4}
-  //             onChange={handleChange}
-  //             disabled={!formData.servicio4}
-  //           >
-  //             <option value="">Seleccione</option>
-  //             <option value="pocas">Pocas veces</option>
-  //             <option value="normalmente">Normalmente</option>
-  //             <option value="bastante">Bastante</option>
-  //             <option value="siempre">Siempre</option>
-  //           </select>
-  //         </div>
-  //         <div className="button-group">
-  //           <button type="submit">Guardar</button>
-  //         </div>
-  //       </form>
-  //     </div>
-  //   );
-  // };
+      //     <div className="container">
+      //       <img src={logo} alt="Logo ISTEC" className="logo" />
+      //       <h1 className="text-xl font-semibold mt-6">
+      //         Datos institucionales sobre los servicios:
+      //       </h1>
+      //       <h4>Seleccione los servicios que hará uso:</h4>
+      //       <form onSubmit={handleSubmit} className="formulario">
+      //         <div className="form-row">
+      //           <label htmlFor="servicio1">Ludoteca</label>
+      //           <input
+      //             type="checkbox"
+      //             id="servicio1"
+      //             name="servicio1"
+      //             checked={formData.servicio1}
+      //             onChange={handleChange}
+      //           />
+      //           <select
+      //             id="frecuencia1"
+      //             name="frecuencia1"
+      //             value={formData.frecuencia1}
+      //             onChange={handleChange}
+      //             disabled={!formData.servicio1}
+      //           >
+      //             <option value="">Seleccione</option>
+      //             <option value="pocas">Pocas veces</option>
+      //             <option value="normalmente">Normalmente</option>
+      //             <option value="bastante">Bastante</option>
+      //             <option value="siempre">Siempre</option>
+      //           </select>
+      //         </div>
+      //         <div className="form-row">
+      //           <label htmlFor="servicio2">Villas de Hospedaje</label>
+      //           <input
+      //             type="checkbox"
+      //             id="servicio2"
+      //             name="servicio2"
+      //             checked={formData.servicio2}
+      //             onChange={handleChange}
+      //           />
+      //           <select
+      //             id="frecuencia2"
+      //             name="frecuencia2"
+      //             value={formData.frecuencia2}
+      //             onChange={handleChange}
+      //             disabled={!formData.servicio2}
+      //           >
+      //             <option value="">Seleccione</option>
+      //             <option value="pocas">Pocas veces</option>
+      //             <option value="normalmente">Normalmente</option>
+      //             <option value="bastante">Bastante</option>
+      //             <option value="siempre">Siempre</option>
+      //           </select>
+      //         </div>
+      //         <div className="form-row">
+      //           <label htmlFor="servicio3">Servicio de Autobús</label>
+      //           <input
+      //             type="checkbox"
+      //             id="servicio3"
+      //             name="servicio3"
+      //             checked={formData.servicio3}
+      //             onChange={handleChange}
+      //           />
+      //           <select
+      //             id="frecuencia3"
+      //             name="frecuencia3"
+      //             value={formData.frecuencia3}
+      //             onChange={handleChange}
+      //             disabled={!formData.servicio3}
+      //           >
+      //             <option value="">Seleccione</option>
+      //             <option value="pocas">Pocas veces</option>
+      //             <option value="normalmente">Normalmente</option>
+      //             <option value="bastante">Bastante</option>
+      //             <option value="siempre">Siempre</option>
+      //           </select>
+      //         </div>
+      //         <div className="form-row">
+      //           <label htmlFor="servicio4">Alquiler de Computadoras</label>
+      //           <input
+      //             type="checkbox"
+      //             id="servicio4"
+      //             name="servicio4"
+      //             checked={formData.servicio4}
+      //             onChange={handleChange}
+      //           />
+      //           <select
+      //             id="frecuencia4"
+      //             name="frecuencia4"
+      //             value={formData.frecuencia4}
+      //             onChange={handleChange}
+      //             disabled={!formData.servicio4}
+      //           >
+      //             <option value="">Seleccione</option>
+      //             <option value="pocas">Pocas veces</option>
+      //             <option value="normalmente">Normalmente</option>
+      //             <option value="bastante">Bastante</option>
+      //             <option value="siempre">Siempre</option>
+      //           </select>
+      //         </div>
+      //         <div className="button-group">
+      //           <button type="submit">Guardar</button>
+      //         </div>
+      //       </form>
+      //     </div>
+      //   );
+      // };
 
-  // return (
-  //   <div className="container">
-  //     <img src={logo} alt="Logo ISTEC" className="logo" />
-  //     <h1 className="text-xl font-semibold mt-6">
-  //       Datos institucionales sobre los servicios:
-  //     </h1>
-  //     <h4>Seleccione los servicios que hará uso:</h4>
+      // return (
+      //   <div className="container">
+      //     <img src={logo} alt="Logo ISTEC" className="logo" />
+      //     <h1 className="text-xl font-semibold mt-6">
+      //       Datos institucionales sobre los servicios:
+      //     </h1>
+      //     <h4>Seleccione los servicios que hará uso:</h4>
 
-  //     <form onSubmit={handleSubmit} className="formulario">
-  //       <div className="form-row">
-  //         <label htmlFor="servicio1">Ludoteca</label>
-  //         <input
-  //           type="checkbox"
-  //           id="servicio1"
-  //           name="servicio1"
-  //           checked={formData.servicio1}
-  //           onChange={handleChange}
-  //         />
-  //         <select
-  //           id="frecuencia1"
-  //           name="frecuencia1"
-  //           value={formData.frecuencia1}
-  //           onChange={handleChange}
-  //           disabled={!formData.servicio1}
-  //         >
-  //           <option value="">Seleccione</option>
-  //           <option value="pocas">Pocas veces</option>
-  //           <option value="normalmente">Normalmente</option>
-  //           <option value="bastante">Bastante</option>
-  //           <option value="siempre">Siempre</option>
-  //         </select>
-  //       </div>
+      //     <form onSubmit={handleSubmit} className="formulario">
+      //       <div className="form-row">
+      //         <label htmlFor="servicio1">Ludoteca</label>
+      //         <input
+      //           type="checkbox"
+      //           id="servicio1"
+      //           name="servicio1"
+      //           checked={formData.servicio1}
+      //           onChange={handleChange}
+      //         />
+      //         <select
+      //           id="frecuencia1"
+      //           name="frecuencia1"
+      //           value={formData.frecuencia1}
+      //           onChange={handleChange}
+      //           disabled={!formData.servicio1}
+      //         >
+      //           <option value="">Seleccione</option>
+      //           <option value="pocas">Pocas veces</option>
+      //           <option value="normalmente">Normalmente</option>
+      //           <option value="bastante">Bastante</option>
+      //           <option value="siempre">Siempre</option>
+      //         </select>
+      //       </div>
 
-  //       <div className="form-row">
-  //         <label htmlFor="servicio2">Villas de Hospedaje</label>
-  //         <input
-  //           type="checkbox"
-  //           id="servicio2"
-  //           name="servicio2"
-  //           checked={formData.servicio2}
-  //           onChange={handleChange}
-  //         />
-  //         <select
-  //           id="frecuencia2"
-  //           name="frecuencia2"
-  //           value={formData.frecuencia2}
-  //           onChange={handleChange}
-  //           disabled={!formData.servicio2}
-  //         >
-  //           <option value="">Seleccione</option>
-  //           <option value="pocas">Pocas veces</option>
-  //           <option value="normalmente">Normalmente</option>
-  //           <option value="bastante">Bastante</option>
-  //           <option value="siempre">Siempre</option>
-  //         </select>
-  //       </div>
+      //       <div className="form-row">
+      //         <label htmlFor="servicio2">Villas de Hospedaje</label>
+      //         <input
+      //           type="checkbox"
+      //           id="servicio2"
+      //           name="servicio2"
+      //           checked={formData.servicio2}
+      //           onChange={handleChange}
+      //         />
+      //         <select
+      //           id="frecuencia2"
+      //           name="frecuencia2"
+      //           value={formData.frecuencia2}
+      //           onChange={handleChange}
+      //           disabled={!formData.servicio2}
+      //         >
+      //           <option value="">Seleccione</option>
+      //           <option value="pocas">Pocas veces</option>
+      //           <option value="normalmente">Normalmente</option>
+      //           <option value="bastante">Bastante</option>
+      //           <option value="siempre">Siempre</option>
+      //         </select>
+      //       </div>
 
-  //       <div className="form-row">
-  //         <label htmlFor="servicio3">Servicio de Autobús</label>
-  //         <input
-  //           type="checkbox"
-  //           id="servicio3"
-  //           name="servicio3"
-  //           checked={formData.servicio3}
-  //           onChange={handleChange}
-  //         />
-  //         <select
-  //           id="frecuencia3"
-  //           name="frecuencia3"
-  //           value={formData.frecuencia3}
-  //           onChange={handleChange}
-  //           disabled={!formData.servicio3}
-  //         >
-  //           <option value="">Seleccione</option>
-  //           <option value="pocas">Pocas veces</option>
-  //           <option value="normalmente">Normalmente</option>
-  //           <option value="bastante">Bastante</option>
-  //           <option value="siempre">Siempre</option>
-  //         </select>
-  //       </div>
+      //       <div className="form-row">
+      //         <label htmlFor="servicio3">Servicio de Autobús</label>
+      //         <input
+      //           type="checkbox"
+      //           id="servicio3"
+      //           name="servicio3"
+      //           checked={formData.servicio3}
+      //           onChange={handleChange}
+      //         />
+      //         <select
+      //           id="frecuencia3"
+      //           name="frecuencia3"
+      //           value={formData.frecuencia3}
+      //           onChange={handleChange}
+      //           disabled={!formData.servicio3}
+      //         >
+      //           <option value="">Seleccione</option>
+      //           <option value="pocas">Pocas veces</option>
+      //           <option value="normalmente">Normalmente</option>
+      //           <option value="bastante">Bastante</option>
+      //           <option value="siempre">Siempre</option>
+      //         </select>
+      //       </div>
 
-  //       <div className="form-row">
-  //         <label htmlFor="servicio4">Alquiler de Computadoras</label>
-  //         <input
-  //           type="checkbox"
-  //           id="servicio4"
-  //           name="servicio4"
-  //           checked={formData.servicio4}
-  //           onChange={handleChange}
-  //         />
-  //         <select
-  //           id="frecuencia4"
-  //           name="frecuencia4"
-  //           value={formData.frecuencia4}
-  //           onChange={handleChange}
-  //           disabled={!formData.servicio4}
-  //         >
-  //           <option value="">Seleccione</option>
-  //           <option value="pocas">Pocas veces</option>
-  //           <option value="normalmente">Normalmente</option>
-  //           <option value="bastante">Bastante</option>
-  //           <option value="siempre">Siempre</option>
-  //         </select>
-  //       </div>
+      //       <div className="form-row">
+      //         <label htmlFor="servicio4">Alquiler de Computadoras</label>
+      //         <input
+      //           type="checkbox"
+      //           id="servicio4"
+      //           name="servicio4"
+      //           checked={formData.servicio4}
+      //           onChange={handleChange}
+      //         />
+      //         <select
+      //           id="frecuencia4"
+      //           name="frecuencia4"
+      //           value={formData.frecuencia4}
+      //           onChange={handleChange}
+      //           disabled={!formData.servicio4}
+      //         >
+      //           <option value="">Seleccione</option>
+      //           <option value="pocas">Pocas veces</option>
+      //           <option value="normalmente">Normalmente</option>
+      //           <option value="bastante">Bastante</option>
+      //           <option value="siempre">Siempre</option>
+      //         </select>
+      //       </div>
 
-  //       <div className="button-group">
-  //         <button type="submit">Guardar</button>
-  //       </div>
-  //     </form>
-  //   </div>
-  <div className="container">
-  <img src={logo} alt="Logo ISTEC" className="logo" />
-  <h1 className="text-xl font-semibold mt-6">
-    Datos institucionales sobre los servicios:
-  </h1>
-  <h4>Seleccione los servicios que hará uso:</h4>
-  <form onSubmit={handleSubmit} className="formulario">
-    <div className="form-row">
-      <label htmlFor="servicio1">Ludoteca</label>
-      <input
-        type="checkbox"
-        id="servicio1"
-        name="servicio1"
-        checked={formData.servicio1}
-        onChange={handleChange}
-      />
-      <select
-        id="frecuencia1"
-        name="frecuencia1"
-        value={formData.frecuencia1}
-        onChange={handleChange}
-        disabled={!formData.servicio1}
-      >
-        <option value="">Seleccione</option>
-        <option value="pocas">Pocas veces</option>
-        <option value="normalmente">Normalmente</option>
-        <option value="bastante">Bastante</option>
-        <option value="siempre">Siempre</option>
-      </select>
+      //       <div className="button-group">
+      //         <button type="submit">Guardar</button>
+      //       </div>
+      //     </form>
+      //   </div>
+      <div className="container2">
+        <img src={logo} alt="Logo ISTEC" className="logo" />
+        <h1 className="text-xl font-semibold mt-6">
+          Datos institucionales sobre los servicios:
+        </h1>
+        <h4>Seleccione los servicios que hará uso:</h4>
+        <form onSubmit={handleSubmit} className="formulario">
+          <div className="form-row">
+            <label htmlFor="servicio1">Ludoteca</label>
+            <input
+              type="checkbox"
+              id="servicio1"
+              name="servicio1"
+              checked={formData.servicio1}
+              onChange={handleChange}
+            />
+            <select
+              id="frecuencia1"
+              name="frecuencia1"
+              value={formData.frecuencia1}
+              onChange={handleChange}
+              disabled={!formData.servicio1}
+            >
+              <option value="">Seleccione</option>
+              <option value="pocas">Pocas veces</option>
+              <option value="normalmente">Normalmente</option>
+              <option value="bastante">Bastante</option>
+              <option value="siempre">Siempre</option>
+            </select>
+          </div>
+          <div className="form-row">
+            <label htmlFor="servicio2">Villas de Hospedaje</label>
+            <input
+              type="checkbox"
+              id="servicio2"
+              name="servicio2"
+              checked={formData.servicio2}
+              onChange={handleChange}
+            />
+            <select
+              id="frecuencia2"
+              name="frecuencia2"
+              value={formData.frecuencia2}
+              onChange={handleChange}
+              disabled={!formData.servicio2}
+            >
+              <option value="">Seleccione</option>
+              <option value="pocas">Pocas veces</option>
+              <option value="normalmente">Normalmente</option>
+              <option value="bastante">Bastante</option>
+              <option value="siempre">Siempre</option>
+            </select>
+          </div>
+          <div className="form-row">
+            <label htmlFor="servicio3">Servicio de Autobús</label>
+            <input
+              type="checkbox"
+              id="servicio3"
+              name="servicio3"
+              checked={formData.servicio3}
+              onChange={handleChange}
+            />
+            <select
+              id="frecuencia3"
+              name="frecuencia3"
+              value={formData.frecuencia3}
+              onChange={handleChange}
+              disabled={!formData.servicio3}
+            >
+              <option value="">Seleccione</option>
+              <option value="pocas">Pocas veces</option>
+              <option value="normalmente">Normalmente</option>
+              <option value="bastante">Bastante</option>
+              <option value="siempre">Siempre</option>
+            </select>
+          </div>
+          <div className="form-row">
+            <label htmlFor="servicio4">Alquiler de Computadoras</label>
+            <input
+              type="checkbox"
+              id="servicio4"
+              name="servicio4"
+              checked={formData.servicio4}
+              onChange={handleChange}
+            />
+            <select
+              id="frecuencia4"
+              name="frecuencia4"
+              value={formData.frecuencia4}
+              onChange={handleChange}
+              disabled={!formData.servicio4}
+            >
+              <option value="">Seleccione</option>
+              <option value="pocas">Pocas veces</option>
+              <option value="normalmente">Normalmente</option>
+              <option value="bastante">Bastante</option>
+              <option value="siempre">Siempre</option>
+            </select>
+          </div>
+          <div className="button-group">
+            <button type="submit">Guardar</button>
+          </div>
+        </form>
+      </div>
+    );
+  };
+
+  return (
+    <div className="container">
+      <img src={logo} alt="Logo ISTEC" className="log" />
+      <h1 className="text-xl font-semibold mt-6">
+        Datos institucionales sobre los servicios:
+      </h1>
+      <h4>Seleccione los servicios que hará uso:</h4>
+
+      <form onSubmit={handleSubmit} className="formulario">
+        <div className="form-row">
+          <label htmlFor="servicio1">Ludoteca</label>
+          <input
+            type="checkbox"
+            id="servicio1"
+            name="servicio1"
+            checked={formData.servicio1}
+            onChange={handleChange}
+          />
+          <select
+            id="frecuencia1"
+            name="frecuencia1"
+            value={formData.frecuencia1}
+            onChange={handleChange}
+            disabled={!formData.servicio1}
+          >
+            <option value="">Seleccione</option>
+            <option value="pocas">Pocas veces</option>
+            <option value="normalmente">Normalmente</option>
+            <option value="bastante">Bastante</option>
+            <option value="siempre">Siempre</option>
+          </select>
+        </div>
+
+        <div className="form-row">
+          <label htmlFor="servicio2">Villas de Hospedaje</label>
+          <input
+            type="checkbox"
+            id="servicio2"
+            name="servicio2"
+            checked={formData.servicio2}
+            onChange={handleChange}
+          />
+          <select
+            id="frecuencia2"
+            name="frecuencia2"
+            value={formData.frecuencia2}
+            onChange={handleChange}
+            disabled={!formData.servicio2}
+          >
+            <option value="">Seleccione</option>
+            <option value="pocas">Pocas veces</option>
+            <option value="normalmente">Normalmente</option>
+            <option value="bastante">Bastante</option>
+            <option value="siempre">Siempre</option>
+          </select>
+        </div>
+
+        <div className="form-row">
+          <label htmlFor="servicio3">Servicio de Autobús</label>
+          <input
+            type="checkbox"
+            id="servicio3"
+            name="servicio3"
+            checked={formData.servicio3}
+            onChange={handleChange}
+          />
+          <select
+            id="frecuencia3"
+            name="frecuencia3"
+            value={formData.frecuencia3}
+            onChange={handleChange}
+            disabled={!formData.servicio3}
+          >
+            <option value="">Seleccione</option>
+            <option value="pocas">Pocas veces</option>
+            <option value="normalmente">Normalmente</option>
+            <option value="bastante">Bastante</option>
+            <option value="siempre">Siempre</option>
+          </select>
+        </div>
+
+        <div className="form-row">
+          <label htmlFor="servicio4">Alquiler de Computadoras</label>
+          <input
+            type="checkbox"
+            id="servicio4"
+            name="servicio4"
+            checked={formData.servicio4}
+            onChange={handleChange}
+          />
+          <select
+            id="frecuencia4"
+            name="frecuencia4"
+            value={formData.frecuencia4}
+            onChange={handleChange}
+            disabled={!formData.servicio4}
+          >
+            <option value="">Seleccione</option>
+            <option value="pocas">Pocas veces</option>
+            <option value="normalmente">Normalmente</option>
+            <option value="bastante">Bastante</option>
+            <option value="siempre">Siempre</option>
+          </select>
+        </div>
+
+        <div className="button-group">
+          <button type="submit">Guardar</button>
+        </div>
+      </form>
     </div>
-    <div className="form-row">
-      <label htmlFor="servicio2">Villas de Hospedaje</label>
-      <input
-        type="checkbox"
-        id="servicio2"
-        name="servicio2"
-        checked={formData.servicio2}
-        onChange={handleChange}
-      />
-      <select
-        id="frecuencia2"
-        name="frecuencia2"
-        value={formData.frecuencia2}
-        onChange={handleChange}
-        disabled={!formData.servicio2}
-      >
-        <option value="">Seleccione</option>
-        <option value="pocas">Pocas veces</option>
-        <option value="normalmente">Normalmente</option>
-        <option value="bastante">Bastante</option>
-        <option value="siempre">Siempre</option>
-      </select>
-    </div>
-    <div className="form-row">
-      <label htmlFor="servicio3">Servicio de Autobús</label>
-      <input
-        type="checkbox"
-        id="servicio3"
-        name="servicio3"
-        checked={formData.servicio3}
-        onChange={handleChange}
-      />
-      <select
-        id="frecuencia3"
-        name="frecuencia3"
-        value={formData.frecuencia3}
-        onChange={handleChange}
-        disabled={!formData.servicio3}
-      >
-        <option value="">Seleccione</option>
-        <option value="pocas">Pocas veces</option>
-        <option value="normalmente">Normalmente</option>
-        <option value="bastante">Bastante</option>
-        <option value="siempre">Siempre</option>
-      </select>
-    </div>
-    <div className="form-row">
-      <label htmlFor="servicio4">Alquiler de Computadoras</label>
-      <input
-        type="checkbox"
-        id="servicio4"
-        name="servicio4"
-        checked={formData.servicio4}
-        onChange={handleChange}
-      />
-      <select
-        id="frecuencia4"
-        name="frecuencia4"
-        value={formData.frecuencia4}
-        onChange={handleChange}
-        disabled={!formData.servicio4}
-      >
-        <option value="">Seleccione</option>
-        <option value="pocas">Pocas veces</option>
-        <option value="normalmente">Normalmente</option>
-        <option value="bastante">Bastante</option>
-        <option value="siempre">Siempre</option>
-      </select>
-    </div>
-    <div className="button-group">
-      <button type="submit">Guardar</button>
-    </div>
-  </form>
-</div>
-);
-};
-
-return (
-<div className="container">
-<img src={logo} alt="Logo ISTEC" className="log" />
-<h1 className="text-xl font-semibold mt-6">
-  Datos institucionales sobre los servicios:
-</h1>
-<h4>Seleccione los servicios que hará uso:</h4>
-
-<form onSubmit={handleSubmit} className="formulario">
-  <div className="form-row">
-    <label htmlFor="servicio1">Ludoteca</label>
-    <input
-      type="checkbox"
-      id="servicio1"
-      name="servicio1"
-      checked={formData.servicio1}
-      onChange={handleChange}
-    />
-    <select
-      id="frecuencia1"
-      name="frecuencia1"
-      value={formData.frecuencia1}
-      onChange={handleChange}
-      disabled={!formData.servicio1}
-    >
-      <option value="">Seleccione</option>
-      <option value="pocas">Pocas veces</option>
-      <option value="normalmente">Normalmente</option>
-      <option value="bastante">Bastante</option>
-      <option value="siempre">Siempre</option>
-    </select>
-  </div>
-
-  <div className="form-row">
-    <label htmlFor="servicio2">Villas de Hospedaje</label>
-    <input
-      type="checkbox"
-      id="servicio2"
-      name="servicio2"
-      checked={formData.servicio2}
-      onChange={handleChange}
-    />
-    <select
-      id="frecuencia2"
-      name="frecuencia2"
-      value={formData.frecuencia2}
-      onChange={handleChange}
-      disabled={!formData.servicio2}
-    >
-      <option value="">Seleccione</option>
-      <option value="pocas">Pocas veces</option>
-      <option value="normalmente">Normalmente</option>
-      <option value="bastante">Bastante</option>
-      <option value="siempre">Siempre</option>
-    </select>
-  </div>
-
-  <div className="form-row">
-    <label htmlFor="servicio3">Servicio de Autobús</label>
-    <input
-      type="checkbox"
-      id="servicio3"
-      name="servicio3"
-      checked={formData.servicio3}
-      onChange={handleChange}
-    />
-    <select
-      id="frecuencia3"
-      name="frecuencia3"
-      value={formData.frecuencia3}
-      onChange={handleChange}
-      disabled={!formData.servicio3}
-    >
-      <option value="">Seleccione</option>
-      <option value="pocas">Pocas veces</option>
-      <option value="normalmente">Normalmente</option>
-      <option value="bastante">Bastante</option>
-      <option value="siempre">Siempre</option>
-    </select>
-  </div>
-
-  <div className="form-row">
-    <label htmlFor="servicio4">Alquiler de Computadoras</label>
-    <input
-      type="checkbox"
-      id="servicio4"
-      name="servicio4"
-      checked={formData.servicio4}
-      onChange={handleChange}
-    />
-    <select
-      id="frecuencia4"
-      name="frecuencia4"
-      value={formData.frecuencia4}
-      onChange={handleChange}
-      disabled={!formData.servicio4}
-    >
-      <option value="">Seleccione</option>
-      <option value="pocas">Pocas veces</option>
-      <option value="normalmente">Normalmente</option>
-      <option value="bastante">Bastante</option>
-      <option value="siempre">Siempre</option>
-    </select>
-  </div>
-
-  <div className="button-group">
-    <button type="submit">Guardar</button>
-  </div>
-</form>
-</div>
   );
 }
 

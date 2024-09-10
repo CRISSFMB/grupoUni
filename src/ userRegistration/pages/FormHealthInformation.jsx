@@ -3,7 +3,6 @@ import log from "../../assets/log.png";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../css/formGeneral.css";
 
-
 function FormHealtInformation() {
   const location = useLocation();
   const { ci } = location.state || {};
@@ -91,19 +90,22 @@ function FormHealtInformation() {
   };
 
   return (
-  
-    <div className="container">
+    <div className="container2">
       <img src={log} alt="logo Puce" className="log" />
       <h1>Información Salud:</h1>
 
-      <h3 className="text-xl font-semibold mt-6">Datos institucionales sobre salud:</h3>
+      <h3 className="text-xl font-semibold mt-6">
+        Datos institucionales sobre salud:
+      </h3>
 
       {errorMessage && <div className="error-message">{errorMessage}</div>}
 
       <form onSubmit={handleSubmit} className="formulario">
         <div className="form-row">
           <div className="form-group left-group">
-            <label htmlFor="catastrofica">¿Tiene alguna enfermedad catastrófica?</label>
+            <label htmlFor="catastrofica">
+              ¿Tiene alguna enfermedad catastrófica?
+            </label>
             <select
               id="catastrofica"
               name="catastrofica"
@@ -143,7 +145,6 @@ function FormHealtInformation() {
               name="tipo_sangre"
               value={formData.tipo_sangre}
               onChange={handleChange}
-              
             >
               <option value="">Seleccione </option>
               <option value="A+">A+</option>
@@ -157,9 +158,10 @@ function FormHealtInformation() {
             </select>
           </div>
 
-
           <div className="form-group left-group">
-            <label htmlFor="enf_piel">Herpes-Enfermedades contagiosas de la piel</label>
+            <label htmlFor="enf_piel">
+              Herpes-Enfermedades contagiosas de la piel
+            </label>
             <input
               type="checkbox"
               id="enf_piel"
@@ -168,7 +170,6 @@ function FormHealtInformation() {
               onChange={handleChange}
             />
           </div>
-
 
           <div className="mb form-group right-group ">
             <label htmlFor="diabetes">Diabetes</label>
@@ -191,11 +192,7 @@ function FormHealtInformation() {
               onChange={handleChange}
             />
           </div>
-
-          
         </div>
-
-       
 
         <div className="button-group">
           <button type="submit">Guardar</button>

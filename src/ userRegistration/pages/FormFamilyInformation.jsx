@@ -87,8 +87,7 @@ function FormFamilyInformation() {
   };
 
   return (
-
-    <div className="container">
+    <div className="container2">
       <img src={logo} alt="Logo ISTEC" className="log" /> {/* Añadir logo */}
       <h1 className="text-xl font-semibold mt-6">Informacion Familiar</h1>
       {errorMessage && <div className="error-message">{errorMessage}</div>}
@@ -205,20 +204,29 @@ function FormFamilyInformation() {
           </div>
 
           <div className="form-group right-group">
-            <label htmlFor="nivel_formacion_padre">Nivel Formación Padre:</label>
+            <label htmlFor="nivel_formacion_padre">
+              Nivel Formación Padre:
+            </label>
             <select
               id="nivel_formacion_padre"
               name="nivel_formacion_padre"
               value={formData.nivel_formacion_padre}
               className="long-select"
-              onChange={handleChange}>
+              onChange={handleChange}
+            >
               <option value="">Seleccione una Opción</option>
               <option value="Estudio Basico">Estudio Básico</option>
-              <option value="Estudio Basico Incompleto">Estudio Básico Incompleto</option>
+              <option value="Estudio Basico Incompleto">
+                Estudio Básico Incompleto
+              </option>
               <option value="Bachillerato">Bachillerato</option>
-              <option value="Bachillerato Incompleto">Bachillerato Incompleto</option>
+              <option value="Bachillerato Incompleto">
+                Bachillerato Incompleto
+              </option>
               <option value="Estudio Superior">Estudio Superior</option>
-              <option value="Estudio Superior Incompleto">Estudio Superior Incompleto</option>
+              <option value="Estudio Superior Incompleto">
+                Estudio Superior Incompleto
+              </option>
             </select>
           </div>
         </div>
@@ -233,25 +241,33 @@ function FormFamilyInformation() {
               value={formData.miembros_hogar}
               onChange={handleChange}
               placeholder="1"
-              
             />
           </div>
 
           <div className="form-group right-group">
-            <label htmlFor="nivel_formacion_madre">Nivel Formación Madre:</label>
+            <label htmlFor="nivel_formacion_madre">
+              Nivel Formación Madre:
+            </label>
             <select
               id="nivel_formacion_madre"
               name="nivel_formacion_madre"
               value={formData.nivel_formacion_madre}
               className="long-select"
-              onChange={handleChange}>
+              onChange={handleChange}
+            >
               <option value="">Seleccione una Opción</option>
               <option value="Estudio Basico">Estudio Básico</option>
-              <option value="Estudio Basico Incompleto">Estudio Básico Incompleto</option>
+              <option value="Estudio Basico Incompleto">
+                Estudio Básico Incompleto
+              </option>
               <option value="Bachillerato">Bachillerato</option>
-              <option value="Bachillerato Incompleto">Bachillerato Incompleto</option>
+              <option value="Bachillerato Incompleto">
+                Bachillerato Incompleto
+              </option>
               <option value="Estudio Superior">Estudio Superior</option>
-              <option value="Estudio Superior Incompleto">Estudio Superior Incompleto</option>
+              <option value="Estudio Superior Incompleto">
+                Estudio Superior Incompleto
+              </option>
             </select>
           </div>
         </div>
@@ -270,15 +286,17 @@ function FormFamilyInformation() {
           </div>
 
           <div className="form-group right-group">
-            <label htmlFor="Padre_o_Madre_soltera">Madre o Padre Soltero:</label>
+            <label htmlFor="Padre_o_Madre_soltera">
+              Madre o Padre Soltero:
+            </label>
             <select
               id="Padre_o_Madre_soltera"
               name="Padre_o_Madre_soltera"
               value={formData.Padre_o_Madre_soltera}
-              
-              onChange={handleChange}> 
-              <option value="">Seleccione una Opción   {'     '}               </option>
-              <option value="si">Sí  </option>
+              onChange={handleChange}
+            >
+              <option value="">Seleccione una Opción {"     "} </option>
+              <option value="si">Sí </option>
               <option value="no">No </option>
             </select>
           </div>
@@ -287,10 +305,6 @@ function FormFamilyInformation() {
         <div className="button-group">
           <button type="submit">Guardar</button>
         </div>
-
-
-
-
       </form>
     </div>
   );
