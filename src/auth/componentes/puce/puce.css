@@ -1,4 +1,7 @@
 .puce {
   background-color: white;
-  padding: 2rem;
+  padding: 3rem;
+  width: 70%;
+  border-radius: 1rem;
+  box-shadow: 6px 7px 8px #188f87;
 }

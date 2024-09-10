@@ -1,4 +1,24 @@
 .carrera {
   background-color: white;
   padding: 3rem;
+  width: 70%;
+  border-radius: 1rem;
+  box-shadow: 6px 7px 8px #188f87;
+}
+
+.carrera__input {
+  margin-bottom: 1rem;
+  border: 2px solid rgb(163 202 163);
+}
+
+.carrera_btn {
+  border: 2px solid rgb(163 202 163);
+  background-color: transparent;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+.carrera_btn:hover {
+  background-color: rgb(163 202 163);
+  color: black;
 }

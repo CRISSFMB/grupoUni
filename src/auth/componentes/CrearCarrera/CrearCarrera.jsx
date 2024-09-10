@@ -32,6 +32,7 @@ const CrearCarrera = () => {
             value={nombreCarrera}
             onChange={(e) => setNombreCarrera(e.target.value)}
             required
+            className="carrera__input"
           />
           <input
             type="text"
@@ -39,8 +40,11 @@ const CrearCarrera = () => {
             value={universidad}
             onChange={(e) => setUniversidad(e.target.value)}
             required
+            className="carrera__input"
           />
-          <button type="submit">Crear</button>
+          <button className="carrera_btn" type="submit">
+            Crear
+          </button>
         </form>
         {error && <p style={{ color: "red" }}>{error}</p>} {/* Mostrar error */}
       </div>

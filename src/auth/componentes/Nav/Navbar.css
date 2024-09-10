@@ -9,5 +9,18 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
+}
+
+.navegacion__listItem {
+  background-color: white;
+  width: 100px;
+  text-align: center;
+  padding: 9px 14px;
+  border-radius: 8px;
+  box-shadow: 6px 7px 8px #188f87;
+  cursor: pointer;
+}
+.navegacion__listItem a {
+  color: black;
 }
