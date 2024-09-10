@@ -5,6 +5,17 @@
   background-color: rgb(253, 253, 253);
   width: 60%;
   margin: 0 auto;
+  box-shadow: 8px 9px 14px 3px #125b6b;
+  animation: shadow-animation 2s ease-in-out infinite alternate;
+}
+
+@keyframes shadow-animation {
+  0% {
+    box-shadow: 8px 9px 14px 3px #125b6b;
+  }
+  100% {
+    box-shadow: 15px 20px 25px 5px #0e3f47;
+  }
 }
 
 form {

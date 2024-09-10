@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 8px 5px 19px black;
 }
 
 .navegacion__list {

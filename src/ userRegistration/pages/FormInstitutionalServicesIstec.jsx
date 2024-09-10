@@ -288,8 +288,8 @@ function FormInstitutionalServicesIstec() {
         <img src={logo} alt="Logo ISTEC" className="logo" />
         <h1>Datos institucionales sobre los servicios:</h1>
         <h2>Seleccione los servicios que hará uso:</h2>
-        <form onSubmit={handleSubmit} className="formulario">
-          <div className="form-row">
+        <form onSubmit={handleSubmit}>
+          <div className="">
             <label htmlFor="servicio1">Ludoteca</label>
             <input
               type="checkbox"
@@ -312,7 +312,7 @@ function FormInstitutionalServicesIstec() {
               <option value="siempre">Siempre</option>
             </select>
           </div>
-          <div className="form-row">
+          <div className="">
             <label htmlFor="servicio2">Villas de Hospedaje</label>
             <input
               type="checkbox"
@@ -335,7 +335,7 @@ function FormInstitutionalServicesIstec() {
               <option value="siempre">Siempre</option>
             </select>
           </div>
-          <div className="form-row">
+          <div className="">
             <label htmlFor="servicio3">Servicio de Autobús</label>
             <input
               type="checkbox"
@@ -358,7 +358,7 @@ function FormInstitutionalServicesIstec() {
               <option value="siempre">Siempre</option>
             </select>
           </div>
-          <div className="form-row">
+          <div className="">
             <label htmlFor="servicio4">Alquiler de Computadoras</label>
             <input
               type="checkbox"
@@ -381,7 +381,7 @@ function FormInstitutionalServicesIstec() {
               <option value="siempre">Siempre</option>
             </select>
           </div>
-          <div className="button-group">
+          <div className="">
             <button type="submit">Guardar</button>
           </div>
         </form>
@@ -390,12 +390,12 @@ function FormInstitutionalServicesIstec() {
   };
 
   return (
-    <div className="container">
+    <div className="container2">
       <img src={logo} alt="Logo ISTEC" className="logo" />
       <h1 className="text-xl font-semibold mt-6">
         Datos institucionales sobre los servicios:
       </h1>
-      <h4>Seleccione los servicios que hará uso:</h4>
+      <h2>Seleccione los servicios que hará uso:</h2>
 
       <form onSubmit={handleSubmit} className="formulario">
         <div className="form-row">
